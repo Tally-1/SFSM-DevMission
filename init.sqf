@@ -1,0 +1,1 @@
+// [] spawn Tally_fnc_init;
