@@ -343,7 +343,7 @@ class CfgFunctions
             class initHouseDemolition   {};
             class placeExplosive        {};
             class blowUpHouse           {};
-        }
+        };
 
         class launchers
         {
@@ -352,8 +352,6 @@ class CfgFunctions
             class launcherHandler   {};
             class forceFireLauncher {};
             class canRpgHouse       {};
-            class steerMissile      {};
-            class guideMissile      {};
             class forcedCqbRpg      {};
         }
 

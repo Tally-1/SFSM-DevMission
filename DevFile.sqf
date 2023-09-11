@@ -15,4 +15,21 @@ SFSM_Custom3Dpositions = [];
 private _man1    = cc;
 private _man2    = bb;
 
+SFSM_bombTypes        = ["GBU", "Grenade", "Largest explosive in Inventory"];
+SFSM_captureExplosive = "gbu"
+
+SFSM_fnc_captureBombType = { 
+
+};
+
+
+SFSM_fnc_bombOnCapture = { 
+params["_man", "_captor"];
+
+createVehicle ["Bomb_03_F", (GetPosATL _man)];
+private _text = [name _man, " blew himself and ", (name _captor), " into very small pieces"]joinString"";
+[_text] call dbgmsg;
+};
+
+
 systemChat "devFile read";
