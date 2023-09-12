@@ -90,10 +90,11 @@ then{
                 'Acts_AidlPercMstpSnonWnonDnon_warmup_7_loop',
                 'Acts_AidlPercMstpSnonWnonDnon_warmup_6_loop'
         ]";
-        SFSM_allowEvasion    = true;    // When no cover is found a soldier will run to avoid incoming fire.
-        SFSM_bombOnCapture   = 0.2;    //  Probability for suicide-bomb when captured.
-        SFSM_simpleBff       = true;  //   Remove Caching of Terrain objects. Will improve performance, but units taking cover will become slightly dumber.
-        SFSM_spawnBffActions = false;//    Spawns the functions called during a battle in a separate thread, bad for performance but ensures that the loop does not get aborted when an error occurs.
+        SFSM_allowEvasion     = true;     //When no cover is found a soldier will run to avoid incoming fire.
+        SFSM_bombOnCapture    = 0.2;     // Probability for suicide-bomb when captured.
+        SFSM_simpleBff        = true;   //  Remove Caching of Terrain objects. Will improve performance, but units taking cover will become slightly dumber.
+        SFSM_spawnBffActions  = false; //   Spawns the functions called during a battle in a separate thread, bad for performance but ensures that the loop does not get aborted when an error occurs.
+        SFSM_captureExplosive = "largestEx"; // Choose which explosive you will be used in the case of capture suicide. ("gbu"   "grenade"  "largestEx")
 };
 
 

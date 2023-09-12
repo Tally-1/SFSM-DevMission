@@ -37,8 +37,7 @@ _man addEventHandler ["Hit", {
 }}}];
 
 
-if(random 1 < SFSM_bombOnCapture)
-exitWith{[_man, _captor] call SFSM_fnc_bombOnCapture;};
+if(random 1 < SFSM_bombOnCapture)exitWith{[_man, _captor] call SFSM_fnc_bombOnCapture;};
 
 ["capture",  [_man, _captor]] call CBA_fnc_localEvent;
 

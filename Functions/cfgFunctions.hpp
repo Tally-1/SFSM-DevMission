@@ -582,6 +582,14 @@ class CfgFunctions
             class allAiRescueCapture {};
         };
 
+        class selfBomb 
+        {
+            file = "functions\overrun\selfBomb";
+            class captureBombType  {};
+            class canBombOnCapVars {};
+            class bombOnCapture    {};
+        };
+
         class reactiveFire
         {
             file = "functions\reactiveFire";
@@ -896,38 +904,41 @@ class CfgFunctions
         class objectData
         {
             file = "functions\objectData";
-            class glRifle               {};
-            class ObjStance             {};
-            class areaData              {};
-            class getMapObjects         {};
-            class excludedMapObject     {};
-            class filterMapObjects      {};
-            class terrainObjData        {};
-            class squadAsset            {};
-            class hasAmmoForWeapon      {};
-            class validEnemy            {};
-            class validEnemyVehicle     {};
-            class isMachineGunner       {};
-            class isATSoldier           {};
-            class isMarksman            {};
-            class isRealMan             {};
-            class functionalMan         {};
-            class isMedic               {};
-            class isFipoMedic           {};
-            class isPlayer              {};
-            class isDeactivated         {};            
+            class glRifle                {};
+            class ObjStance              {};
+            class areaData               {};
+            class getMapObjects          {};
+            class excludedMapObject      {};
+            class filterMapObjects       {};
+            class terrainObjData         {};
+            class squadAsset             {};
+            class hasAmmoForWeapon       {};
+            class validEnemy             {};
+            class validEnemyVehicle      {};
+            class isMachineGunner        {};
+            class isATSoldier            {};
+            class isMarksman             {};
+            class isRealMan              {};
+            class functionalMan          {};
+            class isMedic                {};
+            class isFipoMedic            {};
+            class isPlayer               {};
+            class isDeactivated          {};            
             
-            class availableAiSoldier    {};
-            class buildingCenterPosASL  {};
-            class availEnemyFriendDist  {};
+            class availableAiSoldier     {};
+            class buildingCenterPosASL   {};
+            class availEnemyFriendDist   {};
 
-            class validAllyVehicle      {};
-            class validAlly             {};
+            class validAllyVehicle       {};
+            class validAlly              {};
 
-            class manIsInjured          {};
+            class manIsInjured           {};
 
-            class weaponAimPos          {};
-
+            class weaponAimPos           {};
+            
+            class getBiggestInvExplosive {};
+            class isExplosiveMag         {};
+            class getMagSplashRange      {};
             
             
         };

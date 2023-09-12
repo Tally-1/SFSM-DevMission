@@ -60,3 +60,15 @@ private _versionName = "DCO soldier FSM | Overrun";
 		true
 	]
 ] call cba_settings_fnc_init;
+
+[
+	"SFSM_captureExplosive",
+	"LIST",
+	["Captured Bomb-type", "Choose which explosive will be used in the case of capture suicide."],
+	_versionName,
+	[
+		["gbu", "grenade", "largestEx"],
+		["GBU", "Grenade", "Largest explosive in Inventory"], 
+		2
+	]
+] call cba_settings_fnc_init;
