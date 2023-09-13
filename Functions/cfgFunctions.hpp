@@ -285,13 +285,7 @@ class CfgFunctions
         {
             file = "functions\projectileHandling";
             class soundReaction         {};
-            class reactToExplosion      {};
-            class addCrater             {};
             class handleBulletImpact    {};
-            class handleExplosion       {};
-            class handleGrenade         {};
-            class throwBackGrenade      {};
-            class evadeGrenade          {};
         };
 
         class curator
@@ -336,13 +330,24 @@ class CfgFunctions
         class explosives 
         {
             file = "functions\explosives" 
-            class canBlowUpHouse        {};
-            class carriedExplosives     {};
-            class formatExplosiveName   {};
-            class getChargeFromBackPack {};
-            class initHouseDemolition   {};
-            class placeExplosive        {};
-            class blowUpHouse           {};
+            class canBlowUpHouse         {};
+            class carriedExplosives      {};
+            class formatExplosiveName    {};
+            class getChargeFromBackPack  {};
+            class initHouseDemolition    {};
+            class placeExplosive         {};
+            class blowUpHouse            {};
+
+            class reactToExplosion      {};
+            class addCrater             {};
+            class handleExplosion       {};
+            class handleGrenade         {};
+            class throwBackGrenade      {};
+            class evadeGrenade          {};
+
+            class getBiggestInvExplosive {};
+            class isExplosiveMag         {};
+            class getMagSplashRange      {};
         };
 
         class launchers
@@ -935,12 +940,6 @@ class CfgFunctions
             class manIsInjured           {};
 
             class weaponAimPos           {};
-            
-            class getBiggestInvExplosive {};
-            class isExplosiveMag         {};
-            class getMagSplashRange      {};
-            
-            
         };
 
         // class hunkerDown

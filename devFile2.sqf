@@ -7,6 +7,13 @@ params["_orMen"];
 
 }] call CBA_fnc_addEventHandler;
 
+["pre_bomb_on_capture", {
+params["_man", "_captor"];
+
+[_man] spawn dbg_cam;
+
+}] call CBA_fnc_addEventHandler;
+
 ["new_unitData", {
 params["_man", "_dataEntry", "_prevValue", "_newValue"];
 if(_dataEntry isNotEqualTo "action")exitWith{};

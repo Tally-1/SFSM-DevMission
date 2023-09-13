@@ -13,46 +13,25 @@ systemChat "devFile found";
 
 // configfile >> "CfgMagazines" >> "DemoCharge_Remote_Mag" >> "ammo"
 // configfile >> "CfgAmmo" >> "DemoCharge_Remote_Ammo" >> "indirectHitRange"
-
-
 player allowDamage false;
 SFSM_Custom3Dpositions = [];
 private _man1    = cc;
 private _man2    = bb;
 
-// SFSM_fnc_getMagSplashRange = { 
-
-// };
-
-// SFSM_fnc_isExplosiveMag = { 
-
-// };
-
-// SFSM_fnc_getBiggestInvExplosive = { 
-
-// };
-
-// SFSM_fnc_captureBombType = { 
-
-// };
-
-// SFSM_fnc_canBombOnCapVars = { 
-
-// };
-
-// [[name _man, " was stopped from blowing himself up."]] call dbgmsg;
-
 // SFSM_fnc_bombOnCapture = { 
 
 // };
 
-
-[player, objNull] spawn SFSM_fnc_bombOnCapture;
 // private _magData  = ["DemoCharge_Remote_Mag"] call ObjScan_fnc_magazineData;
 // private _ammo     = _magData get  "AmmoType" ;
 // private _ammoData = [_ammo] call ObjScan_fnc_getAmmoData; selectionPos
 
-// hint str ([player] call SFSM_fnc_getBiggestInvExplosive);
+// 2 boundingBoxReal _explosive;
+// _ammo = [player] call SFSM_fnc_getBiggestInvExplosive;
+// hint str ([_ammo,[_ammo] call ObjScan_fnc_getAmmoData]);
+
+
+// [player, objNull] spawn SFSM_fnc_bombOnCapture;
 // private _magData  = ["MiniGrenade"] call ObjScan_fnc_magazineData;
 // private _ammo     = _magData get  "AmmoType";
 // private _ammoData = [_ammo] call ObjScan_fnc_getAmmoData;
@@ -61,6 +40,7 @@ private _man2    = bb;
 // private _ex       = _ammo createVehicle position player;
 // sleep 2;
 // _ex setDamage 1;
+
 
 // private _explosives = 
 // [
@@ -75,6 +55,8 @@ private _man2    = bb;
 //   "IEDUrbanSmall_Remote_Mag"
 // ];
 
+// hint str (_explosives apply {[_x] call ObjScan_fnc_magazineData get  "AmmoType";});
+
 // {
 //   private _magData  = [_x] call ObjScan_fnc_magazineData;
 //   private _ammo     = _magData get  "AmmoType";
@@ -84,5 +66,6 @@ private _man2    = bb;
 //   sleep 3;
   
 // } forEach _explosives;
+
 
 systemChat "devFile read";
