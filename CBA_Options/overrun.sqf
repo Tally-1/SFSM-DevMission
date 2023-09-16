@@ -53,10 +53,10 @@ private _versionName = "DCO soldier FSM | Overrun";
 	["Captured Bomb probability", "The probability that a captured soldier blows himself up."],
 	_versionName,
 	[
-		0,    //minimum 
-		1, 	 //max
-		0.2,//default
-		2, //decimals
+		0,     // minimum 
+		1, 	  //  max
+		0.2, //   default
+		2,  //    decimals
 		true
 	]
 ] call cba_settings_fnc_init;

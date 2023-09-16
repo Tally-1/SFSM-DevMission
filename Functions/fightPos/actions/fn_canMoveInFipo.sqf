@@ -35,7 +35,8 @@ if!([_fipo] call SFSM_fnc_fipoAvailable)             exitWith{false;};
 if!([_man, _fipo] call SFSM_fnc_fipoAllowedMan)      exitWith{false;};
 
 // If enemies are near the fighting position
-private _nearEnemies = [_man, SFSM_overRunDistance, (getPosATL _fipo)] call SFSM_fnc_nearEnemies;
+private _distance    = [_fipo] call SFSM_fnc_fipoOverrunDist;
+private _nearEnemies = [_man, _distance, (getPosATL _fipo)] call SFSM_fnc_nearEnemies;
 if(_nearEnemies isNotEqualTo [])
 exitWith{false;};
 

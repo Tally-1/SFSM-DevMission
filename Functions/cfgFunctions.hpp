@@ -555,6 +555,8 @@ class CfgFunctions
             class flee              {};
             
             class canBeOverRun      {};
+            class canBeOverrunFipo  {}; // not sure if this may belong in the fightPos category
+            class fipoOverrunDist   {};
             class panic             {};
             class panicAction       {};
             class calmPanicked      {};

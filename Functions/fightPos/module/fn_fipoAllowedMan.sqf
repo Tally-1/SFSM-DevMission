@@ -28,8 +28,11 @@ exitWith {false;};
 
 //Inactive fire-sector on a dynamic fipo.
 private _dynamic = _fipo getVariable "dynamicFipo";
+private _data    = _fipo getVariable "azFipoData";
+private _azFipo  = !isNil "_data";
 if(_dynamic isEqualTo true
-&&{[_fipo, _man] call SFSM_fnc_dynamicFipoActive isEqualTo false})
+&&{_azFipo  isEqualTo false
+&&{[_fipo, _man] call SFSM_fnc_dynamicFipoActive isEqualTo false}})
 exitWith{false;};
 
 

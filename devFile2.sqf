@@ -183,7 +183,21 @@ while {sleep 0.1; true;} do {
     };
 };
 
+SFSM_fnc_debugCuratorKeyHandler = { 
+params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
+private _pressed = false;
 
+if(_key isEqualTo 79)exitWith {execVM 'devFile.sqf'; true;};
+
+if   (_ctrl 
+&&   {_key isEqualTo 34})
+exitWith{
+        [] call SFSM_fnc_onDbgCurKey;
+        true;
+};
+
+false;
+};
 /*
 private _valArr = this getVariable ["SFSM_allActions",[]];
 hint str _valArr;
