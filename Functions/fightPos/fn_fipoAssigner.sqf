@@ -11,7 +11,7 @@ private _excludedMen  = [];
 			if(alive _assignedMan)then{_excludedMen pushBackUnique _assignedMan;};
     };
     
-} forEach SFSM_fipositions;
+} forEach SFSM_allFipos;//SFSM_fipositions;
 
 if(SFSM_debugger
 &&{(count _excludedMen) > 0})then{

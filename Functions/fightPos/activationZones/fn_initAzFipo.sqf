@@ -19,6 +19,7 @@ private _objData = [
     // ["sides",       _sides],
     ["position",    _pos],
     ["owner",       objNull],
+    ["active_actions", false],
 
 /*----------------Methods--------------*/
     ["availUnits",       {[]    call SFSM_fnc_availAzFipoUnits}],

@@ -555,7 +555,7 @@ class CfgFunctions
             class azFipoActive          {};
             class availAzFipoUnits      {};
             class handleAZfipos         {};
-            class onAzActiveChanged     {};
+            class onAzSidesChanged      {};
             class azFipoGetOut          {};
             class azFipoActions         {};
             class handleActivationZones {};
@@ -805,6 +805,9 @@ class CfgFunctions
             class fipoHRDbgTxt          {};
 
             class flashFipoText         {};
+            class drawActivationZones   {};
+            class activationZone3D      {};
+            class AZ3DLines             {};
 
         };
 

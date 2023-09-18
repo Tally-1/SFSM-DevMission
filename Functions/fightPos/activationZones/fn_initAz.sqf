@@ -2,7 +2,8 @@ params["_activationZone"];
 
 private _activationSides = [_activationZone] call SFSM_fnc_getAzSides;
 private _fipos           = [_activationZone] call SFSM_fnc_getAzFipos;
-private _knowledge       = 4 * (_activationZone getVariable "activationknowledge");
+private _knowledgeBase   = _activationZone getVariable "activationknowledge";
+private _knowledge       = 4 * _knowledgeBase;
 private _pos             = getPosATLVisual _activationZone;
 private _area            = [_activationZone] call SFSM_fnc_getAzArea;
 private _radius          = (selectMax [(_area#0), (_area#1)])*2;
@@ -23,6 +24,7 @@ private _objData = [
     ["module",             _activationZone],
     ["sides",              _activationSides],
     ["knowledge",          _knowledge],
+    ["knowledge_base",     _knowledge],
     ["fipos",              _fipos],
     ["position",           _pos],
     ["area",               _area],
@@ -37,7 +39,7 @@ private _objData = [
 /*----------------Methods--------------*/
     ["getUnits",        {[]    call SFSM_fnc_getUnitsInAz}],
     ["update",          {[]    call SFSM_fnc_updateAz}],
-    ["onActiveChanged", {[]    call SFSM_fnc_onAzActiveChanged}],
+    ["onSidesChanged",  {[]    call SFSM_fnc_onAzSidesChanged}],
     ["hostilePresent",  {_this call SFSM_fnc_hostilePresentInAz}]
 ];
 
