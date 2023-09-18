@@ -1,0 +1,48 @@
+params["_activationZone"];
+
+private _activationSides = [_activationZone] call SFSM_fnc_getAzSides;
+private _fipos           = [_activationZone] call SFSM_fnc_getAzFipos;
+private _knowledge       = 4 * (_activationZone getVariable "activationknowledge");
+private _pos             = getPosATLVisual _activationZone;
+private _area            = [_activationZone] call SFSM_fnc_getAzArea;
+private _radius          = (selectMax [(_area#0), (_area#1)])*2;
+private _modeInt         = _activationZone getVariable "type";
+private _mode            = "activate";
+
+
+if(_modeInt isEqualTo 1)then{_mode = "deactivate";};
+
+
+private _objData = [ 
+/*---------------Settings--------------*/
+    ["#type",       "fipo-activation-zone"],
+    ["#flags", [/*"unscheduled",*/"sealed"]],
+    ["#noCopy",     true],
+
+/*----------------Values---------------*/
+    ["module",             _activationZone],
+    ["sides",              _activationSides],
+    ["knowledge",          _knowledge],
+    ["fipos",              _fipos],
+    ["position",           _pos],
+    ["area",               _area],
+    ["radius",             _radius],
+    ["units",              []],
+	["sides_present",      []],
+    ["active",             false],
+    ["mode",               _mode],
+    ["mode_code",          _modeInt],
+    ["last_fipo_handling", time],
+
+/*----------------Methods--------------*/
+    ["getUnits",        {[]    call SFSM_fnc_getUnitsInAz}],
+    ["update",          {[]    call SFSM_fnc_updateAz}],
+    ["onActiveChanged", {[]    call SFSM_fnc_onAzActiveChanged}],
+    ["hostilePresent",  {_this call SFSM_fnc_hostilePresentInAz}]
+];
+
+private _az = createHashMapObject [_objData];
+
+_activationZone setVariable ["SFSM_AzData", _az];
+
+_az;

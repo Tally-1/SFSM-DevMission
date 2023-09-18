@@ -536,7 +536,33 @@ class CfgFunctions
             class fipoBuildingDestroyed {};
         };
 
-/********************************************************/
+        class activationZones
+        {
+            file = "functions\fightPos\activationZones";
+            class initFIPOsAndAZs       {};
+            class initActivationZones   {};
+            class getAzSides            {};
+            class validAzUnit           {};
+            class getUnitsInAz          {};
+            class getAzArea             {};
+            class updateAz              {};
+            class initAz                {};
+
+            class getAzFipos            {};
+            class getAzFipoZones        {};
+            class initAzFipo            {};
+            class hostilePresentInAz    {};
+            class azFipoActive          {};
+            class availAzFipoUnits      {};
+            class handleAZfipos         {};
+            class onAzActiveChanged     {};
+            class azFipoGetOut          {};
+            class azFipoActions         {};
+            class handleActivationZones {};
+
+        };
+
+/***********************FIPO-END*************************/
 /********************************************************/
 
 
@@ -777,6 +803,8 @@ class CfgFunctions
             class add3Dsector           {};
             class fipoDebugData         {};
             class fipoHRDbgTxt          {};
+
+            class flashFipoText         {};
 
         };
 

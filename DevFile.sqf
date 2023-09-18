@@ -22,236 +22,85 @@ player allowDamage false;
 SFSM_Custom3Dpositions = [];
 private _man1    = cc;
 private _man2    = bb;
-
-
-SFSM_fnc_getAzFipos = { 
-params["_activationZone"];
-private _azFipos = [];
-{
-    if(typeOf _x isEqualTo "SFSM_FIPO")then{
-        _azFipos pushBack _x;
-        _x setVariable ["AZ_FIPO", true, true];
-    };
-    
-} forEach (synchronizedObjects _activationZone);
-
-_azFipos;
-};
-
-
-
-SFSM_fnc_initFIPOsAndAZs = { 
-private _fipos           = [];
-private _activationZones = [];
-private _azFipos         = [];
-
-{
-    if(typeOf _x isEqualTo "SFSM_FIPO")
-    then{_fipos pushBack _x};
-
-    if(typeOf _x isEqualTo "SFSM_AZ")then{
-    private _connectedFipos = [_x] call SFSM_fnc_getAzFipos;
-    _azFipos append _connectedFipos;
-    _activationZones pushBack _x;
-    };
-
-} forEach (entities "logic");
- 
-{[_x] call SFSM_fnc_initFipo} forEach _fipos;
-
-SFSM_fipositions = _fipos select {(_x in _azFipos) isEqualTo false;};
-SFSM_azFIPOs     = _azFipos         apply {[_x] call SFSM_fnc_initAzFipo;};;
-
-
-
-true;
-};
-
-
-SFSM_fnc_initActivationZones = { 
-params["_zones"];
-private _initializedZones = _zones apply {[_x] call SFSM_fnc_initAz;};
-private _sorted = [_initializedZones, [], {_x get "mode_code"}, "ASCEND"] call BIS_fnc_sortBy;
-SFSM_activationZones = _sorted;
-
-true;
-};
-
-
-SFSM_fnc_initAzFipo = { 
-params["_fipo"];
-private _activationZones = (synchronizedObjects _fipo) select {typeOf _x isEqualTo "SFSM_AZ"};
-private _sides           = [_fipo] call SFSM_fnc_fipoDefineSides;
-private _pos             = getPosATLVisual _fipo;
-
-private _objData = [ 
-/*---------------Settings--------------*/
-    ["#type",       "fipo-activation-zone"],
-    ["#flags", [/*"unscheduled",*/"sealed"]],
-    ["#noCopy",     true],
-
-/*----------------Values---------------*/
-    ["module",           _fipo],
-    ["activation_zones", _activationZones],
-    ["sides",            _sides],
-    ["position",         _pos],
-    ["owner",            objNull],
-/*----------------Methods--------------*/
-    ["availUnits",  SFSM_fnc_availAzFipoUnits],
-    ["moveInMan",   SFSM_fnc_moveInAzFIPO],
-    ["isAvailable", SFSM_fnc_moveInAzFIPO]
-];
-
-private _azFipo = createHashMapObject [_objData];
-
-_fipo setVariable ["azFipoData", _azFipo];
-
-_azFipo;
-};
-
-SFSM_fnc_moveInAzFIPO =
-
-SFSM_fnc_availAzFipoUnits = { 
-private _fipo     = _self get "module";
-private _entities = (_self get "position") nearEntities SFSM_fipoGetInDistance;
-private _units    = _entities select {[_x] call SFSM_fnc_canMoveInFipo;};
-
-
-_units;
-};
-
-
-SFSM_fnc_getAzSides = { 
-params["_activationZone"];
-private _sides = [];
-
-if(_activationZone getVariable "activatedByEast")        then{_sides pushBack east;};
-if(_activationZone getVariable "activatedByIndependent") then{_sides pushBack independent;};
-if(_activationZone getVariable "activatedByWest")        then{_sides pushBack west;};
-
-if(_sides isEqualTo [])then{[["Error: ActivationZone with no sides allowed detected"],2] call dbgmsg;};
-
-_sides;
-};
-
-
-// [20, 40, 345.195, true, 20]
-// positions inAreaArray [center, a, b, angle, isRectangle, c]
-
-SFSM_fnc_getAzArea = { 
-params["_activationZone"]; (_activationZone getVariable "objectarea")
-params["_a", "_b", "_angle", "_isRectangle", "_c"]; 
-private _center = getPos _activationZone;
-private _area   = [_center, _a, _b, _angle, _isRectangle, _c];
-
-_area;
-};
-
-SFSM_fnc_validAzUnit = { 
-params["_entity"];
-
-if!(_entity inArea (_self get "area"))     exitWith{false;};
-if!((side _entity) in (_self get "sides")) exitWith{false;};
-if!([_entity] call SFSM_fnc_functionalMan) exitWith{false;};
-
-
-true;
-};
-
-SFSM_fnc_getUnitsInAz = { 
-private _entities = (_self get "position") nearEntities (_self get "radius");
-private _units = _entities select {[_x] call SFSM_fnc_validAzUnit;};
-
-
-_units;
-};
-
-
-
-SFSM_fnc_updateAz = { isNil{
-
-private _units     = _self get "units";
-private _status    = _self get "active";
-private _newUnits  = _self call ["getUnits"];
-private _activeNow = (_newUnits isNotEqualTo []);
-
-if(_units isEqualTo _newUnits)exitWith{};
-
-_self set ["units", _newUnits];
-
-if(_activeNow isEqualTo _status)exitWith{};
-
-_self set ["active", _activeNow];
-
-_self call ["onActiveChanged"];
-
-
-}};
-
-
-
-SFSM_fnc_onAzActiveChanged = { 
-
-
-
-
-["activation_zone_status_changed", _self] call CBA_fnc_localEvent;
-true;
-};
-
-
-
-SFSM_fnc_initAz = { 
-params["_activationZone"];
-
-private _activationSides = [_activationZone] call SFSM_fnc_getAzSides;
-private _fipos           = [_activationZone] call SFSM_fnc_getAzFipos;
-private _knowledge       = 4 * (_activationZone getVariable "activationknowledge");
-private _pos             = getPosATLVisual _activationZone;
-private _area            = [_activationZone] call SFSM_fnc_getAzArea;
-private _radius          = (selectMax [(_area#0), (_area#1)])*2;
-private _modeInt         = _activationZone getVariable "type";
-private _mode            = "activate";
-
-
-if(_modeInt isEqualTo 1)then{_mode = "deactivate";};
-
-
-private _objData = [ 
-/*---------------Settings--------------*/
-    ["#type",       "fipo-activation-zone"],
-    ["#flags", [/*"unscheduled",*/"sealed"]],
-    ["#noCopy",     true],
-
-/*----------------Values---------------*/
-    ["module",    _activationZone],
-    ["sides",     _activationSides],
-    ["knowledge", _knowledge],
-    ["fipos",     _fipos],
-    ["position",  _pos],
-    ["area",      _area],
-    ["radius",    _radius],
-    ["units",     []],
-    ["active",    false],
-    ["mode",      _mode],
-    ["mode_code", _modeInt],
-
-/*----------------Methods--------------*/
-    ["getUnits",        SFSM_fnc_getUnitsInAz],
-    ["update",          SFSM_fnc_updateAz],
-    ["onActiveChanged", SFSM_fnc_onAzActiveChanged]
-];
-
-private _az = createHashMapObject [_objData];
-
-_az;
-};
-
-az1_obj = [az1] call SFSM_fnc_initAz;
-systemChat str (az1_obj call ["update"]);
+// d1 = (f1 getVariable "azFipoData");
+// hint str (d1 call ["availUnits"]);
+
+
+// _fipo setVariable ["posname", "Activation Zone FIPO", true];
+
+// SFSM_fnc_getFipoZonesUnits = { 
+// params[["_man",  nil, objNull]];
+// private _fireZoneUnits  = [];
+// private _flankZoneUnits = [];
+// {_fireZoneUnits append (_x get "units")}  forEach (_self get "fire_zones");
+// {_flankZoneUnits append (_x get "units")} forEach (_self get "flank_zones");
+
+// if(isNil "_man")exitWith{[_fireZoneUnits, _flankZoneUnits]};
+
+// _fireZoneUnits  = _fireZoneUnits  select {[_man, _x] call SFSM_fnc_validEnemy;};
+// _flankZoneUnits = _flankZoneUnits select {[_man, _x] call SFSM_fnc_validEnemy;};
+
+
+// [_fireZoneUnits, _flankZoneUnits];
+// };
+
+// SFSM_fnc_initFIPOsAndAZs      = {};
+// SFSM_fnc_getAzArea            = {};
+// SFSM_fnc_validAzUnit          = {};
+// SFSM_fnc_getUnitsInAz         = {};
+// SFSM_fnc_updateAz             = {};
+// SFSM_fnc_initAz               = {};
+// SFSM_fnc_initActivationZones  = {};
+// SFSM_fnc_getAzFipos           = {};
+// SFSM_fnc_getAzFipoZones       = {};
+// SFSM_fnc_azFipoFireZoneActive = {};
+// SFSM_fnc_azFipoOutFlanked     = {};
+// SFSM_fnc_initAzFipo           = {};
+// SFSM_fnc_flashFipoText        = {};
+// SFSM_fnc_hostilePresentInAz   = {};
+// SFSM_fnc_getAzSides           = {};
+// SFSM_fnc_canMoveInFipo        = {};
+// SFSM_fnc_getInFipo            = {};
+// SFSM_fnc_getOutFipo           = {};
+// SFSM_fnc_fipoAllowedMan       = {};
+// SFSM_fnc_azFipoActive         = {};
+// SFSM_fnc_availAzFipoUnits     = {};
+// SFSM_fnc_handleAZfipos        = {};
+// SFSM_fnc_updateAz             = {};
+// SFSM_fnc_onAzActiveChanged    = {};
+// SFSM_fnc_azFipoGetOut         = {};
+// SFSM_fnc_azFipoActions        = {};
+
+// SFSM_fnc_handleActivationZones = { 
+
+// };
+
+[] call SFSM_fnc_handleActivationZones;
+// [] call SFSM_fnc_initFIPOsAndAZs;
+// az_3 = az3 getVariable "SFSM_AzData";
+
+// hint str (az_3 in SFSM_activationZones);
+
+// az_3 call ["update"];
+// hint str (az call ["hostilePresent", [west]]);
+// (f1 getVariable "azFipoData") call ["fipoActions"];
+
+// [f1, "Hello!"] spawn SFSM_fnc_flashFipoText;
+
+// az1_obj = [az3] call SFSM_fnc_initAz;
+// az1_obj call ["update"];
+// (f1 getVariable "azFipoData") call ["fipoActions"];
 // hint az1_obj;
 // copyToClipboard str az1_obj;
 
 // [m1, f2] call SFSM_fnc_canMoveInFipo;
 
+// {
+//     if(typeOf _x isEqualTo "SFSM_FIPO")
+//     then{SFSM_fipositions pushBack _x};
+
+//     if(typeOf _x isEqualTo "SFSM_AZ")
+//     then{SFSM_activationZones pushBack _x};
+    
+// } forEach (entities "logic");
 systemChat "devFile read";

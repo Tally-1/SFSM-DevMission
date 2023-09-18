@@ -18,7 +18,8 @@ if(_noFipo
 
 if(_noFipo)exitWith{};
 
-
+private _azFipoData = _fipo getVariable "azFipoData";
+if(!isNil "_azFipoData")then{_azFipoData set ["owner", objNull];};
 
 [_fipo] call SFSM_fnc_clearFipo;
 [_fipo] call SFSM_fnc_updateFipoMarker;
@@ -49,4 +50,5 @@ _man spawn{
 	};
 	true;
 };
+
 true;

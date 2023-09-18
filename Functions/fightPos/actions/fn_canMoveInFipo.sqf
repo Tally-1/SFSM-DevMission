@@ -4,6 +4,7 @@ params[
     ["_showFireSector", false]
 ];
 
+
 if!([_man] call SFSM_fnc_availableAiSoldier)  exitWith{false;};
 if ((behaviour _man) isEqualTo "SAFE")        exitWith{false;};
 if ((behaviour _man) isEqualTo "CARELESS")    exitWith{false;};
@@ -39,6 +40,10 @@ private _distance    = [_fipo] call SFSM_fnc_fipoOverrunDist;
 private _nearEnemies = [_man, _distance, (getPosATL _fipo)] call SFSM_fnc_nearEnemies;
 if(_nearEnemies isNotEqualTo [])
 exitWith{false;};
+
+private _azFipo = _fipo getVariable "azFipoData";
+if(!isNil "_azFipo")
+exitWith{_azFipo call ["isActive", [(side _man)]];};
 
 // The fighting position has been outflanked
 private _flankEnemies = [_fipo, _man] call SFSM_fnc_fipoFlankEnemies;

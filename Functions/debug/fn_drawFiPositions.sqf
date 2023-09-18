@@ -1,7 +1,8 @@
 private _camPos    = (positionCameraToWorld [0,0,0]);
-private _positions = SFSM_fiPositions select {_camPos distance2D _x < 200};
+// private _positions = SFSM_allFipos select {_camPos distance2D _x < 200};
 
-{
+{if(_camPos distance2D _x < 200)then{
+
     ([_x] call SFSM_fnc_fipoDebugData)
 	params [
 		"_pos",
@@ -19,4 +20,4 @@ private _positions = SFSM_fiPositions select {_camPos distance2D _x < 200};
         _size
     ] call SFSM_fnc_drawObjectMarker;
 
-} forEach _positions;
+}} forEach SFSM_allFipos;

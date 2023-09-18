@@ -188,15 +188,15 @@ SFSM_aceLoaded   = "@ace" in _addons;
 // getting all fipos stored in editor
 SFSM_fipositions     = [];// entities "logic" select {typeOf _x isEqualTo "SFSM_FIPO"};
 SFSM_activationZones = [];// entities "logic" select {typeOf _x isEqualTo "SFSM_FIPO"};
+SFSM_allFipos        = [];
+// {
+//     if(typeOf _x isEqualTo "SFSM_FIPO")
+//     then{SFSM_fipositions pushBack _x};
 
-{
-    if(typeOf _x isEqualTo "SFSM_FIPO")
-    then{SFSM_fipositions pushBack _x};
-
-    if(typeOf _x isEqualTo "SFSM_AZ")
-    then{SFSM_activationZones pushBack _x};
+//     if(typeOf _x isEqualTo "SFSM_AZ")
+//     then{SFSM_activationZones pushBack _x};
     
-} forEach (entities "logic");
+// } forEach (entities "logic");
 
 SFSM_sprinters   = []; //simultaneous sprinters, used to cap the amount
 SFSM_cleanupObjs = []; //Objects programmed for deletion.
