@@ -20,11 +20,9 @@ private _objData = [
     ["position",    _pos],
     ["owner",       objNull],
     ["active_actions", false],
+    ["activeForSides", []],
 
 /*----------------Methods--------------*/
-    ["availUnits",       {[]    call SFSM_fnc_availAzFipoUnits}],
-    ["fipoActions",      {[]    call SFSM_fnc_azFipoActions}],
-    ["getUnitsInZones",  {[]    call SFSM_fnc_getFipoZonesUnits}],
     ["isActive",         {_this call SFSM_fnc_azFipoActive}],
     ["getOut",           {[]    call SFSM_fnc_azFipoGetOut}]
 ];

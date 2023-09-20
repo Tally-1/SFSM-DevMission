@@ -1,3 +1,5 @@
+private _fipos = [];
+
 isNil{//forced unscheduled execution
 private _sides        = _self get "sides_present";
 private _newSides     = [];
@@ -9,6 +11,8 @@ private _activeNow    = (_newUnits isNotEqualTo []);
 
 if(_units isEqualTo _newUnits)exitWith{};
 
+
+
 _self set ["units", _newUnits];
 
 {
@@ -18,13 +22,24 @@ _self set ["units", _newUnits];
 
 }forEach _newUnits;
 
+if(_activeNow)then{
+    _fipos append (_self get "fipos");
+    [["Units moved in to AZ ", str (_self get "module")]] call dbgmsg;
+}else{
+	[["Units moved out of AZ ", str (_self get "module")]] call dbgmsg;
+};
+
 if(_sides isEqualTo _newSides)exitWith{};
 
 _self set  ["sides_present", _newSides];
-_self call ["onSidesChanged"];
+// _self call ["onSidesChanged"];
+["activation_sides_changed", _self] call CBA_fnc_localEvent;
 
 if(_activeNow isEqualTo _status)exitWith{};
 
 _self set ["active", _activeNow];
+_self set ["last_activated", time];
 
 };//Unscheduled execution ended...
+
+_fipos;

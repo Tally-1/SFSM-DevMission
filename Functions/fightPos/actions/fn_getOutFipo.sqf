@@ -6,9 +6,9 @@ _man setAnimSpeedCoef 1;
 _man enableAI "all";
 _man setUnitPos "AUTO";
 
-private _action      = [_man] call SFSM_fnc_getAction;
-private _fipo        = [_man] call SFSM_fnc_getFipo;
-private _noFipo      =  isNil "_fipo";
+private _action = [_man] call SFSM_fnc_getAction;
+private _fipo   = [_man] call SFSM_fnc_getFipo;
+private _noFipo =  isNil "_fipo";
 
 if(_noFipo
 &&{_action isNotEqualTo "none"})exitWith{

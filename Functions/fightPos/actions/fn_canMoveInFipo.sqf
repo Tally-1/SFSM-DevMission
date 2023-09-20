@@ -1,4 +1,4 @@
-params[
+    params[
     ["_man", nil],
     ["_fipo", nil],
     ["_showFireSector", false]
@@ -14,9 +14,9 @@ private _isLeader = (leader (group _man)) isEqualTo _man;
 if (_isLeader
 && {([group _man] call SFSM_fnc_hasActiveWp)})          exitWith{false;};
 
-// if has tried to get in within the last 60 seconds
+// if has tried to get in within the last 20 seconds
 private _timeSinceLastAttempt = time - ([_man, "lastFipoAttempt"] call SFSM_fnc_unitData);
-if(_timeSinceLastAttempt < 60)exitWith{false;};
+if(_timeSinceLastAttempt < 20)exitWith{false;};
 
 // if leader is a player, and playerFipos have been disabeled.
 if(SFSM_playerSquadFipo isEqualTo false
@@ -49,6 +49,5 @@ exitWith{_azFipo call ["isActive", [(side _man)]];};
 private _flankEnemies = [_fipo, _man] call SFSM_fnc_fipoFlankEnemies;
 if(_flankEnemies isNotEqualTo [[],[]])
 exitWith{false;};
-
 
 true;

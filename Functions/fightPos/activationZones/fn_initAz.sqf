@@ -6,7 +6,7 @@ private _knowledgeBase   = _activationZone getVariable "activationknowledge";
 private _knowledge       = 4 * _knowledgeBase;
 private _pos             = getPosATLVisual _activationZone;
 private _area            = [_activationZone] call SFSM_fnc_getAzArea;
-private _radius          = (selectMax [(_area#0), (_area#1)])*2;
+private _radius          = (selectMax [(_area#1), (_area#2)])*2;
 private _modeInt         = _activationZone getVariable "type";
 private _mode            = "activate";
 
@@ -35,11 +35,12 @@ private _objData = [
     ["mode",               _mode],
     ["mode_code",          _modeInt],
     ["last_fipo_handling", time],
+    ["last_activated",     time],
 
 /*----------------Methods--------------*/
     ["getUnits",        {[]    call SFSM_fnc_getUnitsInAz}],
     ["update",          {[]    call SFSM_fnc_updateAz}],
-    ["onSidesChanged",  {[]    call SFSM_fnc_onAzSidesChanged}],
+    // ["onSidesChanged",  {[]    call SFSM_fnc_onAzSidesChanged}],
     ["hostilePresent",  {_this call SFSM_fnc_hostilePresentInAz}]
 ];
 

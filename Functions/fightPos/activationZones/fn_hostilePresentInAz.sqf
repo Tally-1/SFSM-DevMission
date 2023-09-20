@@ -1,5 +1,5 @@
 params["_side"];
-private _sides = [];//(_self get "sides_present");
+private _sides = [];
 
 {
     if((_side knowsAbout _x >= (_self get "knowledge"))

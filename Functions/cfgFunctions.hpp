@@ -151,6 +151,7 @@ class CfgFunctions
 
             class threadsFinished       {};
             class enemiesInFront        {};
+            class addRandomToValue      {};
         };
 
         class morale
@@ -417,7 +418,6 @@ class CfgFunctions
             class selectFipo            {};
             class assignFiposs          {};
             class fipoMenRegroup        {};
-            // class groupFipoAssigner     {};
             class fipoAssigner          {};
             class fipoFSM               {};
             class fipoManager           {};
@@ -464,6 +464,8 @@ class CfgFunctions
             class getOutDynamicFipo   {};
             class fipoAttemptAllowed  {};
             
+            class getOutAzFipo        {};
+            class fipoPanic           {};
         };
 
         class module
@@ -553,11 +555,7 @@ class CfgFunctions
             class initAzFipo            {};
             class hostilePresentInAz    {};
             class azFipoActive          {};
-            class availAzFipoUnits      {};
-            class handleAZfipos         {};
-            class onAzSidesChanged      {};
             class azFipoGetOut          {};
-            class azFipoActions         {};
             class handleActivationZones {};
 
         };
