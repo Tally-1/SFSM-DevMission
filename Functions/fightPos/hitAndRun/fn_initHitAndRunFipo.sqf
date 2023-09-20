@@ -3,7 +3,7 @@ params["_man", "_fipo"];
 private _timeOut = _fipo getVariable "hitandruntimeout";
 private _random  = _fipo getVariable "hrTimeoutRandom";
 
-_timeOut = [_timeOut, _random, 0]call SFSM_fnc_addRandomToValue;
+_timeOut = [_timeOut, _random]call SFSM_fnc_addRandomToValue;
 
 
 _fipo setVariable ["shotsFired", 0];
