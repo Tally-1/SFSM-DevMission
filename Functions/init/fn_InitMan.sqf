@@ -54,6 +54,7 @@ _unitData set     ["abortSprint",         false];
 _unitData set     ["forcedMovement",      false];
 _unitData set     ["inFipo",              false];
 _unitData set     ["lastFipoPanicCheck",  0-300];
+_unitData set     ["lastFipoSuppression", 0-300];
 _unitData set     ["fipoPanicCount",      0];
 _unitData set     ["moraleEventsActive",  []];
 _unitData set     ["moraleEvents",        []];

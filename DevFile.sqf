@@ -13,20 +13,7 @@ systemChat "devFile found";
 
 player allowDamage false;
 SFSM_Custom3Dpositions = [];
-// private _man1    = cc;
-// private _man2    = bb;
 
-// SFSM_fnc_addRandomToValue = { 
-
-// };
-
-
-// [cc] call SFSM_fnc_fipoPanic;
 
 /************************************************************************************/
-// this spawn{
-// while {sleep 1; alive _this;} do {
-// 	[_this, "morale", 0] call SFSM_fnc_unitData;
-// 	_this setDamage 0.76;
-// }};
 systemChat "devFile read";

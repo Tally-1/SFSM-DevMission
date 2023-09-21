@@ -427,6 +427,9 @@ class CfgFunctions
             class tempPegToFipo         {};
             class dynamicFipoActive     {};
             class assignFipo            {};
+            class canFipoSuppress       {};
+            class getFipoSuppressPos    {};
+            class fipoSuppress          {};
                         
         };
 
@@ -972,28 +975,6 @@ class CfgFunctions
 
             class weaponAimPos           {};
         };
-
-        // class hunkerDown
-        // {
-        //     file = "functions\hunkerDown";
-        //     class getHunkerObject     {};
-        //     class initHunker          {};
-        //     class isHunkerObject      {};
-        //     class hunkAvailable       {};
-        //     class getAvHunkObject     {};
-        //     class filterHunkerObjects {};
-        //     class hunkObjHash         {};
-        //     class hunkerFSM           {};
-        //     class hunkerFsmStatus     {};
-        //     class addHunkerObjData    {};
-        //     class setHobjPositions    {};
-        //     class moveToHunkerPos     {};
-        //     class endHunker           {};
-        //     class initHunkerFSM       {};
-        //     class handleHunkerStatus  {};
-        //     class randomHunkerInit    {};
-
-        // };
 
         class turrets
         {
