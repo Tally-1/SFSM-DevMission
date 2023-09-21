@@ -6,6 +6,7 @@ private _knowledgeBase   = _activationZone getVariable "activationknowledge";
 private _knowledge       = 4 * _knowledgeBase;
 private _pos             = getPosATLVisual _activationZone;
 private _area            = [_activationZone] call SFSM_fnc_getAzArea;
+private _corners         = _area call SFSM_fnc_getAreaCorners;
 private _radius          = (selectMax [(_area#1), (_area#2)])*2;
 private _modeInt         = _activationZone getVariable "type";
 private _mode            = "activate";
@@ -28,6 +29,7 @@ private _objData = [
     ["fipos",              _fipos],
     ["position",           _pos],
     ["area",               _area],
+    ["corners",            _corners],
     ["radius",             _radius],
     ["units",              []],
 	["sides_present",      []],

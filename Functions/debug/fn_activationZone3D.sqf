@@ -1,5 +1,5 @@
 params["_AZ"];
-private _pos   = _x get "position";
+private _pos   = _AZ get "position";
 private _color = [0.85,0.4,0,0.7];
 private _text  = "Fire Zone";
 private _icon  = "\a3\ui_f\data\igui\cfg\simpletasks\letters\z_ca.paa";
@@ -13,6 +13,8 @@ then{
 if(_AZ get "active")then{
     _color deleteAt 3;
     _color pushBack 1;
+	[_AZ] call SFSM_fnc_activeAZ3D;
+
 };
 
 

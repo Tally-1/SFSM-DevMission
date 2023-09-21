@@ -26,6 +26,14 @@ if(SFSM_debugger
 };
 
 
+if(_fipoList isEqualTo SFSM_activeAzFipos)
+then{
+    private _timeSpent = round (time - _startTime);
+    private _msg = ["Processed ", (count _fipoList), " AZ-Fighting-Positions in ", _timeSpent, "s"];
+    [_msg, 1] call dbgmsg;
+    SFSM_activeAzFipos = [];
+};
+
 SFSM_fipoAssigner = nil;
 
 true;

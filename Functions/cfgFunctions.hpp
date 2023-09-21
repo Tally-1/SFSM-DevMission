@@ -152,6 +152,8 @@ class CfgFunctions
             class threadsFinished       {};
             class enemiesInFront        {};
             class addRandomToValue      {};
+
+            class getAreaCorners        {};
         };
 
         class morale
@@ -560,6 +562,7 @@ class CfgFunctions
             class azFipoActive          {};
             class azFipoGetOut          {};
             class handleActivationZones {};
+            class AZmanager             {};
 
         };
 
@@ -809,6 +812,8 @@ class CfgFunctions
             class drawActivationZones   {};
             class activationZone3D      {};
             class AZ3DLines             {};
+            class activeAZ3D            {};
+            class AZ3DCorners           {};
 
         };
 

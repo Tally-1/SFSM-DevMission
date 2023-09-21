@@ -66,6 +66,7 @@ sleep 0.1;
 
 [] spawn SFSM_fnc_TaskManager;
 [] spawn SFSM_fnc_fipoManager;
+[] spawn SFSM_fnc_AZmanager;
 // [] spawn SFSM_fnc_moraleUpdater;
 
 /* --------comment by Tally----------

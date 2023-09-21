@@ -19,6 +19,8 @@ private _azFipos         = [];
 SFSM_activationZones = [_activationZones] call SFSM_fnc_initActivationZones;
 SFSM_fipositions     = _fipos select  {(_x in _azFipos) isEqualTo false;};
 SFSM_azFIPOs         = _azFipos apply {[_x] call SFSM_fnc_initAzFipo;};
+SFSM_activeAzFipos   = [];
 SFSM_allFipos        = _fipos;
+
 
 true;
