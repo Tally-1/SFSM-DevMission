@@ -34,7 +34,7 @@ if(_assignFipos isEqualTo true
 &&{_azFipos isNotEqualTo []})
 then{
 	[["Assigning ", count _azFipos, " Az fipos."]] call dbgmsg;
-	[_azFipos] call SFSM_fnc_fipoAssigner;
+	[_azFipos, true] call SFSM_fnc_fipoAssigner;
 };
 
 if(_assignFipos isEqualTo false)then{

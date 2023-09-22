@@ -10,21 +10,21 @@ sleep 3;
 []spawn{while {true} do {
    // [] call SFSM_fnc_AssigAllFipos;
    // [] spawn SFSM_fnc_unitToFipoAssigner;
+   [SFSM_activeAzFipos, true] call SFSM_fnc_fipoAssigner;
    sleep 1;   
 }};
 
 private _assignAllTime = time + 60;
 // forever loop, priority is put on the activation Zone FIPOS (Newest feature)
 while {sleep 2; true} do {
-   [true] call SFSM_fnc_handleActivationZones;
-   [] call SFSM_fnc_fipoAssigner;
-   [SFSM_activeAzFipos] call SFSM_fnc_fipoAssigner;
+   // [true] call SFSM_fnc_handleActivationZones;
+   [SFSM_fipositions, true] call SFSM_fnc_fipoAssigner;
 
    if(time > _assignAllTime)
    then{
-      // [SFSM_allFipos] call SFSM_fnc_fipoAssigner;
-      [] call SFSM_fnc_AssigAllFipos;
-      _assignAllTime = time + 60;
+      [SFSM_allFipos, true] call SFSM_fnc_fipoAssigner;
+      // [] call SFSM_fnc_AssigAllFipos;
+      _assignAllTime = time + 120;
       "Assigned all FIPOs" call dbgmsg;
    };
 };

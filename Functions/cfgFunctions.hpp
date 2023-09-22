@@ -155,6 +155,7 @@ class CfgFunctions
 
             class getAreaCorners        {};
             class buildingOnPos         {};
+            class splitArr              {};
         };
 
         class morale
@@ -427,6 +428,7 @@ class CfgFunctions
             class assignFiposs          {};
             class fipoMenRegroup        {};
             class fipoAssigner          {};
+            class assigAllFipos         {};
             class fipoFSM               {};
             class fipoManager           {};
             class unitToFipoAssigner    {};

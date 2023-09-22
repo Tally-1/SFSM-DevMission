@@ -16,49 +16,15 @@ systemChat "devFile found";
 // };
 
 
-SFSM_fnc_splitArr = { 
-params["_array", "_splitCount"];
-private _arrCount   = count _array;
-private _elPrArr    = floor (_arrCount / _splitCount);
-private _wholeCount = _elPrArr*_splitCount;
-private _remaining  = _arrCount % _wholeCount;
+// SFSM_fnc_splitArr = { 
 
-private _splitArr = [];
-private _index    = 0;
-for "_i" from 0 to (_splitCount-1) do {
-	private _newArr = _array select [_index, _elPrArr];
-	_splitArr pushBack _newArr;
-	_index = _index + _elPrArr;
-};
-
-if(_remaining > 0)then{
-	private _newArr = _array select [_index, _remaining];
-	_splitArr pushBack _newArr;
-};
-
-_splitArr;
-};
+// };
 
 
 
-SFSM_fnc_AssigAllFipos = { 
-private _allfipos  = [SFSM_allfipos, 4] call SFSM_fnc_splitArr;
-private _threads   = [];
-private _startTime = time;
+// SFSM_fnc_assigAllFipos = { 
 
-{
-	private _script = [_x, true] spawn SFSM_fnc_fipoAssigner;
-	_threads pushBack _script;
-} forEach _allfipos;
-
-waitUntil { sleep 1; [_threads] call SFSM_fnc_threadsFinished;};
-
-private _timeSpent = round (time - _startTime);
-private _msg = ["Processed All FIPOS in ", _timeSpent, "s"];
-[_msg, 1] call dbgmsg;
-
-true;
-};
+// };
 
 
 
