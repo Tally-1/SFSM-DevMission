@@ -1,14 +1,18 @@
 params[
-    ["_fipoList", SFSM_fipositions]
+    ["_fipoList", SFSM_fipositions],
+    ["_forced", false]
 ];
-if(_fipoList isEqualTo [])     exitWith{};
-if(!isNil "SFSM_fipoAssigner") exitWith{};
+if(_fipoList isEqualTo [])exitWith{};
+
+if(isNil "SFSM_fipoAssigner" isEqualTo false
+&&{_forced isEqualTo false})exitWith{};
 
 SFSM_fipoAssigner = true;
 
 private _startTime    = time;
 private _squadLeaders = (allGroups apply {leader _x})select{[_x] call SFSM_fnc_isRealMan};
 private _excludedMen  = [];
+
 {
     if([_x] call SFSM_fnc_fipoAvailable)
     then{
@@ -17,6 +21,7 @@ private _excludedMen  = [];
     };
     
 } forEach _fipoList;
+
 
 if(SFSM_debugger
 &&{(count _excludedMen) > 0})then{

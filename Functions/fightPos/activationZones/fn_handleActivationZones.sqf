@@ -20,7 +20,7 @@ isNil{//Forced unscheduled execution.
 // [["updated ", _count, " AZs in ", _timeSpent, " seconds."]] call dbgmsg;
 
 // Just in case some of these has not been updated for >1 minute a check is done anyway.
-private _filter     = {time - (_x get "last_fipo_handling") > 60};
+private _filter     = {time - (_x get "last_fipo_handling") > 90 && {_x get "mode_code" isEqualTo 0}};
 private _checkZones = SFSM_activationZones select _filter;
 private _checkFipos = _checkZones apply {_x get "fipos";};
 

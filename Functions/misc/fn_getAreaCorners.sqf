@@ -18,8 +18,8 @@ _positions append _roofPositions;
 _floorPositions =
 _floorPositions apply {
 	_x params ["_xx", "_y", "_z"];
-	if(_z < 0.2)then{_z = 0.2};
-	[_xx, _y, _z];
+	// if(_z < 0.2)then{_z = 0.2};
+	[_xx, _y, 0.2];
 };
 
 [_floorPositions, _roofPositions, _positions];

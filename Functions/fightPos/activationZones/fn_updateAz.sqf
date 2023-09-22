@@ -24,9 +24,9 @@ _self set ["units", _newUnits];
 
 if(_activeNow)then{
     _fipos append (_self get "fipos");
-    [["Units moved in to AZ ", str (_self get "module")]] call dbgmsg;
+    // [["Units moved in to AZ ", str (_self get "module")]] call dbgmsg;
 }else{
-	[["Units moved out of AZ ", str (_self get "module")]] call dbgmsg;
+	// [["Units moved out of AZ ", str (_self get "module")]] call dbgmsg;
 };
 
 if(_sides isEqualTo _newSides)exitWith{};

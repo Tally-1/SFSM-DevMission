@@ -113,7 +113,7 @@ params["_man"];
 };
 
 SFSM_fnc_getActiveScripts = { 
-params[["_copy", false]];
+params[["_copy", false], ["_namesOnly"]];
 
 private _scriptData   = diag_activeSQFScripts apply {[_x#0, _x#3]};
 private _scriptCount1 = diag_activeScripts#0;
@@ -198,6 +198,11 @@ exitWith{
 
 false;
 };
+
+SFSM_fnc_activeFunctions = {
+    (diag_activeSQFScripts select {"SFSM_fnc_" in (_x#0)})apply {_x#0};
+};
+
 /*
 private _valArr = this getVariable ["SFSM_allActions",[]];
 hint str _valArr;

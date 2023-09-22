@@ -143,7 +143,8 @@ SFSM_fipoActions = [
 	"In cover",
 	"Moving to fighting position",
 	"Dodging to FIPO",
-    "Engaging target"
+    "Engaging target",
+    "Suppressing enemy"
 ] apply {toLowerANSI _x;};
 
 //all AI abilities that can be disabled using the "disableAI" command.

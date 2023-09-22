@@ -154,6 +154,7 @@ class CfgFunctions
             class addRandomToValue      {};
 
             class getAreaCorners        {};
+            class buildingOnPos         {};
         };
 
         class morale
@@ -203,6 +204,10 @@ class CfgFunctions
 
             class regroup               {};
             class fixPos                {};
+
+            class formatMovePos         {};
+            class forceMoveToPos2       {};
+            class keepMoving            {};
 
         };
 
@@ -281,6 +286,7 @@ class CfgFunctions
             class validCleanupObject    {};
             class garbageCollector      {};
             class minuteTasks           {};
+            class verifyScriptStatus    {};
             
         };
 
@@ -423,6 +429,7 @@ class CfgFunctions
             class fipoAssigner          {};
             class fipoFSM               {};
             class fipoManager           {};
+            class unitToFipoAssigner    {};
             class canTeleportFipo       {};
             class checkFipoError        {};
             class getFipoMen            {};

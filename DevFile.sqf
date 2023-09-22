@@ -11,26 +11,68 @@ systemChat "devFile found";
 // SFSM_moveAnims call ["animEndPos", ["sprint-front", player, nil, 3]];
 /************************************************************************************/
 
-player allowDamage false;
-SFSM_Custom3Dpositions = [];
+// SFSM_fnc_keepMoving = { 
 
-private _data      = az1 getVariable "SFSM_AzData";
-private _area      = _data get "area";
-private _pos      = _data get "position";
-private _corners   = _area call SFSM_fnc_getAreaCorners;
-private _screenPos   = worldToScreen _pos;
-// hint str ;
-// hint str( (_data get "corners")isEqualTo _corners);
-// private _area      = _data get "area";
-// private _i = 0;
-// (_area call SFSM_fnc_getAreaCorners)params["_bottom", "_top"];
-// _bottom append _top;
-// private _positions = (_bottom apply{_i=_i+1; [_x, str _i]});
+// };
 
-// SFSM_Custom3Dpositions = _positions;// [[_positions#0, "FR"], [_positions#1, "FL"], [_positions#2, "BL"], [_positions#3, "BR"]];
-// [_startPos, _x, _color]
 
-// SFSM_fnc_AZmanager = {};
+SFSM_fnc_splitArr = { 
+params["_array", "_splitCount"];
+private _arrCount   = count _array;
+private _elPrArr    = floor (_arrCount / _splitCount);
+private _wholeCount = _elPrArr*_splitCount;
+private _remaining  = _arrCount % _wholeCount;
+
+private _splitArr = [];
+private _index    = 0;
+for "_i" from 0 to (_splitCount-1) do {
+	private _newArr = _array select [_index, _elPrArr];
+	_splitArr pushBack _newArr;
+	_index = _index + _elPrArr;
+};
+
+if(_remaining > 0)then{
+	private _newArr = _array select [_index, _remaining];
+	_splitArr pushBack _newArr;
+};
+
+_splitArr;
+};
+
+
+
+SFSM_fnc_AssigAllFipos = { 
+private _allfipos  = [SFSM_allfipos, 4] call SFSM_fnc_splitArr;
+private _threads   = [];
+private _startTime = time;
+
+{
+	private _script = [_x, true] spawn SFSM_fnc_fipoAssigner;
+	_threads pushBack _script;
+} forEach _allfipos;
+
+waitUntil { sleep 1; [_threads] call SFSM_fnc_threadsFinished;};
+
+private _timeSpent = round (time - _startTime);
+private _msg = ["Processed All FIPOS in ", _timeSpent, "s"];
+[_msg, 1] call dbgmsg;
+
+true;
+};
+
+
+
+
+
+
+// [] spawn SFSM_fnc_unitToFipoAssigner;
+
+// SFSM_fnc_forceMoveToPos2 = { 
+
+// };
+// [true] call SFSM_fnc_getActiveScripts;
+// private _pos = getPosATLVisual player;
+// [cc, _pos] spawn SFSM_fnc_forceMoveToPos2;
 
 /************************************************************************************/
 systemChat "devFile read";
