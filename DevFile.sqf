@@ -11,31 +11,8 @@ systemChat "devFile found";
 // SFSM_moveAnims call ["animEndPos", ["sprint-front", player, nil, 3]];
 /************************************************************************************/
 
-// SFSM_fnc_keepMoving = { 
+// [] call SFSM_fnc_killTarget;
 
-// };
-
-
-// SFSM_fnc_splitArr = { 
-
-// };
-
-
-
-// SFSM_fnc_assigAllFipos = { 
-
-// };
-
-
-
-
-
-
-// [] spawn SFSM_fnc_unitToFipoAssigner;
-
-// SFSM_fnc_forceMoveToPos2 = { 
-
-// };
 // [true] call SFSM_fnc_getActiveScripts;
 // private _pos = getPosATLVisual player;
 // [cc, _pos] spawn SFSM_fnc_forceMoveToPos2;
