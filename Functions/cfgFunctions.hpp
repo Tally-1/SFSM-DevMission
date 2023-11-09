@@ -156,6 +156,7 @@ class CfgFunctions
             class getAreaCorners        {};
             class buildingOnPos         {};
             class splitArr              {};
+            class getCourageTime        {};
         };
 
         class morale
@@ -267,6 +268,10 @@ class CfgFunctions
             class enableHijack          {};
             class disableHijack         {};
             class canHijackVehicle      {};
+            class hijackVehiclesGlobal  {};
+            class joinVehGrp            {};
+            class reinforceVehGlobal    {};
+            class handleHijackGlobal    {};
 
         };
 
@@ -334,6 +339,8 @@ class CfgFunctions
             class antiRubberBand        {};
             class ACE_MedicalCBA        {};
             class buildingDestroyedEH   {};
+            class groupCommandEh        {};
+            class onCommandChange       {};
             
         };
 
@@ -453,12 +460,13 @@ class CfgFunctions
 
         }
 
-        class actions
+        class FIPO_actions
         {
             file = "functions\fightPos\actions";
             class fipoActions         {};
             class leaderGetOutFipo    {};
             class curatorGetOutFipo   {};
+            class safeGetOutFipo      {};
             class fipoRemoveUseless   {};
             class fipoCorrectPosition {};
             
@@ -854,39 +862,41 @@ class CfgFunctions
         class healing
         {
             file = "functions\healing";
-            class proneHeal             {};
-            class endSelfHeal           {};
-            class canSelfHeal           {};
-            class hasMedkit             {};
-            class nearestHealer         {};
-            class initBuddyHeal         {};
-            class canBuddyHeal          {};
-            class buddyHeal             {};
-            class endBuddyHeal          {};
-            class reviveAnim            {};
-            class buddyRevive           {};
-            class endBuddyRevive        {};
-            class initDragMan           {};
-            class dragStatus            {};
-            class drag                  {};
-            class dragMan               {};
-            class endDragMan            {};
-            class dragPos               {};
-            class searchAndRevive       {};
+            class proneHeal               {};
+            class endSelfHeal             {};
+            class canSelfHeal             {};
+            class hasMedkit               {};
+            class nearestHealer           {};
+            class initBuddyHeal           {};
+            class canBuddyHeal            {};
+            class buddyHeal               {};
+            class endBuddyHeal            {};
+            class reviveAnim              {};
+            class buddyRevive             {};
+            class endBuddyRevive          {};
+            class initDragMan             {};
+            class dragStatus              {};
+            class drag                    {};
+            class dragMan                 {};
+            class endDragMan              {};
+            class dragPos                 {};
+            class searchAndRevive         {};
 
-            class getGroupHealer        {};
-            class playerNeedsMedic      {};
-            class canCallMedic          {};
-            class playerHealHint        {};
-            class callPlayerMedic       {};
-            class playerCallMedicAction {};
-            class nearestValidReviver   {};
-            class sortRevivers          {};
-            class sortUnconscious       {};
+            class getGroupHealer          {};
+            class playerNeedsMedic        {};
+            class canCallMedic            {};
+            class playerHealHint          {};
+            class callPlayerMedic         {};
+            class playerCallMedicAction   {};
+            class nearestValidReviver     {};
+            class sortRevivers            {};
+            class sortUnconscious         {};
+            class onKnockOut              {};
+            class onWakeUp                {};
+            class unconAiAbility          {};
 
-            class onKnockOut            {};
-            class onWakeUp              {};
-            class unconAiAbility        {};
+            class ACE_medicalGlobal       {};
+            class woundedAndHealersGlobal {};
         };
 
 
@@ -996,6 +1006,7 @@ class CfgFunctions
             file = "functions\turrets";
             class isTurret              {};
             class getTurretsAndLeaders  {};
+            class assignMenToTurrets    {};
             class assignTurret          {};
             class canGetInTurret        {};
             class turretAvailable       {};
@@ -1009,6 +1020,8 @@ class CfgFunctions
             class turretGetOut          {};
             class groupLeaveTurrets     {};
             class manAllTurrets         {};
+            class manTurretsGlobal      {};
+            
         };
     };
 

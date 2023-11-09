@@ -14,14 +14,14 @@ private _title = "<t color='#72d15a'>Call for Ammo!</t>";
     {[] spawn SFSM_fnc_buddyRearm },
     nil,        // arguments
     1.5,        // priority
-    false,        // showWindow
-    true,        // hideOnUse
-    "",            // shortcut
+    false,      // showWindow
+    true,       // hideOnUse
+    "",         // shortcut
     _condition, // condition
-    1,            // radius
-    false,        // unconscious
-    "",            // selection
-    ""            // memoryPoint
+    1,          // radius
+    false,      // unconscious
+    "",         // selection
+    ""          // memoryPoint
 ]] 
 remoteExecCall ["addAction", 0, true];
 

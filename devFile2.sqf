@@ -112,6 +112,9 @@ params["_man"];
     openCuratorInterface;
 };
 
+// (group player) addEventHandler ["CommandChanged", {_this call SFSM_fnc_onCommandChange;}];
+
+
 SFSM_fnc_getActiveScripts = { 
 params[["_copy", false], ["_namesOnly"]];
 
