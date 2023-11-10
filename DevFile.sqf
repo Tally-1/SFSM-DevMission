@@ -7,17 +7,30 @@ systemChat "devFile found";
 // [_man] call SFSM_fnc_availableAiSoldier;
 // [_man, _anims, false, _condition, _midFnc, _postFnc] call SFSM_fnc_playAnimList;
 // [true] call SFSM_fnc_getActiveScripts;
+// [player] call SFSM_fnc_ACE_disableAutoStance;
 // [false, true, true] spawn SFSM_fnc_animListData;
 // SFSM_moveAnims call ["animEndPos", ["sprint-front", player, nil, 3]];
 /************************************************************************************/
-/*
+/*[player] call SFSM_fnc_ACE_callMedic;
 Current Tasks:
 private _courage = 0.1;
 private _coef    = 0.5/_courage;
 private _time    = 10;
 _time * _coef;
 */
+// _action = [
+// 	"VulcanPinch",
+// 	"Vulcan Pinch",
+// 	"",
+// 	{_target setDamage 1;},
+// 	{true},
+// 	{},
+// 	[parameters], 
+// 	[0,0,0], 
+// 	100
 
+// ] call ace_interact_menu_fnc_createAction;
+// [cursorTarget, 0, ["ACE_TapShoulderRight"], _action] call ace_interact_menu_fnc_addActionToObject;
 
 /*
  * Argument:
@@ -72,60 +85,75 @@ private _action = [
 _action;
 };
 
+// _action = 
 // [
-// 	player,
-// 	"SFSM_testAction",
-// 	"Test action",
-// 	{hint "Hello Altis!"}
+// 	"CheckExtTank",
+// 	"Check External Tank",
+// 	"",
+// 	{hint format ["Ext Tank: %1", 5]},
+// 	{true}
+// ] call ace_interact_menu_fnc_createAction;
 
-// ] call SFSM_fnc_addAceAction;
-
-private _baseCategory = [
-	"baseCategory",
-	"Frontlines",
-	"",
-	{},
-	{true}
-] call ace_interact_menu_fnc_createAction;
+// [
+// 	"Tank_F", 
+// 	0, 
+// 	["ACE_MainActions", "CheckFuel"], 
+// 	_action, 
+// 	true
+// ] call ace_interact_menu_fnc_addActionToClass;
+/*
+_action = 
 [
-	player,
-	0,
-	["ACE_SelfActions"],
-	_baseCategory
+	"VulcanPinch",
+	"Vulcan Pinch",
+	"",
+	{_target setDamage 1;},
+	{true},
+	{},
+	[parameters], 
+	[0,0,0], 
+	100
+
+] call ace_interact_menu_fnc_createAction;
+
+[
+	cursorTarget, 
+	0, 
+	["ACE_TapShoulderRight"], 
+	_action
 
 ] call ace_interact_menu_fnc_addActionToObject;
+*/
+SFSM_fnc_ACE_simpleObjectAction = { 
+params[
+	"_object",
+	"_title",
+	"_condition",
+	"_code",
+	["_icon", ""]
+];
 
-_condition = {
-    true;//(!pabst_radioFinder_on) && {(backpack _player) in pabst_radioFinder_backpacks} && {[_player, _target, []] call ace_common_fnc_canInteractWith}
-};
-_statement = {
-    hint "Control";//[true] call pabst_fnc_radioFinder_action;
-};
-_action = [
-	"Open RDF",
-	"Radio Direction Finder",
-	"",
-	_statement,
+private _parentPath = ["ACE_MainActions"];
+private _actionType = 0;
+private _actionName = ["SFSM_ACE_MainActions", _title]joinString"";
+
+private _action = [
+	_actionName,
+	_title,
+	_icon,
+	_code,
 	_condition
-
 ] call ace_interact_menu_fnc_createAction;
 
 [
-	player, 
-	1, 
-	["ACE_SelfActions", "baseCategory"], 
+	_object,
+	_actionType,
+	_parentPath,
 	_action
 
 ] call ace_interact_menu_fnc_addActionToObject;
 
-
-
-// private _action =
-// [
-
-// ] call ace_interact_menu_fnc_createAction
-
-// hint str ([aa, 10] call SFSM_fnc_getCourageTime);
-
+_action;
+};
 /************************************************************************************/
 systemChat "devFile read";

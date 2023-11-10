@@ -25,13 +25,13 @@ private _title = "<t color='#f8aa45'>Allow vehicle hijacking.</t>";
     },
     nil,        // arguments
     1.5,        // priority
-    true,        // showWindow
-    true,        // hideOnUse
-    "",            // shortcut
+    true,       // showWindow
+    true,       // hideOnUse
+    "",         // shortcut
     _condition, // condition
-    5,            // radius
-    false,        // unconscious
-    "",            // selection
-    ""            // memoryPoint
+    5,          // radius
+    false,      // unconscious
+    "",         // selection
+    ""          // memoryPoint
 ]] 
 remoteExecCall ["addAction", 0, true];

@@ -1,6 +1,8 @@
 params["_man"];
 
-
+if(SFSM_aceLoaded) exitWith{
+   [_man] remoteExecCall ["SFSM_fnc_ACE_disableAutoStance", 0, true];
+};
 
 private _condition = "
 private _disabeled = (group player) getVariable ['SFSM_noAutoStance', false];

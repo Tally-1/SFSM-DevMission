@@ -59,7 +59,7 @@ then{
         SFSM_disableSpecialists = "player-squads"; // "all" "player-squads" "none"
         SFSM_specRegroupDist    = 70;             //   Distance to leader for specialists to regroup.
         SFSM_BFFknowledgeType   = "both sides";  //   "one side" "both sides"
-        SFSM_autoStanceAction   = false;        // Show action to toggle auto-stance.
+        SFSM_autoStanceAction   = true;         // Show action to toggle auto-stance.
         SFSM_autoStanceEnabled  = true;        //  Enable auto-stance for playerGroups.
         SFSM_hijackVehicles     = "always";   //   Allow units to hijack enemy vehicles. ["always", "never", "action"]
         SFSM_overRunDistance    = 50;        // activate overrun when enemy is within this distance 

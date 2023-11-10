@@ -1,11 +1,13 @@
 params ["_man"];
 
 if!(SFSM_buddyRearm)exitWith{};
-//SFSM_fnc_canCallBuddyRearm
 private _playable = [_man] call SFSM_fnc_playableUnit;
 if!(_playable)exitWith{};
-private _condition = "(_this) isEqualTo (_target) && {[_this] call SFSM_fnc_canCallBuddyRearm}";
+if(SFSM_aceLoaded) exitWith{
+   [_man] remoteExecCall ["SFSM_fnc_ACE_buddyRearm", 0, true];
+};
 
+private _condition = "(_this) isEqualTo (_target) && {[_this] call SFSM_fnc_canCallBuddyRearm}";
 private _title = "<t color='#72d15a'>Call for Ammo!</t>";
 
 [_man,

@@ -2,6 +2,34 @@ class CfgFunctions
 {
     class SFSM
     {
+        class actionMenu
+        {
+            file = "functions\actionMenu";
+            class buddyRearmAction      {};
+            class captureAction         {};
+            class disableAutoStance     {};
+            class disableHijack         {};
+            class enableAutoStance      {};
+            class enableHijack          {};
+            class executeAction         {};
+            class panicAction           {};
+            class playerCallMedicAction {};
+            class vehicleActions        {};
+            class autoStanceActions     {};
+            class showAutoStAction      {};
+        }
+
+        class ACE_actionMenu
+        {
+            file = "functions\actionMenu\ace";
+            class ACE_selfActionCategory {};
+            class ACE_simpleSelfAction   {};
+            class ACE_callMedic          {};
+            class ACE_buddyRearm         {};
+            class ACE_enableAutoStance   {};
+            class ACE_disableAutoStance  {};
+        };
+        
         class audioFeedback
         {
             file = "functions\audioFeedback";
@@ -96,10 +124,8 @@ class CfgFunctions
             class isPosition            {};
             class availableRegulars     {};
             class isUncon               {};
-            class enableAutoStance      {};
-            class disableAutoStance     {};
-            class autoStanceActions     {};
-            class showAutoStAction      {};
+            
+            
             class playableUnit          {};
             class playableGroup         {};
 
@@ -264,9 +290,7 @@ class CfgFunctions
             class getInVehicle          {};
             class vehicleNeedsCrew      {};
             class reinforceVehicles     {};
-            class vehicleActions        {};
-            class enableHijack          {};
-            class disableHijack         {};
+            
             class canHijackVehicle      {};
             class hijackVehiclesGlobal  {};
             class joinVehGrp            {};
@@ -606,7 +630,6 @@ class CfgFunctions
             class canBeOverrunFipo  {}; // not sure if this may belong in the fightPos category
             class fipoOverrunDist   {};
             class panic             {};
-            class panicAction       {};
             class calmPanicked      {};
         }
 
@@ -618,8 +641,7 @@ class CfgFunctions
             class surrender          {};
             class capture            {};
             class execute            {};
-            class executeAction      {};
-            class captureAction      {};
+            
             class joinSurrenderGroup {};
             class battleLost         {};
             
@@ -684,7 +706,6 @@ class CfgFunctions
         class buddyRearm
         {
             file = "functions\rearming\buddyRearm";
-            class buddyRearmAction   {};
             class isRearmBuddy       {};
             class canCallBuddyRearm  {};
             class getRearmingBuddy   {};
@@ -887,7 +908,6 @@ class CfgFunctions
             class canCallMedic            {};
             class playerHealHint          {};
             class callPlayerMedic         {};
-            class playerCallMedicAction   {};
             class nearestValidReviver     {};
             class sortRevivers            {};
             class sortUnconscious         {};
