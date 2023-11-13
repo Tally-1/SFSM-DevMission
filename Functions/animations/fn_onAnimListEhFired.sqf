@@ -31,7 +31,7 @@ if(_timedOut  isEqualTo true)  exitWith{true;};
 if(_continue  isEqualTo false) exitWith{true;};
 if(_canMove   isEqualTo false) exitWith{true;};
 
-[] call _midFnc;
+[_man] call _midFnc;
 
 _continue = [] call _condition;
 

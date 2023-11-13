@@ -17,17 +17,29 @@ class CfgFunctions
             class vehicleActions        {};
             class autoStanceActions     {};
             class showAutoStAction      {};
+            class removeCaptureAction   {};
+            class removeExecuteAction   {};
         }
 
         class ACE_actionMenu
         {
             file = "functions\actionMenu\ace";
-            class ACE_selfActionCategory {};
-            class ACE_simpleSelfAction   {};
-            class ACE_callMedic          {};
-            class ACE_buddyRearm         {};
-            class ACE_enableAutoStance   {};
-            class ACE_disableAutoStance  {};
+            class ACE_selfActionCategory  {};
+            class ACE_simpleSelfAction    {};
+            class ACE_callMedic           {};
+            class ACE_buddyRearm          {};
+            class ACE_enableAutoStance    {};
+            class ACE_disableAutoStance   {};
+            class ACE_objectActionSimple  {};
+            class ACE_removeObjectAction  {};
+            class ACE_removeSelfAction    {};
+            class ACE_disableHijack       {};
+            class ACE_enableHijack        {};
+            class ACE_removeExecuteAction {};
+            class ACE_executeAction       {};
+            class ACE_panicAction         {};
+            class ACE_removeCaptureAction {};
+
         };
         
         class audioFeedback
@@ -657,11 +669,41 @@ class CfgFunctions
             class initAiRescue       {};
             class helpOrCapture      {};
             class allAiRescueCapture {};
+
+            class endCapture         {};
+            class postCapture        {};
+            class initUnconCapture   {};
+            class setCaptured        {};
+            class toggleCaptureAi    {};
+        };
+
+        class capture_abuse
+        {
+            file = "functions\overrun\capture\abuse";
+            class executionerKillshot     {};
+            class captorAbuseOnAnimChange {};
+            class captorAbuseMirrorAnim   {};
+            class allowCaptureExecution   {};
+            class captorAbuseAnimList     {};
+            class captorAbuseAnimParams   {};
+            class initCaptureAbuse        {};
+            class endCaptureAbuse         {};
+            class captureAbuse            {};
+            class allowCaptureAbuse       {};
+
+        };
+
+        class capture_eventsAndActions
+        {
+            file = "functions\overrun\capture\ehAndAction";
+            class captureKillEh         {};
+            class captureHitEh          {};
+            class executionerKillshotEh {};
         };
 
         class selfBomb 
         {
-            file = "functions\overrun\selfBomb";
+            file = "functions\overrun\capture\selfBomb";
             class captureBombType  {};
             class canBombOnCapVars {};
             class bombOnCapture    {};

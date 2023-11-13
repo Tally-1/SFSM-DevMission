@@ -1,8 +1,6 @@
 params ["_man"];
-
-if!(SFSM_buddyRearm)exitWith{};
-private _playable = [_man] call SFSM_fnc_playableUnit;
-if!(_playable)exitWith{};
+if!(SFSM_buddyRearm)                   exitWith{};
+if!([_man] call SFSM_fnc_playableUnit) exitWith{};
 if(SFSM_aceLoaded) exitWith{
    [_man] remoteExecCall ["SFSM_fnc_ACE_buddyRearm", 0, true];
 };

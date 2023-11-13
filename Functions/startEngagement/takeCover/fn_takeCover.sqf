@@ -18,7 +18,7 @@ if (_noCoverSpam)                              exitWith{};
 if (_man getVariable ['SFSM_excluded', false]) exitWith{};
 if ([_man] call SFSM_fnc_isPlayer)             exitWith{};
 if!([_man, true] call SFSM_fnc_canRun)         exitWith{};
-if!(_canTakeCover)                             exitWith{[["taking cover blocked grp: ", _group]] call dbgmsg}; 
+if!(_canTakeCover)                             exitWith{[["taking cover blocked grp: ", (name leader _group)]] call dbgmsg}; 
 
 [_man] call SFSM_fnc_initTakeCover;
 

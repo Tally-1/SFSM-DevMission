@@ -10,7 +10,7 @@ if(isNil "_category")
 then{   _category = [_player] call SFSM_fnc_ACE_selfActionCategory;};
 private _parentPath = ["ACE_SelfActions", _category];
 private _actionType = 1;
-private _actionName = ["SFSM_ACE_SelfActions", _title]joinString"";
+private _actionName = ["SFSM_ACE_SelfActions ", _title]joinString"";
 
 private _action = [
 	_actionName,
@@ -28,4 +28,4 @@ private _action = [
 
 ] call ace_interact_menu_fnc_addActionToObject;
 
-_action;
+[_parentPath, _actionName];

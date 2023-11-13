@@ -11,149 +11,68 @@ systemChat "devFile found";
 // [false, true, true] spawn SFSM_fnc_animListData;
 // SFSM_moveAnims call ["animEndPos", ["sprint-front", player, nil, 3]];
 /************************************************************************************/
-/*[player] call SFSM_fnc_ACE_callMedic;
-Current Tasks:
-private _courage = 0.1;
-private _coef    = 0.5/_courage;
-private _time    = 10;
-_time * _coef;
-*/
-// _action = [
-// 	"VulcanPinch",
-// 	"Vulcan Pinch",
-// 	"",
-// 	{_target setDamage 1;},
-// 	{true},
-// 	{},
-// 	[parameters], 
-// 	[0,0,0], 
-// 	100
 
-// ] call ace_interact_menu_fnc_createAction;
-// [cursorTarget, 0, ["ACE_TapShoulderRight"], _action] call ace_interact_menu_fnc_addActionToObject;
+SFSM_fnc_capturePlayer = { 
+params["_player", "_captor"];
+if(_player isNotEqualTo player)exitWith{false;};
 
-/*
- * Argument:
- * 0: Action name <STRING>
- * 1: Name of the action shown in the menu <STRING>
- * 2: Icon <STRING>
- * 3: Statement <CODE>
- * 4: Condition <CODE>
- * 5: Insert children code <CODE> (Optional)
- * 6: Action parameters <ANY> (Optional)
- * 7: Position (Position array, Position code or Selection Name) <ARRAY>, <CODE> or <STRING> (Optional)
- * 8: Distance <NUMBER> (Optional)
- * 9: Other parameters [showDisabled,enableInside,canCollapse,runOnHover,doNotCheckLOS] <ARRAY> (Optional)
- * 10: Modifier function <CODE> (Optional)
- */
-/*
- * Argument:
- * 0: Object the action should be assigned to <OBJECT>
- * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
- * 2: Parent path of the new action <ARRAY> (Example: `["ACE_SelfActions", "ACE_Equipment"]`)
- * 3: Action <ARRAY>
- */
+if(animationState _player isNotEqualTo "acts_executionvictim_loop")
+then{_player playMoveNow "Acts_executionvictim_Loop";};
 
-SFSM_fnc_addAceAction = { 
-params[
-	["_object",      nil,               objNull], // Object the action should be assigned to <OBJECT>
-	["_actionName",  nil,                 ""],    // Action name <STRING>
-	["_displayName", nil,                 ""],    // Name of the action shown in the menu <STRING>
-	["_statement",   {},                  {}],    // Statement <CODE>
-	["_condition",   {true},              {}],    // Condition <CODE>
-	["_icon",        "",                  ""],    // Icon <STRING>
-	["_actionType",  0,                   0 ],    // Type of action, 0 for actions, 1 for self-actions <NUMBER>
-	["_parentPath",  ["ACE_SelfActions"], []]     // Parent path of the new action <ARRAY> (Example: `["ACE_SelfActions", "ACE_Equipment"]`)
-];
 
-private _action = [
-	_actionName,
-	_displayName,
-	_icon,
-	_statement,
-	_condition
-] call ace_interact_menu_fnc_createAction;
-
-[
-	_object,
-	_actionType,
-	_parentPath,
-	_action
-
-] call ace_interact_menu_fnc_addActionToObject;
-
-_action;
 };
 
-// _action = 
-// [
-// 	"CheckExtTank",
-// 	"Check External Tank",
-// 	"",
-// 	{hint format ["Ext Tank: %1", 5]},
-// 	{true}
-// ] call ace_interact_menu_fnc_createAction;
+// SFSM_fnc_allowCaptureAbuse = { 
 
-// [
-// 	"Tank_F", 
-// 	0, 
-// 	["ACE_MainActions", "CheckFuel"], 
-// 	_action, 
-// 	true
-// ] call ace_interact_menu_fnc_addActionToClass;
-/*
-_action = 
-[
-	"VulcanPinch",
-	"Vulcan Pinch",
-	"",
-	{_target setDamage 1;},
-	{true},
-	{},
-	[parameters], 
-	[0,0,0], 
-	100
+// };
 
-] call ace_interact_menu_fnc_createAction;
 
-[
-	cursorTarget, 
-	0, 
-	["ACE_TapShoulderRight"], 
-	_action
 
-] call ace_interact_menu_fnc_addActionToObject;
-*/
-SFSM_fnc_ACE_simpleObjectAction = { 
-params[
-	"_object",
-	"_title",
-	"_condition",
-	"_code",
-	["_icon", ""]
-];
+// SFSM_fnc_capture = { 
+// params[
+// 	"_captive", 
+// 	"_captor",
+// 	["_forceAbuse", false],
+// 	["_forceExecution", false]
+// ];
 
-private _parentPath = ["ACE_MainActions"];
-private _actionType = 0;
-private _actionName = ["SFSM_ACE_MainActions", _title]joinString"";
+// [_captive, _captor] call SFSM_fnc_initUnconCapture;
+// [_captive] remoteExecCall ["SFSM_fnc_removeCaptureAction", 0];
+// [_captive] remoteExecCall ["SFSM_fnc_executeAction", 0];
+// [_captive] call SFSM_fnc_captureKillEh;
+// [_captive] call SFSM_fnc_captureHitEh;
+// [_captive] call SFSM_fnc_setCaptured;
 
-private _action = [
-	_actionName,
-	_title,
-	_icon,
-	_code,
-	_condition
-] call ace_interact_menu_fnc_createAction;
+// private _bombed =
+// [_captive, _captor] call SFSM_fnc_bombOnCapture;
 
-[
-	_object,
-	_actionType,
-	_parentPath,
-	_action
+// if(_bombed)exitWith{false;};
 
-] call ace_interact_menu_fnc_addActionToObject;
+// ["capture",  [_captive, _captor]] call CBA_fnc_localEvent;
+// [_captive] remoteExec ["SFSM_fnc_capturePlayer", _captive];
+// [_captive] spawn SFSM_fnc_postCapture;
 
-_action;
-};
+// if([_captive, _captor, _forceAbuse]     call SFSM_fnc_allowCaptureAbuse)then{
+//    [_captive, _captor, _forceExecution] spawn SFSM_fnc_captureAbuse;
+// };
+
+// [[name _captive, " was captured by ", (name _captor)],1] call dbgmsg;
+
+// true;
+// };
+bbb allowDamage true;
+// [ddd, aaa] call SFSM_fnc_initCapture;
+bbb switchMove "Acts_executionvictim_Loop";
+// bbb playMoveNow "Acts_executionvictim_Loop";
+[bbb] call SFSM_fnc_setCaptured;
+sleep 2;
+// [bbb] call SFSM_fnc_activateMan;
+// [aaa] call SFSM_fnc_activateMan;
+[bbb, aaa] call SFSM_fnc_captureAbuse;
+// detach bbb;
+// detach aaa;
+// hint str ([ddd] call SFSM_fnc_canBeCaptured);
+
+// [this, 1] call SFSM_fnc_forcedFire;
 /************************************************************************************/
 systemChat "devFile read";

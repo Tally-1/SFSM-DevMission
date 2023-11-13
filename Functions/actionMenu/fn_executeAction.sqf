@@ -1,9 +1,12 @@
 params["_man"];
+if(SFSM_aceLoaded) exitWith{
+   [_man] call SFSM_fnc_ACE_executeAction;
+};
 
 private _condition = "alive _target && {handgunWeapon player isNotEqualTo ''}";
-private _title = "<t color='#f8aa45'>Execute</t>";
+private _title     = "<t color='#f8aa45'>Execute</t>";
+private _eh        = _man addAction
 
-[_man,
 [
     _title,        // title
     {
@@ -20,5 +23,6 @@ private _title = "<t color='#f8aa45'>Execute</t>";
     false,        // unconscious
     "",            // selection
     ""            // memoryPoint
-]] 
-remoteExecCall ["addAction", 0];
+];
+
+_man setVariable ["SFSM_executeAction", _eh];

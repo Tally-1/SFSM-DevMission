@@ -7,6 +7,9 @@
 //              https://www.fiverr.com/hartgen_dev/script-anything-you-can-think-of-in-arma-3
 
 params["_vehicle"];
+if(SFSM_aceLoaded) exitWith{
+   [_vehicle] remoteExecCall ["SFSM_fnc_ACE_enableHijack", 0, true];
+};
 
 private _condition = "Alive _target 
                    && {(!(_target getVariable ['SFSM_allowHijack', false]))

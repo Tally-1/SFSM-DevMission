@@ -1,4 +1,6 @@
 params["_man", "_captor"];
+if!(random 1 < SFSM_bombOnCapture) exitWith{false;};
+if ([_man] call SFSM_fnc_isPlayer) exitWith{false;};
 
 // A variable can be inserted here(Using CBA EH) to stop the bomb from spawning.
 // read "fn_canBombOnCapVars.sqf"
@@ -36,5 +38,7 @@ _explosive setDamage 1;
 [_man, "none"] call SFSM_fnc_setAction;
 _man setVariable ["SFSM_capBombObj", nil];
 [[name _man, " blew himself up with a ", _bombType]] call dbgmsg;
+
+[_man] call SFSM_fnc_endCapture;
 
 true;

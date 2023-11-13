@@ -1,4 +1,7 @@
 params["_man"];
+if(SFSM_aceLoaded) exitWith{
+   [_man] remoteExecCall ["SFSM_fnc_ACE_panicAction", 0, true];
+};
 
 private _condition = "alive _target &&{side (group _target) isEqualTo side _this}";
 private _title = "<t color='#f8aa45'>Calm down</t>";
