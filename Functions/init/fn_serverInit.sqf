@@ -59,6 +59,14 @@ isNil{
     []    call SFSM_fnc_animationMaps;
     []    call SFSM_fnc_antiRubberBand;
     []    call SFSM_fnc_ACE_MedicalCBA;
+
+    // May move these lines to a separate function if more non-medical
+    // ACE eventhandlers are added.
+    [
+        "ace_captiveStatusChanged", 
+        {_this call SFSM_fnc_ACE_onCaptiveChange;}
+    
+    ] call CBA_fnc_addEventHandler;
     
 };
 

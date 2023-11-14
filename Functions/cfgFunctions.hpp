@@ -648,33 +648,35 @@ class CfgFunctions
         class capture
         {
             file = "functions\overrun\capture";
-            class dropWeapon         {};
-            class dropAllWeapons     {};
-            class surrender          {};
-            class capture            {};
-            class execute            {};
+            class dropWeapon          {};
+            class dropAllWeapons      {};
+            class surrender           {};
+            class capture             {};
+            class execute             {};
             
-            class joinSurrenderGroup {};
-            class battleLost         {};
+            class joinSurrenderGroup  {};
+            class battleLost          {};
             
-            class failRescue         {};
-            class failAiCapture      {};
-            class aiCaptureMan       {};
-            class unconSurrPan       {};
-            class canBeCaptured      {};
-            class canCapture         {};
-            class initCapture        {};
-            class canRescue          {};
-            class AiRescue           {};
-            class initAiRescue       {};
-            class helpOrCapture      {};
-            class allAiRescueCapture {};
+            class failRescue          {};
+            class failAiCapture       {};
+            class aiCaptureMan        {};
+            class unconSurrPan        {};
+            class canBeCaptured       {};
+            class canCapture          {};
+            class initCapture         {};
+            class canRescue           {};
+            class AiRescue            {};
+            class initAiRescue        {};
+            class helpOrCapture       {};
+            class allAiRescueCapture  {};
 
-            class endCapture         {};
-            class postCapture        {};
-            class initUnconCapture   {};
-            class setCaptured        {};
-            class toggleCaptureAi    {};
+            class endCapture          {};
+            class postCapture         {};
+            class initUnconCapture    {};
+            class setCaptured         {};
+            class toggleCaptureAi     {};
+
+            class ACE_onCaptiveChange {};
         };
 
         class capture_abuse
@@ -690,23 +692,38 @@ class CfgFunctions
             class endCaptureAbuse         {};
             class captureAbuse            {};
             class allowCaptureAbuse       {};
+            class doVictimAbuseAnim       {};
+            class captorAbuseCondition    {};
 
         };
 
         class capture_eventsAndActions
         {
             file = "functions\overrun\capture\ehAndAction";
-            class captureKillEh         {};
-            class captureHitEh          {};
-            class executionerKillshotEh {};
+            class captureKillEh           {};
+            class captureHitEh            {};
+            class executionerKillshotEh   {};
+            class captureAbuseAnimStartEh {};
         };
 
-        class selfBomb 
+        class capture_selfBomb 
         {
             file = "functions\overrun\capture\selfBomb";
             class captureBombType  {};
             class canBombOnCapVars {};
             class bombOnCapture    {};
+        };
+
+        class capture_player
+        {
+            file = "functions\overrun\capture\player";
+            class breakOutHint             {};
+            class capturePlayer            {};
+            class endPlayerCapture         {};
+            class onBreakOutKey            {};
+            class playerCaptureKeyHandlers {};
+            class playerCaptureOnKeyDown   {};
+            class playerCaptureOnKeyUp     {};
         };
 
         class reactiveFire

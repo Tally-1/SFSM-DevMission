@@ -16,7 +16,7 @@ if(isNil "_incapacitated")exitWith{};
 private _maxHealCount = (count _medics) + (count _fipoMedics) + (count _healers) + (count _availSpecialists);
 
 // if no healers were found then exit
-if(_maxHealCount isEqualTo 0)exitWith{"Nobody is available for buddy-healing" call dbgmsg;};
+if(_maxHealCount isEqualTo 0)exitWith{/*"Nobody is available for buddy-healing" call dbgmsg;*/};
 
 // if no wounded or incapacitated units were found then exit
 if(_wounded       isEqualTo []

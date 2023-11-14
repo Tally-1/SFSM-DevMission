@@ -91,21 +91,24 @@ then{
                 'Acts_AidlPercMstpSnonWnonDnon_warmup_6_loop'
         ]";
         SFSM_allowEvasion     = true;     //When no cover is found a soldier will run to avoid incoming fire.
-        SFSM_bombOnCapture    = 0.2;     // Probability for suicide-bomb when captured.
         SFSM_simpleBff        = true;   //  Remove Caching of Terrain objects. Will improve performance, but units taking cover will become slightly dumber.
         SFSM_spawnBffActions  = false; //   Spawns the functions called during a battle in a separate thread, bad for performance but ensures that the loop does not get aborted when an error occurs.
-        SFSM_captureExplosive = "largestEx"; // Choose which explosive you will be used in the case of capture suicide. ("gbu"   "grenade"  "largestEx")
+        
 
         SFSM_shotDistanceDef  = 300; // Default distance a man will hear enemy fire
         SFSM_shotDistanceAss  = 400; // The distance a man will hear enemy Assault rifles firing
         SFSM_shotDistanceMac  = 600; // The distance a man will hear enemy Machine Guns firing
         SFSM_shotDistanceSni  = 800; // The distance a man will hear enemy Sniper Rifles firing
         SFSM_shotDistanceSil  = 100; // The distance a man will hear enemy Silenced weapons firing.
-
-        SFSM_captureAbuseProb = 1;   // Float 0-1 probability that a captive will be beaten.
-        SFSM_cptrAbuseProbPlr = 1;   // Float 0-1 probability that a player-captive will be beaten.
-        SFSM_captureExecProb  = 1;   // Float 0-1 Probability that a captive Will be executed.
-        SFSM_cptrExecProbPlr  = 1;   // Float 0-1 Probability that a player-captive Will be executed.
+        
+        SFSM_bombOnCapture    = 0.2;         // Probability for suicide-bomb when captured.
+        SFSM_captureExplosive = "largestEx"; // Choose which explosive you will be used in the case of capture suicide. ("gbu"   "grenade"  "largestEx")
+        SFSM_captureAbuseProb = 1;           // Float 0-1 probability that a captive will be beaten.
+        SFSM_cptrAbuseProbPlr = 1;           // Float 0-1 probability that a player-captive will be beaten.
+        SFSM_captureExecProb  = 1;           // Float 0-1 Probability that a captive Will be executed.
+        SFSM_cptrExecProbPlr  = 1;           // Float 0-1 Probability that a player-captive Will be executed.
+        SFSM_cptrPlrEscProb   = 0.5;         // The probability for success when a player attempts to break free while captured.
+        SFSM_cptrPlrEscTime   = 8;           // How long one escape attempt takes in seconds.
 };
 
 
@@ -119,8 +122,12 @@ missionNamespace setVariable ["SFSM_shotDistanceSni",  SFSM_shotDistanceSni, tru
 missionNamespace setVariable ["SFSM_shotDistanceSil",  SFSM_shotDistanceSil, true];
 missionNamespace setVariable ["SFSM_captureAbuseProb", SFSM_captureAbuseProb,true];
 missionNamespace setVariable ["SFSM_cptrAbuseProbPlr", SFSM_cptrAbuseProbPlr,true];
+missionNamespace setVariable ["SFSM_captureExecProb",  SFSM_captureExecProb,true];
+missionNamespace setVariable ["SFSM_cptrExecProbPlr",  SFSM_cptrExecProbPlr,true];
+missionNamespace setVariable ["SFSM_cptrPlrEscProb",   SFSM_cptrPlrEscProb,true];
+missionNamespace setVariable ["SFSM_cptrPlrEscTime",   SFSM_cptrPlrEscTime,true];
 
-
+// pre 1.21 settings
 missionNamespace setVariable ["SFSM_FlinchTreshHold",    1,                     true];
 // missionNamespace setVariable ["SFSM_ProneTreshHold",    SFSM_ProneTreshHold,    true];
 missionNamespace setVariable ["SFSM_FlinchCoolDown",    SFSM_FlinchCoolDown,    true];

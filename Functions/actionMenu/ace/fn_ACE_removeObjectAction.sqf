@@ -3,6 +3,8 @@ params [
 	"_parentPath", 
 	"_actionName"
 ];
+if(isNil "_actionName")
+exitWith{"Could not remove ACE action, _actionName is nil" call dbgmsg;};
 
 private _actionList = _object getVariable ["ace_interact_menu_actions", []];
 

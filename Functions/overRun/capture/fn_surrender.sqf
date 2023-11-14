@@ -1,5 +1,5 @@
 params["_man"];
-["overrun_surrender",  [_man]] call CBA_fnc_localEvent;
+["SFSM_surrender",  [_man]] call CBA_fnc_localEvent;
 
 private _side = side _man;
 private _loadout = getUnitLoadout _man;

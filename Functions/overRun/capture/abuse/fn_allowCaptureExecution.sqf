@@ -3,6 +3,7 @@ params [
 	"_captor",
 	["_forced", false]
 ];
+// Players have their own action for this
 if([_captor] call SFSM_fnc_isPlayer) exitWith{false;};
 if(_forced)                          exitWith{true;};
 

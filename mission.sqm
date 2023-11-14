@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=44719;
+		nextID=44721;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={22782.994,20.491711,18980.248};
-		dir[]={-0.82077479,-0.42296654,-0.38396367};
-		up[]={-0.38311771,0.90614533,-0.17922489};
-		aside[]={-0.42373303,0,0.90578723};
+		pos[]={22772.471,47.193794,18914.852};
+		dir[]={-0.19371825,-0.55660754,0.80787456};
+		up[]={-0.12978841,0.83077562,0.54126424};
+		aside[]={0.97243428,-7.4505806e-009,0.2331776};
 	};
 };
 binarizationWanted=0;
@@ -32,20 +32,18 @@ addons[]=
 	"A3_Structures_F_Mil_BagFence",
 	"A3_Static_F_Mortar_01",
 	"Tallys_AK_120",
-	"A3_Weapons_F_Exp",
-	"ace_realisticnames",
-	"A3_Weapons_F_Mark_Acc",
 	"A3_Weapons_F",
 	"A3_Characters_F",
 	"A3_Weapons_F_Items",
 	"ace_medical_engine",
-	"ace_medical_treatment"
+	"ace_medical_treatment",
+	"ace_realisticnames"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=11;
+		items=9;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -80,8 +78,8 @@ class AddonsMetaData
 		};
 		class Item5
 		{
-			className="A3_Weapons_F_Exp";
-			name="Arma 3 Apex - Weapons and Accessories";
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -94,26 +92,12 @@ class AddonsMetaData
 		};
 		class Item7
 		{
-			className="A3_Weapons_F_Mark";
-			name="Arma 3 Marksmen - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item8
-		{
-			className="A3_Weapons_F";
-			name="Arma 3 Alpha - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item9
-		{
 			className="ace_medical_engine";
 			name="ACE3 - Medical Engine";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item10
+		class Item8
 		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
@@ -124,8 +108,7 @@ class AddonsMetaData
 };
 dlcs[]=
 {
-	"Enoch",
-	"Mark"
+	"Enoch"
 };
 randomSeed=904946;
 class ScenarioData
@@ -156,7 +139,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=65;
+		items=66;
 		class Item0
 		{
 			dataType="Logic";
@@ -17677,7 +17660,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22774.656,12.749643,18962.957};
+						position[]={22753.412,13.274875,18971.398};
 					};
 					side="Independent";
 					flags=7;
@@ -17689,12 +17672,11 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="srifle_GM6_ghex_F";
-								optics="optic_KHS_tan";
+								name="Tally_arifle_AKM_GOLD_F";
 								class primaryMuzzleMag
 								{
-									name="5Rnd_127x108_Mag";
-									ammoLeft=5;
+									name="120Rnd_GOLD_Mag";
+									ammoLeft=120;
 								};
 							};
 							class handgun
@@ -17721,9 +17703,9 @@ class Mission
 									};
 									class Item1
 									{
-										name="5Rnd_127x108_Mag";
+										name="120Rnd_GOLD_Mag";
 										count=3;
-										ammoLeft=5;
+										ammoLeft=120;
 									};
 								};
 								class ItemCargo
@@ -17771,7 +17753,6 @@ class Mission
 					};
 					id=44522;
 					type="Tally_CustomGorka_model";
-					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17808,7 +17789,6 @@ class Mission
 			{
 			};
 			id=44521;
-			atlOffset=9.5367432e-007;
 		};
 		class Item64
 		{
@@ -17822,7 +17802,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22765.348,13.241628,18977.197};
+						position[]={22766.807,13.111938,18972.303};
 					};
 					side="West";
 					flags=7;
@@ -17920,16 +17900,77 @@ class Mission
 			};
 			id=44713;
 		};
+		class Item65
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={22775.811,12.774604,18963.93};
+					};
+					side="Independent";
+					flags=7;
+					class Attributes
+					{
+						name="ccc";
+					};
+					id=44720;
+					type="I_medic_F";
+					atlOffset=9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=44719;
+			atlOffset=9.5367432e-007;
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=21;
+			nextID=24;
 		};
 		class Links
 		{
-			items=21;
+			items=24;
 			class Item0
 			{
 				linkID=0;
@@ -18134,6 +18175,36 @@ class Mission
 			{
 				linkID=20;
 				item0=44522;
+				item1=3215;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item21
+			{
+				linkID=21;
+				item0=44714;
+				item1=3215;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item22
+			{
+				linkID=22;
+				item0=44715;
+				item1=3215;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item23
+			{
+				linkID=23;
+				item0=44720;
 				item1=3215;
 				class CustomData
 				{

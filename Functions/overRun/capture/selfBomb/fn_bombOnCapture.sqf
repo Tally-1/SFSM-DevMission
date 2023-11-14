@@ -6,7 +6,10 @@ if ([_man] call SFSM_fnc_isPlayer) exitWith{false;};
 // read "fn_canBombOnCapVars.sqf"
 ["pre_bomb_on_capture", [_man, _captor]] call CBA_fnc_localEvent;
 private _canBomb   = [_man] call SFSM_fnc_canBombOnCapVars;
-if(_canBomb isEqualTo false)exitWith{[[name _man, " was stopped from blowing himself up..."]] call dbgmsg;};
+if(_canBomb isEqualTo false)exitWith{
+    [[name _man, " was stopped from blowing himself up..."]] call dbgmsg;
+    false;
+};
 
 private _bombType  = [_man] call SFSM_fnc_captureBombType;
 if(isNil "_bombType")
