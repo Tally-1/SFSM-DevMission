@@ -1,3 +1,5 @@
+if(time < 3)exitWith{"Exited devfile" call dbgmsg;};
+
 systemChat "devFile found";
 // SFSM_fnc_
 // SFSM_Custom3Dpositions = [];
@@ -76,10 +78,15 @@ systemChat "devFile found";
 // };
 
 // [ccc, bbb] call SFSM_fnc_initCapture;
-[ccc, true] call ACE_captives_fnc_setSurrendered;
-[ddd, true] call ACE_captives_fnc_setSurrendered;
+// [ccc, true] call ACE_captives_fnc_setSurrendered;
+// [ddd, true] call ACE_captives_fnc_setSurrendered; 
+
+[player, true] call ACE_captives_fnc_setSurrendered;
+
 sleep 3;
 [] call SFSM_fnc_allAiRescueCapture;
+// player switchMove "acts_executionvictim_kill";
+
 // [player, true] call ace_medical_fnc_setUnconscious;
 // [player, bbb] call SFSM_fnc_initCapture;
 // [player] call SFSM_fnc_setCaptured;

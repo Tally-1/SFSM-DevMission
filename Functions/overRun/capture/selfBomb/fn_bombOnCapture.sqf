@@ -13,7 +13,10 @@ if(_canBomb isEqualTo false)exitWith{
 
 private _bombType  = [_man] call SFSM_fnc_captureBombType;
 if(isNil "_bombType")
-exitWith{[[name _man, " could not blow himself up when captured"]] call dbgmsg;};
+exitWith{
+    [[name _man, " could not blow himself up when captured"]] call dbgmsg;
+    false;
+};
 
 [_man, "Not taking me alive!"] call SFSM_fnc_setAction;
 

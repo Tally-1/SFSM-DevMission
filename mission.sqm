@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={22772.471,47.193794,18914.852};
-		dir[]={-0.19371825,-0.55660754,0.80787456};
-		up[]={-0.12978841,0.83077562,0.54126424};
-		aside[]={0.97243428,-7.4505806e-009,0.2331776};
+		pos[]={22788.58,23.340237,18965.955};
+		dir[]={-0.7768088,-0.49888599,0.38432857};
+		up[]={-0.44715995,0.86666524,0.22123402};
+		aside[]={0.44345355,7.5284333e-008,0.89631289};
 	};
 };
 binarizationWanted=0;
@@ -31,19 +31,30 @@ addons[]=
 	"A3_Static_F_HMG_02",
 	"A3_Structures_F_Mil_BagFence",
 	"A3_Static_F_Mortar_01",
-	"Tallys_AK_120",
-	"A3_Weapons_F",
 	"A3_Characters_F",
+	"A3_Weapons_F_Exp_Rifles_AK12",
+	"ace_realisticnames",
+	"A3_Weapons_F_Acc",
+	"ace_laserpointer",
+	"A3_Weapons_F_Exp",
+	"A3_Weapons_F",
+	"A3_Weapons_F_Pistols_ACPC2",
+	"cba_jam",
+	"ace_ballistics",
+	"ace_smallarms",
+	"ace_nightvision",
 	"A3_Weapons_F_Items",
 	"ace_medical_engine",
 	"ace_medical_treatment",
-	"ace_realisticnames"
+	"ace_attach",
+	"ace_chemlights",
+	"A3_Weapons_F_Enoch"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=17;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -72,37 +83,94 @@ class AddonsMetaData
 		};
 		class Item4
 		{
-			className="Tallys_AK_120";
-			name="Golden AK";
-			author="[P] Tally";
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item5
+		{
+			className="A3_Weapons_F_Exp";
+			name="Arma 3 Apex - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
-		{
-			className="A3_Characters_F";
-			name="Arma 3 Alpha - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
 		class Item7
+		{
+			className="ace_laserpointer";
+			name="ACE3 - Laser Pointer";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item8
+		{
+			className="cba_jam";
+			name="Community Base Addons - Joint Ammo Magazines";
+			author="CBA Team";
+			url="https://www.github.com/CBATeam/CBA_A3";
+		};
+		class Item9
+		{
+			className="ace_ballistics";
+			name="ACE3 - Ballistics";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item10
+		{
+			className="ace_smallarms";
+			name="ACE3 - Small Arms";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item11
+		{
+			className="ace_nightvision";
+			name="ACE3 - Night Vision";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item12
 		{
 			className="ace_medical_engine";
 			name="ACE3 - Medical Engine";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item8
+		class Item13
 		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
+		};
+		class Item14
+		{
+			className="ace_attach";
+			name="ACE3 - Attach";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item15
+		{
+			className="ace_chemlights";
+			name="ace_chemlights";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item16
+		{
+			className="A3_Weapons_F_Enoch";
+			name="Arma 3 Contact Platform - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -114,6 +182,40 @@ randomSeed=904946;
 class ScenarioData
 {
 	author="Tally";
+	respawn=2;
+	respawnDelay=15.000001;
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="Counter";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
@@ -139,7 +241,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=66;
+		items=65;
 		class Item0
 		{
 			dataType="Logic";
@@ -17651,148 +17753,6 @@ class Mission
 		class Item63
 		{
 			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={22753.412,13.274875,18971.398};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						name="ddd";
-						isPlayer=1;
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="Tally_arifle_AKM_GOLD_F";
-								class primaryMuzzleMag
-								{
-									name="120Rnd_GOLD_Mag";
-									ammoLeft=120;
-								};
-							};
-							class handgun
-							{
-								name="Tallys_45";
-								class primaryMuzzleMag
-								{
-									name="21Rnd_45ACP_Mag_Gold";
-									ammoLeft=21;
-								};
-							};
-							class uniform
-							{
-								typeName="Tally_customGorka_item";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="21Rnd_45ACP_Mag_Gold";
-										count=1;
-										ammoLeft=21;
-									};
-									class Item1
-									{
-										name="120Rnd_GOLD_Mag";
-										count=3;
-										ammoLeft=120;
-									};
-								};
-								class ItemCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="FirstAidKit";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="V_PlateCarrier1_blk";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="21Rnd_45ACP_Mag_Gold";
-										count=3;
-										ammoLeft=21;
-									};
-									class Item1
-									{
-										name="HandGrenade";
-										count=1;
-										ammoLeft=1;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="B_tallysBckpack_F";
-								isBackpack=1;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-							headgear="H_Shemag_olive_hs";
-						};
-					};
-					id=44522;
-					type="Tally_CustomGorka_model";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male02RUS";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=44521;
-		};
-		class Item64
-		{
-			dataType="Group";
 			side="West";
 			class Entities
 			{
@@ -17814,6 +17774,7 @@ class Mission
 					};
 					id=44714;
 					type="B_Soldier_GL_F";
+					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17899,8 +17860,9 @@ class Mission
 				formation="FILE";
 			};
 			id=44713;
+			atlOffset=9.5367432e-007;
 		};
-		class Item65
+		class Item64
 		{
 			dataType="Group";
 			side="Independent";
@@ -17912,17 +17874,150 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22775.811,12.774604,18963.93};
+						position[]={22779.822,12.936678,18971.143};
 					};
 					side="Independent";
 					flags=7;
 					class Attributes
 					{
 						name="ccc";
+						isPlayer=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="arifle_AK12_GL_F";
+								flashlight="acc_pointer_IR";
+								class primaryMuzzleMag
+								{
+									name="30Rnd_762x39_AK12_Mag_F";
+									ammoLeft=30;
+								};
+								class secondaryMuzzleMag
+								{
+									name="1Rnd_HE_Grenade_shell";
+									ammoLeft=1;
+								};
+							};
+							class handgun
+							{
+								name="hgun_ACPC2_F";
+								class primaryMuzzleMag
+								{
+									name="9Rnd_45ACP_Mag";
+									ammoLeft=8;
+								};
+							};
+							class uniform
+							{
+								typeName="U_I_CombatUniform_shortsleeve";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="SmokeShell";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="30Rnd_762x39_AK12_Mag_F";
+										count=3;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="V_PlateCarrierIA2_dgtl";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=7;
+									class Item0
+									{
+										name="9Rnd_45ACP_Mag";
+										count=2;
+										ammoLeft=8;
+									};
+									class Item1
+									{
+										name="SmokeShellGreen";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="SmokeShellOrange";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item3
+									{
+										name="SmokeShellPurple";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item4
+									{
+										name="Chemlight_green";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item5
+									{
+										name="1Rnd_HE_Grenade_shell";
+										count=3;
+										ammoLeft=1;
+									};
+									class Item6
+									{
+										name="75rnd_762x39_AK12_Mag_Tracer_F";
+										count=3;
+										ammoLeft=75;
+									};
+								};
+							};
+							class backpack
+							{
+								typeName="I_Fieldpack_oli_Medic";
+								isBackpack=1;
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="Medikit";
+										count=1;
+									};
+									class Item1
+									{
+										name="FirstAidKit";
+										count=10;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							hmd="NVGoggles_INDEP";
+							headgear="H_HelmetIA";
+						};
 					};
 					id=44720;
 					type="I_medic_F";
-					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17959,18 +18054,17 @@ class Mission
 			{
 			};
 			id=44719;
-			atlOffset=9.5367432e-007;
 		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=24;
+			nextID=23;
 		};
 		class Links
 		{
-			items=24;
+			items=23;
 			class Item0
 			{
 				linkID=0;
@@ -18174,7 +18268,7 @@ class Mission
 			class Item20
 			{
 				linkID=20;
-				item0=44522;
+				item0=44714;
 				item1=3215;
 				class CustomData
 				{
@@ -18184,7 +18278,7 @@ class Mission
 			class Item21
 			{
 				linkID=21;
-				item0=44714;
+				item0=44715;
 				item1=3215;
 				class CustomData
 				{
@@ -18194,16 +18288,6 @@ class Mission
 			class Item22
 			{
 				linkID=22;
-				item0=44715;
-				item1=3215;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item23
-			{
-				linkID=23;
 				item0=44720;
 				item1=3215;
 				class CustomData
