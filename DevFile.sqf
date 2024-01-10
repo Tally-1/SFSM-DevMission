@@ -81,10 +81,10 @@ systemChat "devFile found";
 // [ccc, true] call ACE_captives_fnc_setSurrendered;
 // [ddd, true] call ACE_captives_fnc_setSurrendered; 
 
-[player, true] call ACE_captives_fnc_setSurrendered;
+// [player, true] call ACE_captives_fnc_setSurrendered;
 
 sleep 3;
-[] call SFSM_fnc_allAiRescueCapture;
+// [] call SFSM_fnc_allAiRescueCapture;
 // player switchMove "acts_executionvictim_kill";
 
 // [player, true] call ace_medical_fnc_setUnconscious;

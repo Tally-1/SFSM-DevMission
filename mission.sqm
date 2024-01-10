@@ -8,18 +8,18 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=44721;
+		nextID=44723;
 	};
 	class MarkerIDProvider
 	{
-		nextID=3;
+		nextID=4;
 	};
 	class Camera
 	{
-		pos[]={22788.58,23.340237,18965.955};
-		dir[]={-0.7768088,-0.49888599,0.38432857};
-		up[]={-0.44715995,0.86666524,0.22123402};
-		aside[]={0.44345355,7.5284333e-008,0.89631289};
+		pos[]={22814.383,48.224232,18961.285};
+		dir[]={-0.65091205,-0.71520066,0.25457856};
+		up[]={-0.66607159,0.698915,0.26050735};
+		aside[]={0.364245,-1.3900353e-007,0.93130785};
 	};
 };
 binarizationWanted=0;
@@ -48,13 +48,14 @@ addons[]=
 	"ace_medical_treatment",
 	"ace_attach",
 	"ace_chemlights",
-	"A3_Weapons_F_Enoch"
+	"A3_Weapons_F_Enoch",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=17;
+		items=18;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -172,6 +173,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item17
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -241,7 +249,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=65;
+		items=66;
 		class Item0
 		{
 			dataType="Logic";
@@ -18054,6 +18062,18 @@ class Mission
 			{
 			};
 			id=44719;
+		};
+		class Item65
+		{
+			dataType="Marker";
+			position[]={22781.973,12.949,18973.133};
+			name="marker_3";
+			markerType="ELLIPSE";
+			type="";
+			a=50;
+			b=50;
+			id=44722;
+			atlOffset=0.00037670135;
 		};
 	};
 	class Connections
