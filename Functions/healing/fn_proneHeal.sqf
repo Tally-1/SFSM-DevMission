@@ -43,9 +43,13 @@ if(_friendlyFire)exitWith{};
 
 //Heal
 private _timeSinceLastHeal = time - ([_man, "prevHealTime"] call SFSM_fnc_unitData);
-
 if(_timeSinceLastHeal < 10)exitWith{
     [_man, "Spam healing blocked"] call SFSM_fnc_flashAction;
+};
+
+private _enemyNear = ([_man, 50, nil, true] call SFSM_fnc_nearEnemies)isNotEqualTo [];
+if(_enemyNear)exitWith{
+    [_man, "!Cannot heal! (enemy within 50m)"] call SFSM_fnc_flashAction;
 };
 
 private _timer = time + 3;

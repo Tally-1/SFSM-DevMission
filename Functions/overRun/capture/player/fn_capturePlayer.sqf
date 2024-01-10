@@ -9,7 +9,7 @@ player setVariable ["SFSM_myCaptor", _captor, true];
 
 private _eh = 
 player addEventHandler ["Killed", {
-	params [_player];
+	params ["_player"];
 	_player setVariable ["SFSM_pCapEhKill", nil];
 	[] call SFSM_fnc_endPlayerCapture;
 	_player removeEventHandler [_thisEvent, _thisEventHandler];
