@@ -17,9 +17,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={22761.68,23.615675,18961.018};
-		dir[]={0.12607196,-0.54298729,0.83022761};
-		up[]={0.08151973,0.8397404,0.53683645};
-		aside[]={0.98867267,1.4868419e-008,-0.15013213};
+		dir[]={0.12607142,-0.5429852,0.83022469};
+		up[]={0.081518956,0.83974224,0.53683108};
+		aside[]={0.98866606,7.4505806e-009,-0.15013108};
 	};
 };
 binarizationWanted=0;
@@ -18019,6 +18019,7 @@ class Mission
 					};
 					id=44720;
 					type="I_medic_F";
+					atlOffset=-9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18055,6 +18056,7 @@ class Mission
 			{
 			};
 			id=44723;
+			atlOffset=-9.5367432e-007;
 		};
 	};
 	class Connections
