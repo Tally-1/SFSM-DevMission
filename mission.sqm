@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={22814.383,48.224232,18961.285};
-		dir[]={-0.65091205,-0.71520066,0.25457856};
-		up[]={-0.66607159,0.698915,0.26050735};
-		aside[]={0.364245,-1.3900353e-007,0.93130785};
+		pos[]={22409.156,41.353481,19373.049};
+		dir[]={0.38692904,-0.61874259,-0.68369848};
+		up[]={0.30474973,0.78559375,-0.53848869};
+		aside[]={-0.87029517,1.4901161e-008,-0.49253064};
 	};
 };
 binarizationWanted=0;
@@ -32,24 +32,24 @@ addons[]=
 	"A3_Structures_F_Mil_BagFence",
 	"A3_Static_F_Mortar_01",
 	"A3_Characters_F",
-	"A3_Weapons_F_Exp_Rifles_AK12",
+	"A3_Weapons_F_Rifles_MX",
 	"ace_realisticnames",
+	"ace_scopes",
+	"ace_ballistics",
+	"A3_Weapons_F_Exp",
 	"A3_Weapons_F_Acc",
 	"ace_laserpointer",
-	"A3_Weapons_F_Exp",
+	"A3_Weapons_F_Mark_Acc",
 	"A3_Weapons_F",
+	"ace_smallarms",
 	"A3_Weapons_F_Pistols_ACPC2",
 	"cba_jam",
-	"ace_ballistics",
-	"ace_smallarms",
 	"ace_nightvision",
 	"A3_Weapons_F_Items",
 	"ace_medical_engine",
 	"ace_medical_treatment",
 	"ace_attach",
-	"ace_chemlights",
-	"A3_Weapons_F_Enoch",
-	"A3_Ui_F"
+	"ace_chemlights"
 };
 class AddonsMetaData
 {
@@ -91,100 +91,100 @@ class AddonsMetaData
 		};
 		class Item5
 		{
-			className="A3_Weapons_F_Exp";
-			name="Arma 3 Apex - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item6
-		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item6
 		{
-			className="ace_laserpointer";
-			name="ACE3 - Laser Pointer";
+			className="ace_scopes";
+			name="ACE3 - Scopes";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item8
-		{
-			className="cba_jam";
-			name="Community Base Addons - Joint Ammo Magazines";
-			author="CBA Team";
-			url="https://www.github.com/CBATeam/CBA_A3";
-		};
-		class Item9
+		class Item7
 		{
 			className="ace_ballistics";
 			name="ACE3 - Ballistics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
+		class Item8
+		{
+			className="A3_Weapons_F_Exp";
+			name="Arma 3 Apex - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item9
+		{
+			className="ace_laserpointer";
+			name="ACE3 - Laser Pointer";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
 		class Item10
+		{
+			className="A3_Weapons_F_Mark";
+			name="Arma 3 Marksmen - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item11
 		{
 			className="ace_smallarms";
 			name="ACE3 - Small Arms";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item11
+		class Item12
+		{
+			className="cba_jam";
+			name="Community Base Addons - Joint Ammo Magazines";
+			author="CBA Team";
+			url="https://www.github.com/CBATeam/CBA_A3";
+		};
+		class Item13
 		{
 			className="ace_nightvision";
 			name="ACE3 - Night Vision";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item12
+		class Item14
 		{
 			className="ace_medical_engine";
 			name="ACE3 - Medical Engine";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item13
+		class Item15
 		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item14
+		class Item16
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item15
+		class Item17
 		{
 			className="ace_chemlights";
 			name="ace_chemlights";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item16
-		{
-			className="A3_Weapons_F_Enoch";
-			name="Arma 3 Contact Platform - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item17
-		{
-			className="A3_Ui_F";
-			name="Arma 3 - User Interface";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
 	};
 };
 dlcs[]=
 {
-	"Enoch"
+	"Mark"
 };
 randomSeed=904946;
 class ScenarioData
@@ -249,7 +249,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=66;
+		items=65;
 		class Item0
 		{
 			dataType="Logic";
@@ -297,7 +297,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={22807.811,12.348789,18914.557};
-				angles[]={0.0039967569,0,0.05461248};
+				angles[]={0.0039968039,0,0.054611351};
 			};
 			name="zz";
 			id=4234;
@@ -17882,29 +17882,28 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22779.822,12.936678,18971.143};
+						position[]={22412.986,36.916233,19371.145};
+						angles[]={0,2.5610437,0};
 					};
 					side="Independent";
 					flags=7;
 					class Attributes
 					{
-						name="ccc";
+						name="ddd";
 						isPlayer=1;
 						class Inventory
 						{
 							class primaryWeapon
 							{
-								name="arifle_AK12_GL_F";
+								name="arifle_MXM_F";
+								optics="optic_DMS_ghex_F";
+								muzzle="muzzle_snds_H";
 								flashlight="acc_pointer_IR";
+								underBarrel="bipod_01_F_snd";
 								class primaryMuzzleMag
 								{
-									name="30Rnd_762x39_AK12_Mag_F";
+									name="30Rnd_65x39_caseless_mag";
 									ammoLeft=30;
-								};
-								class secondaryMuzzleMag
-								{
-									name="1Rnd_HE_Grenade_shell";
-									ammoLeft=1;
 								};
 							};
 							class handgun
@@ -17931,7 +17930,7 @@ class Mission
 									};
 									class Item1
 									{
-										name="30Rnd_762x39_AK12_Mag_F";
+										name="30Rnd_65x39_caseless_mag";
 										count=3;
 										ammoLeft=30;
 									};
@@ -17952,7 +17951,7 @@ class Mission
 								isBackpack=0;
 								class MagazineCargo
 								{
-									items=7;
+									items=6;
 									class Item0
 									{
 										name="9Rnd_45ACP_Mag";
@@ -17985,15 +17984,9 @@ class Mission
 									};
 									class Item5
 									{
-										name="1Rnd_HE_Grenade_shell";
-										count=3;
-										ammoLeft=1;
-									};
-									class Item6
-									{
-										name="75rnd_762x39_AK12_Mag_Tracer_F";
-										count=3;
-										ammoLeft=75;
+										name="100Rnd_65x39_caseless_mag";
+										count=2;
+										ammoLeft=100;
 									};
 								};
 							};
@@ -18026,6 +18019,7 @@ class Mission
 					};
 					id=44720;
 					type="I_medic_F";
+					atlOffset=3.8146973e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18062,18 +18056,7 @@ class Mission
 			{
 			};
 			id=44719;
-		};
-		class Item65
-		{
-			dataType="Marker";
-			position[]={22781.973,12.949,18973.133};
-			name="marker_3";
-			markerType="ELLIPSE";
-			type="";
-			a=50;
-			b=50;
-			id=44722;
-			atlOffset=0.00037670135;
+			atlOffset=3.8146973e-006;
 		};
 	};
 	class Connections

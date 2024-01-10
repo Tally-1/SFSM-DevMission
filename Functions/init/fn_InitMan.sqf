@@ -36,6 +36,7 @@ _unitData set     ["lastFipoAttempt",     0-300];
 _unitData set     ["peekCooldown",        0-300];
 _unitData set     ["lastPeek",            0-300];
 _unitData set     ["lastOverRun",         0-300];
+_unitData set     ["prevHealTime",        0-300];
 _unitData set     ["lastCqbRpgCheck",     0   ];
 _unitData set     ["roundsPrSecond",      0   ];
 _unitData set     ["action",              "none"];
