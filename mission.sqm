@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=44723;
+		nextID=44724;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={22409.156,41.353481,19373.049};
-		dir[]={0.38692921,-0.61874247,-0.68369842};
-		up[]={0.30474976,0.78559393,-0.53848851};
-		aside[]={-0.87029505,0,-0.49253085};
+		pos[]={22761.68,23.615675,18961.018};
+		dir[]={0.12607196,-0.54298729,0.83022761};
+		up[]={0.08151973,0.8397404,0.53683645};
+		aside[]={0.98867267,1.4868419e-008,-0.15013213};
 	};
 };
 binarizationWanted=0;
@@ -17873,7 +17873,7 @@ class Mission
 		class Item64
 		{
 			dataType="Group";
-			side="Independent";
+			side="West";
 			class Entities
 			{
 				items=1;
@@ -17882,10 +17882,10 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22412.986,36.916233,19371.145};
+						position[]={22758.828,13.26554,18972.943};
 						angles[]={0,2.5610437,0};
 					};
-					side="Independent";
+					side="West";
 					flags=7;
 					class Attributes
 					{
@@ -18019,7 +18019,6 @@ class Mission
 					};
 					id=44720;
 					type="I_medic_F";
-					atlOffset=3.8146973e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18055,8 +18054,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=44719;
-			atlOffset=3.8146973e-006;
+			id=44723;
 		};
 	};
 	class Connections

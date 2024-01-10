@@ -52,6 +52,7 @@ _unitData set     ["hunkObjectHash",      []];
 _unitData set     ["flinchTimes",         []];
 _unitData set     ["abortForcedMove",     false];
 _unitData set     ["abortSprint",         false];
+_unitData set     ["checkSprint",         true];
 _unitData set     ["forcedMovement",      false];
 _unitData set     ["inFipo",              false];
 _unitData set     ["lastFipoPanicCheck",  0-300];

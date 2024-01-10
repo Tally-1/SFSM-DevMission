@@ -284,6 +284,8 @@ class CfgFunctions
             class sprintSuppress                        {};
             class updateSprintTimer                     {};
             class adjustSprintDir                       {};
+
+            class sprintSegmentClear                    {};
         };
 
         class vehicles
