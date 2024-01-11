@@ -195,6 +195,8 @@ class CfgFunctions
             class buildingOnPos         {};
             class splitArr              {};
             class getCourageTime        {};
+
+            class posOnVector           {};
         };
 
         class morale
@@ -483,11 +485,19 @@ class CfgFunctions
             class tempPegToFipo         {};
             class dynamicFipoActive     {};
             class assignFipo            {};
+            
+                        
+        };
+
+        class FIPO_Suppress
+        {
+            file = "functions\fightPos\suppression";
             class canFipoSuppress       {};
             class getFipoSuppressPos    {};
             class fipoSuppress          {};
-                        
-        };
+            class validSuppressPos      {};
+
+        }
 
         class dodgeToFipo
         {
