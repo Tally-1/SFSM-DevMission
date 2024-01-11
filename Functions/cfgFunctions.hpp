@@ -197,6 +197,7 @@ class CfgFunctions
             class getCourageTime        {};
 
             class posOnVector           {};
+            class lineBroken            {};
         };
 
         class morale
