@@ -265,6 +265,12 @@ class CfgFunctions
             class evasiveAttackAlign                           {};
             class endEvasiveAttack                             {};
             class initEvasiveAttack                            {};
+            
+            class attackAnimPath                               {};
+            class attackPathClear                              {};
+            class attackAnimMap                                {};
+            class initAttackAnims                              {};
+
         };
 
         class sprint

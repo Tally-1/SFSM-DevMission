@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=45085;
+		nextID=45187;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={22894.064,36.988255,18703.719};
-		dir[]={0.63521075,-0.62501347,0.45375189};
-		up[]={0.50858909,0.78061324,0.36330086};
-		aside[]={0.58127135,5.5631972e-008,-0.81372857};
+		pos[]={22930.979,36.988255,18807.078};
+		dir[]={0.63520241,-0.62500566,0.45374644};
+		up[]={0.50857651,0.78062022,0.36329332};
+		aside[]={0.58126402,1.4901161e-008,-0.81371504};
 	};
 };
 binarizationWanted=0;
@@ -18321,13 +18321,14 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=1;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22935.467,3.186589,18731.188};
+						position[]={22970.02,3.0767908,18808.502};
+						angles[]={0,3.976285,-0};
 					};
 					side="West";
 					flags=7;
@@ -18339,7 +18340,7 @@ class Mission
 					};
 					id=44714;
 					type="B_Soldier_GL_F";
-					atlOffset=9.5367432e-007;
+					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18371,54 +18372,6 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={22939.008,3.1867831,18731.082};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-						name="bbb";
-					};
-					id=44715;
-					type="B_Soldier_F";
-					atlOffset=-2.3841858e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
 			};
 			class Attributes
 			{
@@ -18426,7 +18379,7 @@ class Mission
 				formation="FILE";
 			};
 			id=44713;
-			atlOffset=9.5367432e-007;
+			atlOffset=2.3841858e-007;
 		};
 		class Item64
 		{
@@ -18440,8 +18393,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22920.721,3.1746986,18733.326};
-						angles[]={0,2.5610437,0};
+						position[]={22960.125,3.1010876,18805.256};
+						angles[]={0,0.90126896,-0};
 					};
 					side="West";
 					flags=7;
@@ -18577,6 +18530,7 @@ class Mission
 					};
 					id=44720;
 					type="I_medic_F";
+					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18613,6 +18567,7 @@ class Mission
 			{
 			};
 			id=44723;
+			atlOffset=2.3841858e-007;
 		};
 		class Item65
 		{
@@ -22122,7 +22077,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=45051;
+			id=45153;
 			atlOffset=185.97;
 		};
 		class Item77
@@ -22145,7 +22100,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45069;
+					id=45171;
 					type="C_Soldier_VR_F";
 				};
 				class Item1
@@ -22161,7 +22116,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45070;
+					id=45172;
 					type="C_Soldier_VR_F";
 				};
 				class Item2
@@ -22177,7 +22132,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45071;
+					id=45173;
 					type="C_Soldier_VR_F";
 				};
 				class Item3
@@ -22193,7 +22148,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45072;
+					id=45174;
 					type="C_Soldier_VR_F";
 				};
 				class Item4
@@ -22209,7 +22164,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45073;
+					id=45175;
 					type="C_Soldier_VR_F";
 				};
 				class Item5
@@ -22225,7 +22180,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45074;
+					id=45176;
 					type="C_Soldier_VR_F";
 				};
 				class Item6
@@ -22241,7 +22196,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45075;
+					id=45177;
 					type="C_Soldier_VR_F";
 				};
 				class Item7
@@ -22257,7 +22212,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45076;
+					id=45178;
 					type="C_Soldier_VR_F";
 				};
 				class Item8
@@ -22273,7 +22228,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45077;
+					id=45179;
 					type="C_Soldier_VR_F";
 				};
 				class Item9
@@ -22289,7 +22244,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45078;
+					id=45180;
 					type="C_Soldier_VR_F";
 				};
 				class Item10
@@ -22305,7 +22260,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45079;
+					id=45181;
 					type="C_Soldier_VR_F";
 				};
 				class Item11
@@ -22321,7 +22276,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45080;
+					id=45182;
 					type="C_Soldier_VR_F";
 				};
 				class Item12
@@ -22337,7 +22292,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45081;
+					id=45183;
 					type="C_Soldier_VR_F";
 				};
 				class Item13
@@ -22353,7 +22308,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45082;
+					id=45184;
 					type="C_Soldier_VR_F";
 				};
 				class Item14
@@ -22369,7 +22324,7 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45083;
+					id=45185;
 					type="C_Soldier_VR_F";
 				};
 				class Item15
@@ -22385,25 +22340,25 @@ class Mission
 					{
 						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
 					};
-					id=45084;
+					id=45186;
 					type="C_Soldier_VR_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=45068;
+			id=45170;
 		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=38;
+			nextID=37;
 		};
 		class Links
 		{
-			items=38;
+			items=37;
 			class Item0
 			{
 				linkID=0;
@@ -22617,7 +22572,7 @@ class Mission
 			class Item21
 			{
 				linkID=21;
-				item0=44715;
+				item0=44720;
 				item1=3215;
 				class CustomData
 				{
@@ -22627,8 +22582,8 @@ class Mission
 			class Item22
 			{
 				linkID=22;
-				item0=44720;
-				item1=3215;
+				item0=44725;
+				item1=44733;
 				class CustomData
 				{
 					type="Sync";
@@ -22637,7 +22592,7 @@ class Mission
 			class Item23
 			{
 				linkID=23;
-				item0=44725;
+				item0=44726;
 				item1=44733;
 				class CustomData
 				{
@@ -22647,7 +22602,7 @@ class Mission
 			class Item24
 			{
 				linkID=24;
-				item0=44726;
+				item0=44727;
 				item1=44733;
 				class CustomData
 				{
@@ -22657,7 +22612,7 @@ class Mission
 			class Item25
 			{
 				linkID=25;
-				item0=44727;
+				item0=44728;
 				item1=44733;
 				class CustomData
 				{
@@ -22667,7 +22622,7 @@ class Mission
 			class Item26
 			{
 				linkID=26;
-				item0=44728;
+				item0=44729;
 				item1=44733;
 				class CustomData
 				{
@@ -22677,7 +22632,7 @@ class Mission
 			class Item27
 			{
 				linkID=27;
-				item0=44729;
+				item0=44730;
 				item1=44733;
 				class CustomData
 				{
@@ -22687,7 +22642,7 @@ class Mission
 			class Item28
 			{
 				linkID=28;
-				item0=44730;
+				item0=44731;
 				item1=44733;
 				class CustomData
 				{
@@ -22697,8 +22652,8 @@ class Mission
 			class Item29
 			{
 				linkID=29;
-				item0=44731;
-				item1=44733;
+				item0=44730;
+				item1=44741;
 				class CustomData
 				{
 					type="Sync";
@@ -22707,8 +22662,8 @@ class Mission
 			class Item30
 			{
 				linkID=30;
-				item0=44730;
-				item1=44741;
+				item0=44728;
+				item1=44738;
 				class CustomData
 				{
 					type="Sync";
@@ -22717,8 +22672,8 @@ class Mission
 			class Item31
 			{
 				linkID=31;
-				item0=44728;
-				item1=44738;
+				item0=44726;
+				item1=44734;
 				class CustomData
 				{
 					type="Sync";
@@ -22727,8 +22682,8 @@ class Mission
 			class Item32
 			{
 				linkID=32;
-				item0=44726;
-				item1=44734;
+				item0=44725;
+				item1=44744;
 				class CustomData
 				{
 					type="Sync";
@@ -22737,8 +22692,8 @@ class Mission
 			class Item33
 			{
 				linkID=33;
-				item0=44725;
-				item1=44744;
+				item0=44727;
+				item1=44747;
 				class CustomData
 				{
 					type="Sync";
@@ -22747,8 +22702,8 @@ class Mission
 			class Item34
 			{
 				linkID=34;
-				item0=44727;
-				item1=44747;
+				item0=44729;
+				item1=44754;
 				class CustomData
 				{
 					type="Sync";
@@ -22757,8 +22712,8 @@ class Mission
 			class Item35
 			{
 				linkID=35;
-				item0=44729;
-				item1=44754;
+				item0=44731;
+				item1=44796;
 				class CustomData
 				{
 					type="Sync";
@@ -22767,16 +22722,6 @@ class Mission
 			class Item36
 			{
 				linkID=36;
-				item0=44731;
-				item1=44796;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item37
-			{
-				linkID=37;
 				item0=44732;
 				item1=44799;
 				class CustomData
