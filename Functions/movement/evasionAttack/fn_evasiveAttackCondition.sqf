@@ -4,8 +4,6 @@ private _index       = (_man getVariable "SFSM_animListParams")#5;
 private _target      = _man getVariable "SFSM_myAttackTarget";
 private _validTarget = [_target] call SFSM_fnc_functionalMan;
 private _nextAnim    = _animArr#(_index+1);
-private _pathBlocked = false;
-
 
 if!(_validTarget)             exitWith{false;};
 if(_man distance _target < 6) exitWith{

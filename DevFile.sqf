@@ -1,4 +1,4 @@
-if(time < 3)exitWith{"Exited devfile" call dbgmsg;};
+// if(time < 3)exitWith{"Exited devfile" call dbgmsg;};
 
 systemChat "devFile found";
 // SFSM_fnc_
@@ -18,20 +18,140 @@ systemChat "devFile found";
 
 /************************************************************************************/
 /*
-TODO evasion attack:
-    // 1) CBA param do deactivate (default ON)
-    // 2) Do line-checks on path.
-    // 3) Remove zig-zag(Ended up reducing it).
-    4) Add New types of evasion attack
-       + Sidestep -> crouch -> fire 
-       + Sidestep -> big flinch -> fire 
-       + Prone front -> roll -> fire 
+Braindeadness:
+There are 2 types of braindead.
 
-TODO other:
-    1) fix no weaponline error
-    2) Look for HE ammo when firing launcher at house.
-    3) Replace projectile with high-cal when unconscious shot at close range (Allow execution).
+1) Temporary
+   -the unit is pathfinding, and stands still like an idiot.
+
+2) Permanent
+   - The unit no longer responds to any input/commands(Except forced animation), and no fixes work.
+
+Fix requested:
+    - Go prone / crouch.
+
+How to diagnose?
+
+Temporary:
+    -Check if unit has not moved within 2 seconds from forced move order was given.
+
+Permanent:
+    - Brain has been reset.
+    - doMove does not work.
+    - Stance change does not work.
+
+Solution for the permanent braindead:
+
+Add a "AnimStateChanged" eventHandler
+
+On each time the EH fires register time, position, isForcedAnim and speed to an entry in the unitData.
+Run another task for all units in the Taskmanager (every 5 minutes)
+This task should add the same data as mentioned above.
+
+Add a entry into unitData with failed attempts at moving.
+
+if no position change is registered then run a direct unit-check as soon as the unit is available.
+
+The dataObject should look as follows:
+    The moveList:
+    ["animChangeMove", [
+        time, position,      forcedAnim (If in Fipo or animList is being played)
+        [342, [3500,4200,0], false]
+    ]]
+    (This array should not contain more than 30 entries to save RAM)
+
+    The failed move list:
+    ["failedForcedMoves", [
+        time dist  StartPos       EndPos
+        [342, 0,   [3500,4200,0], [3500,4200,0]]
+    ]]
+
+Solution for the Temporary braindead:
+Once a forced move has been initiated add a check after 2 seconds:
+If the man has not moved after 2 seonds then go prone using animStance.
+
 */
+
+SFSM_fnc_forcedMoveProne = { 
+params[
+    ["_man",       nil, [objNull]],
+    ["_startPos",  nil,      [[]]],
+    ["_startTime", nil,       [0]]
+];
+private _timeSinceStart = time - _startTime;
+
+if!([_man, true] call SFSM_fnc_canRun) exitWith{false;};
+if(_timeSinceStart < 2)                exitWith{false;};
+if(_timeSinceStart > 10)               exitWith{false;};
+
+private _hasProned = _man getVariable "SFSM_UnitData" get "hasForcedMoveProned";
+private _distance  = _man distance2D _startPos;
+
+if(_hasProned)    exitWith{false;};
+if(_distance > 1) exitWith{false;};
+
+[_man, "amovppnemstpsraswrfldnon"] remoteExecCall ["playMoveNow", _man];
+[_man, "DOWN"]                     remoteExecCall ["setUnitPos",  _man];
+
+_man getVariable "SFSM_UnitData"set["hasForcedMoveProned", true];
+
+// _man spawn {};
+
+// [_man] spawn dbg_cam;
+
+true;
+};
+
+
+SFSM_fnc_onForcedMoveFailed = { 
+params[
+    ["_man",       nil, [objNull]],
+    ["_startPos",  nil,      [[]]],
+    ["_targetPos", nil,      [[]]]
+];
+if!([_man, true] call SFSM_fnc_canRun)exitWith{false;};
+
+private _failList = _man getVariable "SFSM_UnitData" get "failedForcedMoves";
+private _count    = count _failList;
+private _endPos   = getPosATLVisual _man;
+private _distance = _endPos distance _startPos;
+
+private _moveData = [
+    time,
+    _distance,
+    _startPos,
+    _targetPos,
+    _endPos
+];
+
+_failList pushBack _moveData;
+if(_count > 30)then{_failList deleteAt 0;};
+
+[_man, "forced-move failed TOTALLY!", 0.5] spawn SFSM_fnc_flashAction;
+// [_man]                                call SFSM_fnc_resetBrain;
+
+// [_man] spawn dbg_cam;
+["Complete move fail",2] call dbgmsg;
+
+true;
+};
+
+// SFSM_fnc_onAnimChange = {};
+
+
+
+// zombie setVariable ["animstates", []];
+// zombie addEventHandler ["AnimStateChanged", {
+// 	params ["_man", "_anim"];
+//     (_man getVariable "animstates") pushBack [_anim, time];
+//     [_man, _anim] spawn SFSM_fnc_flashAction;
+//     [["Animstate changed. ", (count (_man getVariable "animstates")), " changes registered"],1] call dbgmsg;
+// }];
+
+// SFSM_Custom3Dpositions = [
+//     [player modelToWorld [-3,0,1], "Left"]
+// ];
+
 
 // player allowDamage false;
 // [aaa, player] call SFSM_fnc_evasiveAttack;

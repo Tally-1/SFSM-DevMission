@@ -270,6 +270,7 @@ class CfgFunctions
             class attackPathClear                              {};
             class attackAnimMap                                {};
             class initAttackAnims                              {};
+            class zigZagPathClear                              {};
 
         };
 
@@ -388,6 +389,8 @@ class CfgFunctions
             class buildingDestroyedEH   {};
             class groupCommandEh        {};
             class onCommandChange       {};
+
+            class onAnimChange          {};
             
         };
 

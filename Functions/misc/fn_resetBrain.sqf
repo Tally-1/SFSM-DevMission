@@ -41,6 +41,6 @@ if(_isLeader)then{
 	group _man selectLeader _man;
 };
 
-[_man] call SFSM_fnc_fixPos;
+[_man, true] call SFSM_fnc_fixPos;
 
 true;
