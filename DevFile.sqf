@@ -54,7 +54,7 @@ if no position change is registered then run a direct unit-check as soon as the 
 
 The dataObject should look as follows:
     The moveList:
-    ["animChangeMove", [
+    ["moveRegistry", [
         time, position,      forcedAnim (If in Fipo or animList is being played)
         [342, [3500,4200,0], false]
     ]]
@@ -72,73 +72,27 @@ If the man has not moved after 2 seonds then go prone using animStance.
 
 */
 
-SFSM_fnc_forcedMoveProne = { 
-params[
-    ["_man",       nil, [objNull]],
-    ["_startPos",  nil,      [[]]],
-    ["_startTime", nil,       [0]]
-];
-private _timeSinceStart = time - _startTime;
-
-if!([_man, true] call SFSM_fnc_canRun) exitWith{false;};
-if(_timeSinceStart < 2)                exitWith{false;};
-if(_timeSinceStart > 10)               exitWith{false;};
-
-private _hasProned = _man getVariable "SFSM_UnitData" get "hasForcedMoveProned";
-private _distance  = _man distance2D _startPos;
-
-if(_hasProned)    exitWith{false;};
-if(_distance > 1) exitWith{false;};
-
-[_man, "amovppnemstpsraswrfldnon"] remoteExecCall ["playMoveNow", _man];
-[_man, "DOWN"]                     remoteExecCall ["setUnitPos",  _man];
-
-_man getVariable "SFSM_UnitData"set["hasForcedMoveProned", true];
-
-// _man spawn {};
-
-// [_man] spawn dbg_cam;
-
-true;
-};
+// SFSM_fnc_forcedMoveProne     = {};
+// SFSM_fnc_forcedMoveHasFailed = {};
+// SFSM_fnc_onForcedMoveFailed  = {};
+// SFSM_fnc_hasMoved            = {};
+// SFSM_fnc_storeMoveData       = {};
+// SFSM_fnc_storeMoveDataAllMen = {};
+// SFSM_posToStanceMap          = nil;
+// SFSM_fnc_stancePosMap        = {};
+// SFSM_fnc_hasMoved            = {};
+// SFSM_fnc_timeSinceLastMove   = {};
+// SFSM_fnc_canChangeStance     = {};
+// SFSM_fnc_isBrainDead         = {};
+// SFSM_fnc_forcedUnitPosNoAnim = {};
+// SFSM_fnc_findZombies         = {};
 
 
-SFSM_fnc_onForcedMoveFailed = { 
-params[
-    ["_man",       nil, [objNull]],
-    ["_startPos",  nil,      [[]]],
-    ["_targetPos", nil,      [[]]]
-];
-if!([_man, true] call SFSM_fnc_canRun)exitWith{false;};
-
-private _failList = _man getVariable "SFSM_UnitData" get "failedForcedMoves";
-private _count    = count _failList;
-private _endPos   = getPosATLVisual _man;
-private _distance = _endPos distance _startPos;
-
-private _moveData = [
-    time,
-    _distance,
-    _startPos,
-    _targetPos,
-    _endPos
-];
-
-_failList pushBack _moveData;
-if(_count > 30)then{_failList deleteAt 0;};
-
-[_man, "forced-move failed TOTALLY!", 0.5] spawn SFSM_fnc_flashAction;
-// [_man]                                call SFSM_fnc_resetBrain;
-
-// [_man] spawn dbg_cam;
-["Complete move fail",2] call dbgmsg;
-
-true;
-};
-
-// SFSM_fnc_onAnimChange = {};
-
-
+// private _zombies = allUnits select {[_x] call SFSM_fnc_isBrainDead;};
+// hint ([count _zombies, " Zombies found."]joinString"");
+// hint str ([aaa] call SFSM_fnc_canChangeStance);
+// [aaa, "DOWN", true, true] call SFSM_fnc_forcedUnitPosNoAnim;
+// hint str ( (SFSM_posToStanceMap get "UP"));
 
 // zombie setVariable ["animstates", []];
 // zombie addEventHandler ["AnimStateChanged", {

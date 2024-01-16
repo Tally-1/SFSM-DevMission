@@ -2,9 +2,7 @@ params [
     "_man",                  // the man that will move.
     "_pos",                 //  target position
     ["_maxTime", 30],      //   timeout (max time to attempt to reach said pos)
-    ["_maxDistance", 1.3],//    distance to wanted pos before aborting move.
-    "_spamTimer",        //     here for legacy reasons
-    "_postFnc"          //      function to be run on completion [[params], _isScheduled, _code]
+    ["_maxDistance", 1.3] //    distance to wanted pos before aborting move.
 ];
 private _canSprint = [_man, _pos, 50, 5] call SFSM_fnc_canSprint;
 
@@ -38,8 +36,6 @@ _man doTarget objNull;
 // _man disableAI "FSM";
 
 _man doMove _pos;
-// _man moveTo _pos;
-// [_man, "DOWN"] remoteExecCall ["setUnitPos",  _man];
 
 while {_keepMoving} do { 
     private _hasMoved = _man distance2D  _startPos > 5;
@@ -50,8 +46,8 @@ while {_keepMoving} do {
     if(_hasMoved &&{_pronePos})then{[_man, "AUTO"] remoteExecCall ["setUnitPos",  _man]};
     if!(_keepMoving)           exitWith{};
 
-    [_man, _pos, _startTime] call SFSM_fnc_forcedMoveProne;
-
+    [_man, _startPos, _startTime] call SFSM_fnc_forcedMoveProne;
+    
     sleep 0.3;
 };
 
@@ -71,16 +67,9 @@ _man setAnimSpeedCoef 1;
 
 private _moveFailed   = _man distance2D _pos > _maxDistance;
 
-if(_moveFailed)exitWith{
-    private _timeSinceStart = time - _startTime;
-    private _endPos         = getPosATLVisual _man;
-    private _completeFail   = (_startPos distance _endPos)<1 &&{_timeSinceStart >= _maxTime};
-    private _unitData       = _man getVariable "SFSM_UnitData";
-    private _noFlash        = SFSM_debugger &&{_completeFail isEqualTo false && {(_unitData get "flashAction") isEqualTo ""}};
-
-    if(_noFlash)     then{[_man, "forced move failed"] spawn SFSM_fnc_flashAction;};
-    if(_completeFail)then{[_man, _startPos, _pos] call SFSM_fnc_onForcedMoveFailed};
-
+if(_moveFailed)exitWith{ 
+    private _noFlash = SFSM_debugger && {(_man getVariable "SFSM_UnitData" get "flashAction") isEqualTo ""};
+    if(_noFlash)then{[_man, "forced move failed"] spawn SFSM_fnc_flashAction;};
     false;
 };
 

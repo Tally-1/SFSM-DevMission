@@ -252,6 +252,20 @@ class CfgFunctions
             class forceMoveToPos2                {};
             class keepMoving                     {};
 
+            class forcedMoveHasFailed            {};
+            class forcedMoveProne                {};
+            class onForcedMoveFailed             {};
+            class storeMoveDataAllMen            {};
+            class storeMoveData                  {};
+
+            class stancePosMap                   {};
+            class hasMoved                       {};
+            class timeSinceLastMove              {};
+            class canChangeStance                {};
+            class forcedUnitPosNoAnim            {};
+            class isBrainDead                    {};
+            class findZombies                    {};
+
         };
 
         class evasionAttack
@@ -889,6 +903,7 @@ class CfgFunctions
             class initClient            {};
             class initSFSM              {postInit = 1};
             class InitMan               {};
+            class initUnitData          {};
             class initGroup             {};
             class initVehicle           {};
             class initFiPositions       {};

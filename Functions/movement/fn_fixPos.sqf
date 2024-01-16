@@ -8,6 +8,8 @@ params[
 	["_liftMan", false, [false]]
 ];
 
+if!([_man, true] call SFSM_fnc_canRun)exitWith{};
+
 private _pos     = getPos _man;
 private _asl     = getPosASLVisual _man;
 private _atl     = getPosATLVisual _man;
@@ -17,8 +19,8 @@ _man setPos _pos;
 _man setPosASL _asl;
 
 if(_liftMan)
-then{_man setPosATL _atl;}
-else{_man setPosATL _atlPlus;};
+then{_man setPosATL _atlPlus;}
+else{_man setPosATL _atl;};
 
 // This move-order is intended to delete any other "intentions" the unit may have.
 _man doMove _atl;
