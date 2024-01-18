@@ -23,6 +23,7 @@ if(_count > 30)then{_failList deleteAt 0;};
 
 [_man, "forced-move failed TOTALLY!", 0.5] spawn SFSM_fnc_flashAction;
 [_man] call SFSM_fnc_resetBrain;
+[_man] call SFSM_fnc_isBrainDead;
 
 [["Complete move fail. Time: ", round time],2] call dbgmsg;
 _man getVariable "SFSM_UnitData" set ["failedForcedMoves", _failList];

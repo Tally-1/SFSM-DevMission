@@ -1096,6 +1096,7 @@ class CfgFunctions
             class hasAmmoForWeapon       {};
             class validEnemy             {};
             class validEnemyVehicle      {};
+            class validEnemyInArr        {};
             class isMachineGunner        {};
             class isATSoldier            {};
             class isMarksman             {};
