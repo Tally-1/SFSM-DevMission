@@ -198,6 +198,9 @@ class CfgFunctions
 
             class posOnVector           {};
             class lineBroken            {};
+
+            class forceLookAtPos        {};
+            
         };
 
         class morale
@@ -434,11 +437,20 @@ class CfgFunctions
         class launchers
         {
             file = "functions\launchers" 
-            class rpgHouse          {};
-            class launcherHandler   {};
-            class forceFireLauncher {};
-            class canRpgHouse       {};
-            class forcedCqbRpg      {};
+            class rpgHouse               {};
+            class launcherHandler        {};
+            class forceFireLauncher      {};
+            class canRpgHouse            {};
+            class forcedCqbRpg           {};
+            class validRpgTargetBuilding {};
+            class isValidRpgFirePos      {};
+            class getRpgLaunchPos        {};
+            class initRpgHouse           {};
+            class endRpgHouse            {};
+            class atValidRpgFirePos      {};
+            class whileRpgMove           {};
+            class moveToRpgLaunchPos     {};
+            class fireLauncherAtHouse    {};
         }
 
         class dodging

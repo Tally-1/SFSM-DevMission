@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=50167;
+		nextID=50455;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={22941.23,28.190001,18794.535};
-		dir[]={0.72381347,-0.55132598,0.41490796};
-		up[]={0.47831601,0.83428538,0.27418223};
-		aside[]={0.49731669,4.1341991e-008,-0.86757731};
+		pos[]={22905.094,28.706533,18827.766};
+		dir[]={0.90214342,-0.41493917,-0.11838431};
+		up[]={0.41142282,0.90984905,-0.053989355};
+		aside[]={-0.13011336,-3.2617208e-007,-0.9915275};
 	};
 };
 binarizationWanted=0;
@@ -60,7 +60,9 @@ addons[]=
 	"A3_Structures_F_Mil_Fortification",
 	"A3_Structures_F_Walls",
 	"A3_Structures_F_Argo_Walls_Military",
-	"A3_Structures_F_Exp_Walls_Slum"
+	"A3_Structures_F_Exp_Walls_Slum",
+	"A3_Structures_F_Argo_Civilian_House_Big02",
+	"A3_Structures_F_Argo_Commercial_Shop_02"
 };
 class AddonsMetaData
 {
@@ -311,7 +313,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=117;
+		items=119;
 		class Item0
 		{
 			dataType="Logic";
@@ -431,7 +433,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22970.02,3.0767906,18808.502};
+						position[]={22940.217,5.1792803,18838.887};
 						angles[]={0,1.9370916,-0};
 					};
 					side="West";
@@ -614,6 +616,7 @@ class Mission
 					};
 					id=44714;
 					type="B_Soldier_GL_F";
+					atlOffset=-4.7683716e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -652,6 +655,7 @@ class Mission
 				formation="FILE";
 			};
 			id=44713;
+			atlOffset=-4.7683716e-007;
 		};
 		class Item3
 		{
@@ -30452,2301 +30456,6 @@ class Mission
 		};
 		class Item114
 		{
-			dataType="Group";
-			side="Civilian";
-			class Attributes
-			{
-			};
-			id=49882;
-			atlOffset=185.97;
-		};
-		class Item115
-		{
-			dataType="Group";
-			side="Civilian";
-			class Entities
-			{
-				items=142;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26956.996,22.393511,24298.178};
-					};
-					side="Civilian";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50024;
-					type="C_Soldier_VR_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26956.996,22.393511,24298.178};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50025;
-					type="C_Soldier_VR_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26942.58,22.982161,24334.906};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50026;
-					type="C_Soldier_VR_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26942.58,22.982161,24334.906};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50027;
-					type="C_Soldier_VR_F";
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26959.26,21.461956,24304.914};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50028;
-					type="C_Soldier_VR_F";
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26959.26,21.461956,24304.914};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50029;
-					type="C_Soldier_VR_F";
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26914.602,24.49106,24314.881};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50030;
-					type="C_Soldier_VR_F";
-				};
-				class Item7
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26914.602,24.49106,24314.881};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50031;
-					type="C_Soldier_VR_F";
-				};
-				class Item8
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26893.031,29.032349,24321.967};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50032;
-					type="C_Soldier_VR_F";
-				};
-				class Item9
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26893.031,29.032349,24321.967};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50033;
-					type="C_Soldier_VR_F";
-				};
-				class Item10
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26896.424,29.032349,24326.352};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50034;
-					type="C_Soldier_VR_F";
-				};
-				class Item11
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26896.424,29.032349,24326.352};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50035;
-					type="C_Soldier_VR_F";
-				};
-				class Item12
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26886.1,24.577227,24317.98};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50036;
-					type="C_Soldier_VR_F";
-				};
-				class Item13
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26886.1,24.577227,24317.98};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50037;
-					type="C_Soldier_VR_F";
-				};
-				class Item14
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26886.895,24.686728,24299.186};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50038;
-					type="C_Soldier_VR_F";
-				};
-				class Item15
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26886.895,24.686728,24299.186};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50039;
-					type="C_Soldier_VR_F";
-				};
-				class Item16
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26925.422,22.23732,24263.613};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50040;
-					type="C_Soldier_VR_F";
-				};
-				class Item17
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26925.422,22.23732,24263.613};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50041;
-					type="C_Soldier_VR_F";
-				};
-				class Item18
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26955.498,21.562819,24324.035};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50042;
-					type="C_Soldier_VR_F";
-				};
-				class Item19
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26955.498,21.562819,24324.035};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50043;
-					type="C_Soldier_VR_F";
-				};
-				class Item20
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26941.814,22.982393,24339.92};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50044;
-					type="C_Soldier_VR_F";
-				};
-				class Item21
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26941.814,22.982393,24339.92};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50045;
-					type="C_Soldier_VR_F";
-				};
-				class Item22
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26939.057,22.985304,24341.68};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50046;
-					type="C_Soldier_VR_F";
-				};
-				class Item23
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26939.057,22.985304,24341.68};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50047;
-					type="C_Soldier_VR_F";
-				};
-				class Item24
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26935.105,23.890732,24352.195};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50048;
-					type="C_Soldier_VR_F";
-				};
-				class Item25
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26935.105,23.890732,24352.195};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50049;
-					type="C_Soldier_VR_F";
-				};
-				class Item26
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26936.547,23.775551,24351.455};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50050;
-					type="C_Soldier_VR_F";
-				};
-				class Item27
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26936.547,23.775551,24351.455};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50051;
-					type="C_Soldier_VR_F";
-				};
-				class Item28
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26937.496,23.696156,24350.545};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50052;
-					type="C_Soldier_VR_F";
-				};
-				class Item29
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26937.496,23.696156,24350.545};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50053;
-					type="C_Soldier_VR_F";
-				};
-				class Item30
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26938.508,23.618885,24349.756};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50054;
-					type="C_Soldier_VR_F";
-				};
-				class Item31
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26938.508,23.618885,24349.756};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50055;
-					type="C_Soldier_VR_F";
-				};
-				class Item32
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26939.654,23.520535,24349.111};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50056;
-					type="C_Soldier_VR_F";
-				};
-				class Item33
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26939.654,23.520535,24349.111};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50057;
-					type="C_Soldier_VR_F";
-				};
-				class Item34
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26950.732,23.078531,24340.459};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50058;
-					type="C_Soldier_VR_F";
-				};
-				class Item35
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26950.732,23.078531,24340.459};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50059;
-					type="C_Soldier_VR_F";
-				};
-				class Item36
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26952.174,22.967064,24339.719};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50060;
-					type="C_Soldier_VR_F";
-				};
-				class Item37
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26952.174,22.967064,24339.719};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50061;
-					type="C_Soldier_VR_F";
-				};
-				class Item38
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26953.123,22.905031,24338.809};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50062;
-					type="C_Soldier_VR_F";
-				};
-				class Item39
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26953.123,22.905031,24338.809};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50063;
-					type="C_Soldier_VR_F";
-				};
-				class Item40
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26954.135,22.843477,24338.02};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50064;
-					type="C_Soldier_VR_F";
-				};
-				class Item41
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26954.135,22.843477,24338.02};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50065;
-					type="C_Soldier_VR_F";
-				};
-				class Item42
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26955.281,22.757542,24337.375};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50066;
-					type="C_Soldier_VR_F";
-				};
-				class Item43
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26955.281,22.757542,24337.375};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50067;
-					type="C_Soldier_VR_F";
-				};
-				class Item44
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26939.018,22.099625,24271.705};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50068;
-					type="C_Soldier_VR_F";
-				};
-				class Item45
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26939.018,22.099625,24271.705};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50069;
-					type="C_Soldier_VR_F";
-				};
-				class Item46
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26938.359,22.02327,24270.223};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50070;
-					type="C_Soldier_VR_F";
-				};
-				class Item47
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26938.359,22.02327,24270.223};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50071;
-					type="C_Soldier_VR_F";
-				};
-				class Item48
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26937.504,21.985071,24269.225};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50072;
-					type="C_Soldier_VR_F";
-				};
-				class Item49
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26937.504,21.985071,24269.225};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50073;
-					type="C_Soldier_VR_F";
-				};
-				class Item50
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26936.775,21.950809,24268.17};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50074;
-					type="C_Soldier_VR_F";
-				};
-				class Item51
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26936.775,21.950809,24268.17};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50075;
-					type="C_Soldier_VR_F";
-				};
-				class Item52
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26936.195,21.896107,24266.99};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50076;
-					type="C_Soldier_VR_F";
-				};
-				class Item53
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26936.195,21.896107,24266.99};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50077;
-					type="C_Soldier_VR_F";
-				};
-				class Item54
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26926.346,21.643488,24252.969};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50078;
-					type="C_Soldier_VR_F";
-				};
-				class Item55
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26926.346,21.643488,24252.969};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50079;
-					type="C_Soldier_VR_F";
-				};
-				class Item56
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26925.639,21.582375,24251.512};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50080;
-					type="C_Soldier_VR_F";
-				};
-				class Item57
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26925.639,21.582375,24251.512};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50081;
-					type="C_Soldier_VR_F";
-				};
-				class Item58
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26924.75,21.551304,24250.539};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50082;
-					type="C_Soldier_VR_F";
-				};
-				class Item59
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26924.75,21.551304,24250.539};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50083;
-					type="C_Soldier_VR_F";
-				};
-				class Item60
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26923.986,21.530869,24249.51};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50084;
-					type="C_Soldier_VR_F";
-				};
-				class Item61
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26923.986,21.530869,24249.51};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50085;
-					type="C_Soldier_VR_F";
-				};
-				class Item62
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26923.369,21.491335,24248.35};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50086;
-					type="C_Soldier_VR_F";
-				};
-				class Item63
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26923.369,21.491335,24248.35};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50087;
-					type="C_Soldier_VR_F";
-				};
-				class Item64
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26903.654,26.029507,24354.271};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50088;
-					type="C_Soldier_VR_F";
-				};
-				class Item65
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26903.654,26.029507,24354.271};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50089;
-					type="C_Soldier_VR_F";
-				};
-				class Item66
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26905.271,25.981524,24354.395};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50090;
-					type="C_Soldier_VR_F";
-				};
-				class Item67
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26905.271,25.981524,24354.395};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50091;
-					type="C_Soldier_VR_F";
-				};
-				class Item68
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26906.557,25.939972,24354.115};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50092;
-					type="C_Soldier_VR_F";
-				};
-				class Item69
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26906.557,25.939972,24354.115};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50093;
-					type="C_Soldier_VR_F";
-				};
-				class Item70
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26907.83,25.908356,24353.973};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50094;
-					type="C_Soldier_VR_F";
-				};
-				class Item71
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26907.83,25.908356,24353.973};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50095;
-					type="C_Soldier_VR_F";
-				};
-				class Item72
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26909.145,25.890896,24354.023};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50096;
-					type="C_Soldier_VR_F";
-				};
-				class Item73
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26909.145,25.890896,24354.023};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50097;
-					type="C_Soldier_VR_F";
-				};
-				class Item74
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26858.834,26.923885,24327.793};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50098;
-					type="C_Soldier_VR_F";
-				};
-				class Item75
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26858.834,26.923885,24327.793};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50099;
-					type="C_Soldier_VR_F";
-				};
-				class Item76
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26859.656,26.943563,24329.189};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50100;
-					type="C_Soldier_VR_F";
-				};
-				class Item77
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26859.656,26.943563,24329.189};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50101;
-					type="C_Soldier_VR_F";
-				};
-				class Item78
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26860.619,26.884947,24330.084};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50102;
-					type="C_Soldier_VR_F";
-				};
-				class Item79
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26860.619,26.884947,24330.084};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50103;
-					type="C_Soldier_VR_F";
-				};
-				class Item80
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26861.465,26.869278,24331.049};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50104;
-					type="C_Soldier_VR_F";
-				};
-				class Item81
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26861.465,26.869278,24331.049};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50105;
-					type="C_Soldier_VR_F";
-				};
-				class Item82
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26862.174,26.856367,24332.156};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50106;
-					type="C_Soldier_VR_F";
-				};
-				class Item83
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26862.174,26.856367,24332.156};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50107;
-					type="C_Soldier_VR_F";
-				};
-				class Item84
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26863.494,25.409939,24288.969};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50108;
-					type="C_Soldier_VR_F";
-				};
-				class Item85
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26863.494,25.409939,24288.969};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50109;
-					type="C_Soldier_VR_F";
-				};
-				class Item86
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26862.051,25.469513,24289.707};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50110;
-					type="C_Soldier_VR_F";
-				};
-				class Item87
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26862.051,25.469513,24289.707};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50111;
-					type="C_Soldier_VR_F";
-				};
-				class Item88
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26861.1,25.513687,24290.615};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50112;
-					type="C_Soldier_VR_F";
-				};
-				class Item89
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26861.1,25.513687,24290.615};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50113;
-					type="C_Soldier_VR_F";
-				};
-				class Item90
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26860.086,25.566494,24291.4};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50114;
-					type="C_Soldier_VR_F";
-				};
-				class Item91
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26860.086,25.566494,24291.4};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50115;
-					type="C_Soldier_VR_F";
-				};
-				class Item92
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26858.938,25.610176,24292.043};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50116;
-					type="C_Soldier_VR_F";
-				};
-				class Item93
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26858.938,25.610176,24292.043};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50117;
-					type="C_Soldier_VR_F";
-				};
-				class Item94
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26879.326,24.739056,24277.594};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50118;
-					type="C_Soldier_VR_F";
-				};
-				class Item95
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26879.326,24.739056,24277.594};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50119;
-					type="C_Soldier_VR_F";
-				};
-				class Item96
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26877.891,24.786592,24278.346};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50120;
-					type="C_Soldier_VR_F";
-				};
-				class Item97
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26877.891,24.786592,24278.346};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50121;
-					type="C_Soldier_VR_F";
-				};
-				class Item98
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26876.949,24.820641,24279.264};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50122;
-					type="C_Soldier_VR_F";
-				};
-				class Item99
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26876.949,24.820641,24279.264};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50123;
-					type="C_Soldier_VR_F";
-				};
-				class Item100
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26875.943,24.864103,24280.061};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50124;
-					type="C_Soldier_VR_F";
-				};
-				class Item101
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26875.943,24.864103,24280.061};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50125;
-					type="C_Soldier_VR_F";
-				};
-				class Item102
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26874.801,24.897041,24280.715};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50126;
-					type="C_Soldier_VR_F";
-				};
-				class Item103
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26874.801,24.897041,24280.715};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50127;
-					type="C_Soldier_VR_F";
-				};
-				class Item104
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26879.676,27.979366,24294.93};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50128;
-					type="C_Soldier_VR_F";
-				};
-				class Item105
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26879.676,27.979366,24294.93};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50129;
-					type="C_Soldier_VR_F";
-				};
-				class Item106
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26875.172,27.979706,24298.084};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50130;
-					type="C_Soldier_VR_F";
-				};
-				class Item107
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26875.172,27.979706,24298.084};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50131;
-					type="C_Soldier_VR_F";
-				};
-				class Item108
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27125.113,28.842041,24280.563};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50132;
-					type="C_Soldier_VR_F";
-				};
-				class Item109
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27125.113,28.842041,24280.563};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50133;
-					type="C_Soldier_VR_F";
-				};
-				class Item110
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27124.865,25.544355,24279.441};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50134;
-					type="C_Soldier_VR_F";
-				};
-				class Item111
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27124.865,25.544355,24279.441};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50135;
-					type="C_Soldier_VR_F";
-				};
-				class Item112
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27012.771,16.658983,24198.477};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50136;
-					type="C_Soldier_VR_F";
-				};
-				class Item113
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27012.771,16.658983,24198.477};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50137;
-					type="C_Soldier_VR_F";
-				};
-				class Item114
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27016.385,16.695694,24201.221};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50138;
-					type="C_Soldier_VR_F";
-				};
-				class Item115
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27016.385,16.695694,24201.221};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50139;
-					type="C_Soldier_VR_F";
-				};
-				class Item116
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27019.256,16.692768,24203.646};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50140;
-					type="C_Soldier_VR_F";
-				};
-				class Item117
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27019.256,16.692768,24203.646};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50141;
-					type="C_Soldier_VR_F";
-				};
-				class Item118
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27021.801,16.664421,24205.32};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50142;
-					type="C_Soldier_VR_F";
-				};
-				class Item119
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27021.801,16.664421,24205.32};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50143;
-					type="C_Soldier_VR_F";
-				};
-				class Item120
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27023.463,16.65728,24207.1};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50144;
-					type="C_Soldier_VR_F";
-				};
-				class Item121
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27023.463,16.65728,24207.1};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50145;
-					type="C_Soldier_VR_F";
-				};
-				class Item122
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26988.465,20.171856,24381.162};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50146;
-					type="C_Soldier_VR_F";
-				};
-				class Item123
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26988.465,20.171856,24381.162};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50147;
-					type="C_Soldier_VR_F";
-				};
-				class Item124
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26990.4,19.734804,24385.037};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50148;
-					type="C_Soldier_VR_F";
-				};
-				class Item125
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26990.4,19.734804,24385.037};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50149;
-					type="C_Soldier_VR_F";
-				};
-				class Item126
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26993.457,19.331085,24388.691};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50150;
-					type="C_Soldier_VR_F";
-				};
-				class Item127
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26993.457,19.331085,24388.691};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50151;
-					type="C_Soldier_VR_F";
-				};
-				class Item128
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27057.188,22.177397,24357.109};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50152;
-					type="C_Soldier_VR_F";
-				};
-				class Item129
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={27057.188,22.177397,24357.109};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50153;
-					type="C_Soldier_VR_F";
-				};
-				class Item130
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26824.09,21.375067,24219};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50154;
-					type="C_Soldier_VR_F";
-				};
-				class Item131
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26824.09,21.375067,24219};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50155;
-					type="C_Soldier_VR_F";
-				};
-				class Item132
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26825.584,21.184647,24217.533};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50156;
-					type="C_Soldier_VR_F";
-				};
-				class Item133
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26825.584,21.184647,24217.533};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50157;
-					type="C_Soldier_VR_F";
-				};
-				class Item134
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26826.598,21.133392,24217.189};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50158;
-					type="C_Soldier_VR_F";
-				};
-				class Item135
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26826.598,21.133392,24217.189};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50159;
-					type="C_Soldier_VR_F";
-				};
-				class Item136
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26859.605,21.867659,24233.129};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50160;
-					type="C_Soldier_VR_F";
-				};
-				class Item137
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26859.605,21.867659,24233.129};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50161;
-					type="C_Soldier_VR_F";
-				};
-				class Item138
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26860.537,21.820286,24233.049};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50162;
-					type="C_Soldier_VR_F";
-				};
-				class Item139
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26860.537,21.820286,24233.049};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50163;
-					type="C_Soldier_VR_F";
-				};
-				class Item140
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26850.777,26.352015,24317.027};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50165;
-					type="C_Soldier_VR_F";
-				};
-				class Item141
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26850.777,26.352015,24317.027};
-					};
-					side="Civilian";
-					flags=5;
-					class Attributes
-					{
-						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
-					};
-					id=50166;
-					type="C_Soldier_VR_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=50023;
-		};
-		class Item116
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
@@ -33150,6 +30859,2335 @@ class Mission
 				};
 				nAttributes=30;
 			};
+		};
+		class Item115
+		{
+			dataType="Group";
+			side="Civilian";
+			class Attributes
+			{
+			};
+			id=50167;
+			atlOffset=185.97;
+		};
+		class Item116
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={22924.443,8.788909,18815.232};
+				angles[]={0,5.5636215,-0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=50310;
+			type="Land_i_House_Big_02_b_yellow_F";
+			atlOffset=1.0228052;
+		};
+		class Item117
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={22913.313,8.0701284,18806.164};
+				angles[]={0,4.0177436,-0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=50311;
+			type="Land_i_Shop_02_b_whiteblue_F";
+			atlOffset=0.55760002;
+		};
+		class Item118
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=142;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26956.996,22.393511,24298.178};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50313;
+					type="C_Soldier_VR_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26956.996,22.393511,24298.178};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50314;
+					type="C_Soldier_VR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26942.58,22.982161,24334.906};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50315;
+					type="C_Soldier_VR_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26942.58,22.982161,24334.906};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50316;
+					type="C_Soldier_VR_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26959.26,21.461956,24304.914};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50317;
+					type="C_Soldier_VR_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26959.26,21.461956,24304.914};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50318;
+					type="C_Soldier_VR_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26914.602,24.49106,24314.881};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50319;
+					type="C_Soldier_VR_F";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26914.602,24.49106,24314.881};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50320;
+					type="C_Soldier_VR_F";
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26893.031,29.032349,24321.967};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50321;
+					type="C_Soldier_VR_F";
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26893.031,29.032349,24321.967};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50322;
+					type="C_Soldier_VR_F";
+				};
+				class Item10
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26896.424,29.032349,24326.352};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50323;
+					type="C_Soldier_VR_F";
+				};
+				class Item11
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26896.424,29.032349,24326.352};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50324;
+					type="C_Soldier_VR_F";
+				};
+				class Item12
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26886.1,24.577227,24317.98};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50325;
+					type="C_Soldier_VR_F";
+				};
+				class Item13
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26886.1,24.577227,24317.98};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50326;
+					type="C_Soldier_VR_F";
+				};
+				class Item14
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26886.895,24.686728,24299.186};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50327;
+					type="C_Soldier_VR_F";
+				};
+				class Item15
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26886.895,24.686728,24299.186};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50328;
+					type="C_Soldier_VR_F";
+				};
+				class Item16
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26925.422,22.23732,24263.613};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50329;
+					type="C_Soldier_VR_F";
+				};
+				class Item17
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26925.422,22.23732,24263.613};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50330;
+					type="C_Soldier_VR_F";
+				};
+				class Item18
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26955.498,21.562819,24324.035};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50331;
+					type="C_Soldier_VR_F";
+				};
+				class Item19
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26955.498,21.562819,24324.035};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50332;
+					type="C_Soldier_VR_F";
+				};
+				class Item20
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26941.814,22.982393,24339.92};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50333;
+					type="C_Soldier_VR_F";
+				};
+				class Item21
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26941.814,22.982393,24339.92};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50334;
+					type="C_Soldier_VR_F";
+				};
+				class Item22
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26939.057,22.985304,24341.68};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50335;
+					type="C_Soldier_VR_F";
+				};
+				class Item23
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26939.057,22.985304,24341.68};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50336;
+					type="C_Soldier_VR_F";
+				};
+				class Item24
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26935.105,23.890732,24352.195};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50337;
+					type="C_Soldier_VR_F";
+				};
+				class Item25
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26935.105,23.890732,24352.195};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50338;
+					type="C_Soldier_VR_F";
+				};
+				class Item26
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26936.547,23.775551,24351.455};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50339;
+					type="C_Soldier_VR_F";
+				};
+				class Item27
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26936.547,23.775551,24351.455};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50340;
+					type="C_Soldier_VR_F";
+				};
+				class Item28
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26937.496,23.696156,24350.545};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50341;
+					type="C_Soldier_VR_F";
+				};
+				class Item29
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26937.496,23.696156,24350.545};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50342;
+					type="C_Soldier_VR_F";
+				};
+				class Item30
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26938.508,23.618885,24349.756};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50343;
+					type="C_Soldier_VR_F";
+				};
+				class Item31
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26938.508,23.618885,24349.756};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50344;
+					type="C_Soldier_VR_F";
+				};
+				class Item32
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26939.654,23.520535,24349.111};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50345;
+					type="C_Soldier_VR_F";
+				};
+				class Item33
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26939.654,23.520535,24349.111};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50346;
+					type="C_Soldier_VR_F";
+				};
+				class Item34
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26950.732,23.078531,24340.459};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50347;
+					type="C_Soldier_VR_F";
+				};
+				class Item35
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26950.732,23.078531,24340.459};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50348;
+					type="C_Soldier_VR_F";
+				};
+				class Item36
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26952.174,22.967064,24339.719};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50349;
+					type="C_Soldier_VR_F";
+				};
+				class Item37
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26952.174,22.967064,24339.719};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50350;
+					type="C_Soldier_VR_F";
+				};
+				class Item38
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26953.123,22.905031,24338.809};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50351;
+					type="C_Soldier_VR_F";
+				};
+				class Item39
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26953.123,22.905031,24338.809};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50352;
+					type="C_Soldier_VR_F";
+				};
+				class Item40
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26954.135,22.843477,24338.02};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50353;
+					type="C_Soldier_VR_F";
+				};
+				class Item41
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26954.135,22.843477,24338.02};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50354;
+					type="C_Soldier_VR_F";
+				};
+				class Item42
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26955.281,22.757542,24337.375};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50355;
+					type="C_Soldier_VR_F";
+				};
+				class Item43
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26955.281,22.757542,24337.375};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50356;
+					type="C_Soldier_VR_F";
+				};
+				class Item44
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26939.018,22.099625,24271.705};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50357;
+					type="C_Soldier_VR_F";
+				};
+				class Item45
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26939.018,22.099625,24271.705};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50358;
+					type="C_Soldier_VR_F";
+				};
+				class Item46
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26938.359,22.02327,24270.223};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50359;
+					type="C_Soldier_VR_F";
+				};
+				class Item47
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26938.359,22.02327,24270.223};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50360;
+					type="C_Soldier_VR_F";
+				};
+				class Item48
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26937.504,21.985071,24269.225};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50361;
+					type="C_Soldier_VR_F";
+				};
+				class Item49
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26937.504,21.985071,24269.225};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50362;
+					type="C_Soldier_VR_F";
+				};
+				class Item50
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26936.775,21.950809,24268.17};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50363;
+					type="C_Soldier_VR_F";
+				};
+				class Item51
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26936.775,21.950809,24268.17};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50364;
+					type="C_Soldier_VR_F";
+				};
+				class Item52
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26936.195,21.896107,24266.99};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50365;
+					type="C_Soldier_VR_F";
+				};
+				class Item53
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26936.195,21.896107,24266.99};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50366;
+					type="C_Soldier_VR_F";
+				};
+				class Item54
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26926.346,21.643488,24252.969};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50367;
+					type="C_Soldier_VR_F";
+				};
+				class Item55
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26926.346,21.643488,24252.969};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50368;
+					type="C_Soldier_VR_F";
+				};
+				class Item56
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26925.639,21.582375,24251.512};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50369;
+					type="C_Soldier_VR_F";
+				};
+				class Item57
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26925.639,21.582375,24251.512};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50370;
+					type="C_Soldier_VR_F";
+				};
+				class Item58
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26924.75,21.551304,24250.539};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50371;
+					type="C_Soldier_VR_F";
+				};
+				class Item59
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26924.75,21.551304,24250.539};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50372;
+					type="C_Soldier_VR_F";
+				};
+				class Item60
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26923.986,21.530869,24249.51};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50373;
+					type="C_Soldier_VR_F";
+				};
+				class Item61
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26923.986,21.530869,24249.51};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50374;
+					type="C_Soldier_VR_F";
+				};
+				class Item62
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26923.369,21.491335,24248.35};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50375;
+					type="C_Soldier_VR_F";
+				};
+				class Item63
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26923.369,21.491335,24248.35};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50376;
+					type="C_Soldier_VR_F";
+				};
+				class Item64
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26903.654,26.029507,24354.271};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50377;
+					type="C_Soldier_VR_F";
+				};
+				class Item65
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26903.654,26.029507,24354.271};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50378;
+					type="C_Soldier_VR_F";
+				};
+				class Item66
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26905.271,25.981524,24354.395};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50379;
+					type="C_Soldier_VR_F";
+				};
+				class Item67
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26905.271,25.981524,24354.395};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50380;
+					type="C_Soldier_VR_F";
+				};
+				class Item68
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26906.557,25.939972,24354.115};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50381;
+					type="C_Soldier_VR_F";
+				};
+				class Item69
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26906.557,25.939972,24354.115};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50382;
+					type="C_Soldier_VR_F";
+				};
+				class Item70
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26907.83,25.908356,24353.973};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50383;
+					type="C_Soldier_VR_F";
+				};
+				class Item71
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26907.83,25.908356,24353.973};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50384;
+					type="C_Soldier_VR_F";
+				};
+				class Item72
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26909.145,25.890896,24354.023};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50385;
+					type="C_Soldier_VR_F";
+				};
+				class Item73
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26909.145,25.890896,24354.023};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50386;
+					type="C_Soldier_VR_F";
+				};
+				class Item74
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26858.834,26.923885,24327.793};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50387;
+					type="C_Soldier_VR_F";
+				};
+				class Item75
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26858.834,26.923885,24327.793};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50388;
+					type="C_Soldier_VR_F";
+				};
+				class Item76
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26859.656,26.943563,24329.189};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50389;
+					type="C_Soldier_VR_F";
+				};
+				class Item77
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26859.656,26.943563,24329.189};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50390;
+					type="C_Soldier_VR_F";
+				};
+				class Item78
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26860.619,26.884947,24330.084};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50391;
+					type="C_Soldier_VR_F";
+				};
+				class Item79
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26860.619,26.884947,24330.084};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50392;
+					type="C_Soldier_VR_F";
+				};
+				class Item80
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26861.465,26.869278,24331.049};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50393;
+					type="C_Soldier_VR_F";
+				};
+				class Item81
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26861.465,26.869278,24331.049};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50394;
+					type="C_Soldier_VR_F";
+				};
+				class Item82
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26862.174,26.856367,24332.156};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50395;
+					type="C_Soldier_VR_F";
+				};
+				class Item83
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26862.174,26.856367,24332.156};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50396;
+					type="C_Soldier_VR_F";
+				};
+				class Item84
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26863.494,25.409939,24288.969};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50397;
+					type="C_Soldier_VR_F";
+				};
+				class Item85
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26863.494,25.409939,24288.969};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50398;
+					type="C_Soldier_VR_F";
+				};
+				class Item86
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26862.051,25.469513,24289.707};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50399;
+					type="C_Soldier_VR_F";
+				};
+				class Item87
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26862.051,25.469513,24289.707};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50400;
+					type="C_Soldier_VR_F";
+				};
+				class Item88
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26861.1,25.513687,24290.615};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50401;
+					type="C_Soldier_VR_F";
+				};
+				class Item89
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26861.1,25.513687,24290.615};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50402;
+					type="C_Soldier_VR_F";
+				};
+				class Item90
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26860.086,25.566494,24291.4};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50403;
+					type="C_Soldier_VR_F";
+				};
+				class Item91
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26860.086,25.566494,24291.4};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50404;
+					type="C_Soldier_VR_F";
+				};
+				class Item92
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26858.938,25.610176,24292.043};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50405;
+					type="C_Soldier_VR_F";
+				};
+				class Item93
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26858.938,25.610176,24292.043};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50406;
+					type="C_Soldier_VR_F";
+				};
+				class Item94
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26879.326,24.739056,24277.594};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50407;
+					type="C_Soldier_VR_F";
+				};
+				class Item95
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26879.326,24.739056,24277.594};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50408;
+					type="C_Soldier_VR_F";
+				};
+				class Item96
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26877.891,24.786592,24278.346};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50409;
+					type="C_Soldier_VR_F";
+				};
+				class Item97
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26877.891,24.786592,24278.346};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50410;
+					type="C_Soldier_VR_F";
+				};
+				class Item98
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26876.949,24.820641,24279.264};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50411;
+					type="C_Soldier_VR_F";
+				};
+				class Item99
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26876.949,24.820641,24279.264};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50412;
+					type="C_Soldier_VR_F";
+				};
+				class Item100
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26875.943,24.864103,24280.061};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50413;
+					type="C_Soldier_VR_F";
+				};
+				class Item101
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26875.943,24.864103,24280.061};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50414;
+					type="C_Soldier_VR_F";
+				};
+				class Item102
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26874.801,24.897041,24280.715};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50415;
+					type="C_Soldier_VR_F";
+				};
+				class Item103
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26874.801,24.897041,24280.715};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50416;
+					type="C_Soldier_VR_F";
+				};
+				class Item104
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26879.676,27.979366,24294.93};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50417;
+					type="C_Soldier_VR_F";
+				};
+				class Item105
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26879.676,27.979366,24294.93};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50418;
+					type="C_Soldier_VR_F";
+				};
+				class Item106
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26875.172,27.979706,24298.084};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50419;
+					type="C_Soldier_VR_F";
+				};
+				class Item107
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26875.172,27.979706,24298.084};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50420;
+					type="C_Soldier_VR_F";
+				};
+				class Item108
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27125.113,28.842041,24280.563};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50421;
+					type="C_Soldier_VR_F";
+				};
+				class Item109
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27125.113,28.842041,24280.563};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50422;
+					type="C_Soldier_VR_F";
+				};
+				class Item110
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27124.865,25.544355,24279.441};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50423;
+					type="C_Soldier_VR_F";
+				};
+				class Item111
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27124.865,25.544355,24279.441};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50424;
+					type="C_Soldier_VR_F";
+				};
+				class Item112
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27012.771,16.658983,24198.477};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50425;
+					type="C_Soldier_VR_F";
+				};
+				class Item113
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27012.771,16.658983,24198.477};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50426;
+					type="C_Soldier_VR_F";
+				};
+				class Item114
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27016.385,16.695694,24201.221};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50427;
+					type="C_Soldier_VR_F";
+				};
+				class Item115
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27016.385,16.695694,24201.221};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50428;
+					type="C_Soldier_VR_F";
+				};
+				class Item116
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27019.256,16.692768,24203.646};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50429;
+					type="C_Soldier_VR_F";
+				};
+				class Item117
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27019.256,16.692768,24203.646};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50430;
+					type="C_Soldier_VR_F";
+				};
+				class Item118
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27021.801,16.664421,24205.32};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50431;
+					type="C_Soldier_VR_F";
+				};
+				class Item119
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27021.801,16.664421,24205.32};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50432;
+					type="C_Soldier_VR_F";
+				};
+				class Item120
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27023.463,16.65728,24207.1};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50433;
+					type="C_Soldier_VR_F";
+				};
+				class Item121
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27023.463,16.65728,24207.1};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50434;
+					type="C_Soldier_VR_F";
+				};
+				class Item122
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26988.465,20.171856,24381.162};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50435;
+					type="C_Soldier_VR_F";
+				};
+				class Item123
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26988.465,20.171856,24381.162};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50436;
+					type="C_Soldier_VR_F";
+				};
+				class Item124
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26990.4,19.734804,24385.037};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50437;
+					type="C_Soldier_VR_F";
+				};
+				class Item125
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26990.4,19.734804,24385.037};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50438;
+					type="C_Soldier_VR_F";
+				};
+				class Item126
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26993.457,19.331085,24388.691};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50439;
+					type="C_Soldier_VR_F";
+				};
+				class Item127
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26993.457,19.331085,24388.691};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50440;
+					type="C_Soldier_VR_F";
+				};
+				class Item128
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27057.188,22.177397,24357.109};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50441;
+					type="C_Soldier_VR_F";
+				};
+				class Item129
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={27057.188,22.177397,24357.109};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50442;
+					type="C_Soldier_VR_F";
+				};
+				class Item130
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26824.09,21.375067,24219};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50443;
+					type="C_Soldier_VR_F";
+				};
+				class Item131
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26824.09,21.375067,24219};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50444;
+					type="C_Soldier_VR_F";
+				};
+				class Item132
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26825.584,21.184647,24217.533};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50445;
+					type="C_Soldier_VR_F";
+				};
+				class Item133
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26825.584,21.184647,24217.533};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50446;
+					type="C_Soldier_VR_F";
+				};
+				class Item134
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26826.598,21.133392,24217.189};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50447;
+					type="C_Soldier_VR_F";
+				};
+				class Item135
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26826.598,21.133392,24217.189};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50448;
+					type="C_Soldier_VR_F";
+				};
+				class Item136
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26859.605,21.867659,24233.129};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50449;
+					type="C_Soldier_VR_F";
+				};
+				class Item137
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26859.605,21.867659,24233.129};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50450;
+					type="C_Soldier_VR_F";
+				};
+				class Item138
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26860.537,21.820286,24233.049};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50451;
+					type="C_Soldier_VR_F";
+				};
+				class Item139
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26860.537,21.820286,24233.049};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50452;
+					type="C_Soldier_VR_F";
+				};
+				class Item140
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26850.777,26.352015,24317.027};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50453;
+					type="C_Soldier_VR_F";
+				};
+				class Item141
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26850.777,26.352015,24317.027};
+					};
+					side="Civilian";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable ['fipo_ind', true]; deleteVehicle this;";
+					};
+					id=50454;
+					type="C_Soldier_VR_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=50312;
 		};
 	};
 	class Connections
