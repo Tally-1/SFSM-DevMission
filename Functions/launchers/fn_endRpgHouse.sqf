@@ -27,6 +27,6 @@ private _canSee = ([_man, "VIEW", _building] checkVisibility [aimPos _man, _buil
 
 if!(_canSee)then{_endMsg = "failed to get LOS on the building";};
 
-[_man, _endMsg] call SFSM_fnc_flashAction;
+[_man, _endMsg] spawn SFSM_fnc_flashAction;
 
 true;

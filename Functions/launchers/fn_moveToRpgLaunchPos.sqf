@@ -3,6 +3,9 @@ params[
     ["_building",  nil, [objNull]],
     ["_launchPos", nil,      [[]]]
 ];
+
+if([_man, _building] call SFSM_fnc_atValidRpgFirePos)exitWith{true;};
+
 private _timeLimit   = time + 30;
 private _buildingPos = [_building] call SFSM_fnc_buildingCenterPosASL;
 private _moveEnded   = false;

@@ -439,7 +439,6 @@ class CfgFunctions
             file = "functions\launchers" 
             class rpgHouse               {};
             class launcherHandler        {};
-            class forceFireLauncher      {};
             class canRpgHouse            {};
             class forcedCqbRpg           {};
             class validRpgTargetBuilding {};
@@ -451,6 +450,11 @@ class CfgFunctions
             class whileRpgMove           {};
             class moveToRpgLaunchPos     {};
             class fireLauncherAtHouse    {};
+            class initfireRpgAtHouse     {};
+            class forceFireLauncher      {};
+            class handleForcedMissile    {};
+            class endFireRpgAtHouse      {};
+            class missileAimed           {};
         }
 
         class dodging

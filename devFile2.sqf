@@ -1012,3 +1012,13 @@ true;
 // [(count _zones)] call dbgmsg;
 
 // {[playerPos, 400] call SFSM_fnc_getMapObjects} forEach _zones;
+/*
+SFSM_trajectories = [
+    [[ASLToATL _startPos, ASLToATL _endPos]]
+];
+
+SFSM_Custom3Dpositions = [
+    [ASLToATL _startPos, "_startPos"],
+    [ASLToATL _endPos,   "_endPos"]
+];
+*/

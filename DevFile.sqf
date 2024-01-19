@@ -51,88 +51,23 @@ TODO RPG HOUSE:
 // SFSM_fnc_whileRpgMove           = {};
 // SFSM_fnc_moveToRpgLaunchPos     = {};
 // SFSM_fnc_forceLookAtPos         = {};
-// SFSM_fnc_fireLauncherAtHouse = {};
+// SFSM_fnc_fireLauncherAtHouse    = {};
+// SFSM_fnc_firePosLite            = {};
+// SFSM_fnc_atValidRpgFirePos      = {};
+// SFSM_fnc_isValidRpgFirePos      = {};
+// SFSM_fnc_getRpgLaunchPos        = {};
+// SFSM_fnc_forceFireLauncher      = {};
+// SFSM_fnc_launcherHandler        = {};
+// SFSM_fnc_forceFireLauncher      = {};
+// SFSM_fnc_initfireRpgAtHouse     = {};
+// SFSM_fnc_endFireRpgAtHouse      = {};
+// SFSM_fnc_fireLauncherAtHouse    = {};
+// SFSM_fnc_handleForcedMissile    = {};
+// SFSM_fnc_missileAimed           = {};
 
-// SFSM_fnc_firePosLite = {};
+// [player, aaa] call SFSM_fnc_missileAimed;
 
 
-SFSM_fnc_atValidRpgFirePos = { 
-params[
-    ["_man",      nil, [objNull]],
-    ["_building", nil, [objNull]]
-];
-private _buildingPos = [_building] call SFSM_fnc_buildingCenterPosASL;
-private _aimPos      = aimpos _man;
-private _canShoot    = [_aimPos, _buildingPos, _man, _building] call SFSM_fnc_isValidRpgFirePos;
-
-_canShoot;
-};
-
-SFSM_fnc_isValidRpgFirePos = { 
-params[
-    ["_firePosASL",   nil,      [[]]],
-    ["_targetPosASL", nil,      [[]]],
-    ["_shooter",      nil, [objNull]],
-    ["_targetObj",    nil, [objNull]]
-];
-
-private _topPos     = _firePosASL vectorAdd [0, 0, 5];
-private _linebreaks = lineIntersectsSurfaces [_firePosASL, _topPos, _shooter, objNull, true, 3];
-private _buildings  = _linebreaks select {(_x#3) isKindOf "house"};
-
-if(_buildings isNotEqualTo [])exitWith{false;};
-
-private _noLOS = [_firePosASL, _targetPosASL, _shooter, _targetObj] call SFSM_fnc_lineBroken;
-
-if(_noLOS)exitWith{false;};
-
-true;
-};
-
-SFSM_fnc_getNearHousePositions = { 
-params[
-    ["_man",      nil,    [objNull]],
-    ["_building", objNull, [objNull]]
-];
-
-};
-
-SFSM_fnc_getRpgLaunchPos = { 
-params[
-    ["_man",          nil,    [objNull]],
-    ["_building",    objNull, [objNull]]
-];
-// Return current position if the RPG guy can shoot from there.
-if([_man, _building] call SFSM_fnc_atValidRpgFirePos)exitWith{getPosATLVisual _man;};
-
-private ["_launchPos"];
-private _areaCenter   = getPosATL _man;
-private _distance     = _man distance _building;
-
-if(_distance < 50)  then {_distance = 50;};
-if(_distance > 300) then {_distance = 300;};
-
-private _positions    = [_areaCenter, _distance, 100] call Tcore_fnc_squareGrid;
-private _targetPosASL = [_building] call SFSM_fnc_buildingCenterPosASL;
-
-_positions = [_positions, [], {_man distance2D _x}, "ASCEND"] call BIS_fnc_sortBy;
-
-{
-    if(!isNil "_launchPos")exitWith{};
-    private _firePosASL = ATLToASL ([_x, 1] call Tcore_fnc_addZ);
-    private _valid      = [_firePosASL, _targetPosASL, _man, _building] call SFSM_fnc_isValidRpgFirePos;
-    
-    if(_valid)exitWith{_launchPos = _x;};
-    
-} forEach _positions;
-
-if(isNil "_launchPos")exitWith{};
-
-kk=0;
-SFSM_Custom3Dpositions = _positions apply {kk=kk+1;[_x, str kk]};
-
-_launchPos;
-};
 
 
 private _man       = aaa;
