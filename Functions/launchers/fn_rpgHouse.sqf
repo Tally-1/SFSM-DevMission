@@ -19,6 +19,7 @@ if(isNil "_launchPos")exitWith{[_man, "RPG on house failed"] call SFSM_fnc_flash
 
 
 [_man, _building, _launchPos] call SFSM_fnc_initRpgHouse;
+[_man]                        call SFSM_fnc_loadLauncherHE;
 [_man, _building, _launchPos] call SFSM_fnc_moveToRpgLaunchPos;
 
 private _cannotMove = ([_man, true] call SFSM_fnc_canRun) isEqualTo false;

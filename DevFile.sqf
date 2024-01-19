@@ -64,21 +64,31 @@ TODO RPG HOUSE:
 // SFSM_fnc_fireLauncherAtHouse    = {};
 // SFSM_fnc_handleForcedMissile    = {};
 // SFSM_fnc_missileAimed           = {};
+// SFSM_fnc_getAmmoData            = {};
+// SFSM_fnc_getMagSplashRange      = {};
+// SFSM_fnc_replaceInArr           = {};
+// SFSM_fnc_loadLauncherHE         = {};
 
 // [player, aaa] call SFSM_fnc_missileAimed;
 
-
+// SFSM_fnc_getHouseTargetPos = {};
 
 
 private _man       = aaa;
+private _target    = bbb;
 private _building  = targetBldn;
-private _targetPos = getPos targetBldn;
+
+_man setVariable ["SFSM_prevTarget", _target];
 
 
 
-// [_man, _building] call SFSM_fnc_getRpgLaunchPos;
+private _pos = ASLToATL ([_man, _building] call SFSM_fnc_getHouseTargetPos);
+SFSM_Custom3Dpositions = [[_pos, "Impact pos"]];
 
-[_man, _building] call SFSM_fnc_rpgHouse;
+
+// [_man] call SFSM_fnc_loadLauncherHE;
+// [_man, _building] call SFSM_fnc_rpgHouse;
+// [_man, _building] call SFSM_fnc_fireLauncherAtHouse;
 
 // [_man, _targetPos] spawn SFSM_fnc_forceLookAtPos;
 

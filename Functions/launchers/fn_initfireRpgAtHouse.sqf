@@ -2,7 +2,7 @@ params[
     ["_man",       nil, [objNull]],
     ["_building",  nil, [objNull]]
 ];
-private _targetPosASL = [_building] call SFSM_fnc_buildingCenterPosASL;
+private _targetPosASL = [_man, _building] call SFSM_fnc_getHouseTargetPos;
 private _handler      = [_man]  call  SFSM_fnc_launcherHandler;
 private _targetPosATL = ASLToATL _targetPosASL;
 private _dir          = _man getDir _building;

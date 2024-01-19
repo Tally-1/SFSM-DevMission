@@ -72,6 +72,7 @@ if("Targeting"            in _action)             exitWith{_blue};
 if("Moving to position"   in _action)             exitWith{_brown};
 if("Hunting"              in _action)             exitWith{_orange};
 if("trying again"         in _action)             exitWith{_orange};
+if("HE missile"           in _action)             exitWith{_orange};
 
 
 

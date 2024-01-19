@@ -198,8 +198,8 @@ class CfgFunctions
 
             class posOnVector           {};
             class lineBroken            {};
-
-            class forceLookAtPos        {};
+            
+            class replaceInArr          {};
             
         };
 
@@ -268,6 +268,7 @@ class CfgFunctions
             class forcedUnitPosNoAnim            {};
             class isBrainDead                    {};
             class findZombies                    {};
+            class forceLookAtPos                 {};
 
         };
 
@@ -438,6 +439,7 @@ class CfgFunctions
         {
             file = "functions\launchers" 
             class rpgHouse               {};
+            class loadLauncherHE         {};
             class launcherHandler        {};
             class canRpgHouse            {};
             class forcedCqbRpg           {};
@@ -455,6 +457,7 @@ class CfgFunctions
             class handleForcedMissile    {};
             class endFireRpgAtHouse      {};
             class missileAimed           {};
+            class getHouseTargetPos      {};
         }
 
         class dodging
@@ -1133,6 +1136,8 @@ class CfgFunctions
             class manIsInjured           {};
 
             class weaponAimPos           {};
+            class getAmmoData            {};
+            class getMagSplashRange      {};
         };
 
         class turrets
