@@ -562,6 +562,7 @@ class CfgFunctions
             class curatorGetOutFipo   {};
             class safeGetOutFipo      {};
             class fipoRemoveUseless   {};
+            class getOutDestroyedFipo {};
             class fipoCorrectPosition {};
             
             class initIdleFipoMove    {};

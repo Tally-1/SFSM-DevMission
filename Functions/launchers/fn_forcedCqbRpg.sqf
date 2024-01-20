@@ -18,4 +18,4 @@ private _validTarget = [_targetBuilding] call SFSM_fnc_validRpgTargetBuilding;
 if!(_validTarget)exitWith{};
 
 "Attacking building with RPG" call dbgmsg;
-[_man, _building] spawn SFSM_fnc_rpgHouse;
+[_man, _targetBuilding] spawn SFSM_fnc_rpgHouse;
