@@ -68,11 +68,25 @@ TODO RPG HOUSE:
 // SFSM_fnc_getMagSplashRange      = {};
 // SFSM_fnc_replaceInArr           = {};
 // SFSM_fnc_loadLauncherHE         = {};
+// SFSM_fnc_getHouseTargetPos      = {};
+// SFSM_fnc_selectionMap           = {};
+// SFSM_fnc_getHousePoints         = {};
+// SFSM_fnc_getHouseTargetPos      = {};
 
-// [player, aaa] call SFSM_fnc_missileAimed;
+// private _positions = 
+// SFSM_Custom3Dpositions = [cursorObject] call SFSM_fnc_getHousePoints;
+
+
+// copyToClipboard str ([cursorObject] call SFSM_fnc_selectionMap);
+// [player, _building] call SFSM_fnc_nearestEnemyInBuilding
+// SFSM_fnc_getHouseTargetMan = {};
 
 // SFSM_fnc_getHouseTargetPos = {};
 
+// SFSM_fnc_nearestEnemyInBuilding = {};
+
+
+SFSM_Custom3Dpositions = [];
 
 private _man       = aaa;
 private _target    = bbb;
@@ -80,11 +94,13 @@ private _building  = targetBldn;
 
 _man setVariable ["SFSM_prevTarget", _target];
 
-
+hint str ([player, _building] call SFSM_fnc_getHouseTargetMan);
 
 private _pos = ASLToATL ([_man, _building] call SFSM_fnc_getHouseTargetPos);
-SFSM_Custom3Dpositions = [[_pos, "Impact pos"]];
+// SFSM_Custom3Dpositions = [[_pos, "Impact pos"]];
 
+SFSM_Custom3Dpositions = ([_building] call SFSM_fnc_getHousePoints);
+SFSM_Custom3Dpositions pushBack [_pos, "Impact pos", [0.2,0.7,0.1,1]];
 
 // [_man] call SFSM_fnc_loadLauncherHE;
 // [_man, _building] call SFSM_fnc_rpgHouse;

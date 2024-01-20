@@ -105,6 +105,9 @@ class CfgFunctions
            class houseAvailable        {};
            class nearestAvailableHouse {};
            class endCQBclearing        {};
+           class getHousePoints        {};
+           class getHouseTargetMan     {};
+           class nearestEnemyInBuilding{};
         };
         
         class misc
@@ -200,7 +203,7 @@ class CfgFunctions
             class lineBroken            {};
             
             class replaceInArr          {};
-            
+            class selectionMap          {};            
         };
 
         class morale
