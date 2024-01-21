@@ -203,7 +203,9 @@ class CfgFunctions
             class lineBroken            {};
             
             class replaceInArr          {};
-            class selectionMap          {};            
+            class selectionMap          {};    
+            class squareGrid            {};
+            class getLowestPos          {};
         };
 
         class morale
