@@ -18,17 +18,22 @@ systemChat "devFile found";
 
 /************************************************************************************/
 
-// SFSM_fnc_squareGrid = {};
-// SFSM_fnc_getLowestPos = {};
+// SFSM_fnc_nearestKnownEnemy    = {};
+// SFSM_fnc_distanceToKnownEnemy = {};
 
-// private _position = getPosATL player;
-// private _rad = SFSM_DodgeDistance;
+
+// SFSM_fnc_canReturnToFormation = {};
+// SFSM_fnc_returnToFormation    = {};
+
+
+
+// SFSM_fnc_squareGrid   = {};
+// SFSM_fnc_getLowestPos = {};
+// private _position     = getPosATL player;
+// private _rad          = SFSM_DodgeDistance;
 // private _lowPos = 
 // [_position, _rad] call SFSM_fnc_getLowestPos;
-
 // SFSM_Custom3Dpositions=[[_lowPos, "Lowest"]];
-// SFSM_fnc_evasion = {};
-
 // [aaa, player] call SFSM_fnc_evasion;
 
 /************************************************************************************/

@@ -274,6 +274,10 @@ class CfgFunctions
             class isBrainDead                    {};
             class findZombies                    {};
             class forceLookAtPos                 {};
+            class canReturnToFormation           {};
+            class returnToFormation              {};
+
+            class returnAllMen                   {};
 
         };
 
@@ -1122,6 +1126,8 @@ class CfgFunctions
             class validEnemy             {};
             class validEnemyVehicle      {};
             class validEnemyInArr        {};
+            class nearestKnownEnemy      {};
+            class distanceToKnownEnemy   {};
             class isMachineGunner        {};
             class isATSoldier            {};
             class isMarksman             {};
