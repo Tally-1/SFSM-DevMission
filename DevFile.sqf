@@ -20,11 +20,26 @@ systemChat "devFile found";
 
 // SFSM_fnc_nearestKnownEnemy    = {};
 // SFSM_fnc_distanceToKnownEnemy = {};
-
-
-// SFSM_fnc_canReturnToFormation = {};
 // SFSM_fnc_returnToFormation    = {};
+// SFSM_fnc_canReturnToFormation = {}; 
+// ObjScan_fnc_scopeRange        = {};
+// SFSM_fnc_isMarksman       = {};
+// private _weaponData       = ([this] call objScan_fnc_infGearData)get"weaponData";
+// SFSM_fnc_hasAmmoForWeapon = {};
+// SFSM_fnc_getScopeRange    = {};
 
+SFSM_Custom3Dpositions=[];
+
+private _men     = units grp1;
+private _snipers = _men select {[_x] call SFSM_fnc_isMarksman};
+private _errors  = _men select {_x in _snipers isEqualTo false;};
+private _ePos    = getPosATLVisual leader grp1;
+
+hint str [count _men, count _snipers, count _errors];
+
+// SFSM_Custom3Dpositions=[[_ePos, "No mark"]];
+// grp2 = createGroup west;
+_snipers join group player;
 
 
 // SFSM_fnc_squareGrid   = {};

@@ -17,8 +17,9 @@ isNil{//Forced unscheduled execution
     private _primaryMags   = primaryWeaponMagazine  _man; 
     private _secondaryMags = secondaryWeaponMagazine _man; 
 
-    _unitMags append _primaryMags;
-    _unitMags append _secondaryMags;
+    _magazineTypes append (compatibleMagazines _weapon);
+    _unitMags      append _primaryMags;
+    _unitMags      append _secondaryMags;
 
     // private _ammoInweapon = currentMagazineDetail _man;
     {
