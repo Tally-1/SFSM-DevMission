@@ -709,6 +709,8 @@ class CfgFunctions
             class fipoOverrunDist   {};
             class panic             {};
             class calmPanicked      {};
+            class isSurrounded      {};
+            class manInLoosingState {};
         }
 
         class capture
@@ -716,6 +718,8 @@ class CfgFunctions
             file = "functions\overrun\capture";
             class dropWeapon          {};
             class dropAllWeapons      {};
+            class canPanicSurrender   {};
+            class surrenderAll        {};
             class surrender           {};
             class capture             {};
             class execute             {};

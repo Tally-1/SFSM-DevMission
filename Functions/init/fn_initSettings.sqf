@@ -90,9 +90,9 @@ then{
                 'Acts_AidlPercMstpSnonWnonDnon_warmup_7_loop',
                 'Acts_AidlPercMstpSnonWnonDnon_warmup_6_loop'
         ]";
-        SFSM_allowEvasion     = true;     //When no cover is found a soldier will run to avoid incoming fire.
-        SFSM_simpleBff        = true;   //  Remove Caching of Terrain objects. Will improve performance, but units taking cover will become slightly dumber.
-        SFSM_spawnBffActions  = false; //   Spawns the functions called during a battle in a separate thread, bad for performance but ensures that the loop does not get aborted when an error occurs.
+        SFSM_allowEvasion     = true;   //When no cover is found a soldier will run to avoid incoming fire.
+        SFSM_simpleBff        = true;  //  Remove Caching of Terrain objects. Will improve performance, but units taking cover will become slightly dumber.
+        SFSM_spawnBffActions  = false;//   Spawns the functions called during a battle in a separate thread, bad for performance but ensures that the loop does not get aborted when an error occurs.
         
 
         SFSM_shotDistanceDef  = 300; // Default distance a man will hear enemy fire
@@ -109,13 +109,18 @@ then{
         SFSM_cptrExecProbPlr  = 1;           // Float 0-1 Probability that a player-captive Will be executed.
         SFSM_cptrPlrEscProb   = 0.5;         // The probability for success when a player attempts to break free while captured.
         SFSM_cptrPlrEscTime   = 8;           // How long one escape attempt takes in seconds.
-
+        SFSM_captureTargets   = "all";       // Who can be captured | ["all", "ai", "players", "disabeled"]
+        SFSM_captiveAutoDeath = -1;          // How long until a captive dies automatically. -1 = never | [-1,1,2,3,4,5]
+        
         SFSM_allowEvasionAttack = true;     // When rushing an enemy at close range the AI will sometimes do a evasive manouver before firing, such as Zig-Zag or a quick flank.
 };
 
-
-
 //Make sure settings are available globally.
+// 1.32 settings
+missionNamespace setVariable ["SFSM_captureTargets",    SFSM_captureTargets, true];
+missionNamespace setVariable ["SFSM_captiveAutoDeath",  SFSM_captiveAutoDeath, true];
+
+
 // 1.3 settings
 missionNamespace setVariable ["SFSM_allowEvasionAttack",  SFSM_allowEvasionAttack, true];
 

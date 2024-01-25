@@ -1,5 +1,28 @@
 private _versionName = "DCO soldier FSM | Capture";
 
+[
+	"SFSM_captureTargets",
+	"LIST",
+	["Capture Targets", "Select what kind of soldiers can be captured."],
+	_versionName,
+	[
+		["Everyone", "AI only", "Players Only", "Nobody"],
+		["all", "ai", "players", "nobody"], 
+		0
+	]
+] call cba_settings_fnc_init;
+
+[
+	"SFSM_captiveAutoDeath",
+	"LIST",
+	["Captive Heart attack", "How long until a captive dies automatically."],
+	_versionName,
+	[
+		["never", "1 minute", "2 minutes", "3 minutes", "4 minutes", "5 minutes"],
+		[-1,1,2,3,4,5], 
+		0
+	]
+] call cba_settings_fnc_init;
 
 [
 	"SFSM_bombOnCapture",

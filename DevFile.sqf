@@ -17,39 +17,31 @@ systemChat "devFile found";
 // [aaa, (getPosATLVisual player)] spawn SFSM_fnc_forceMove2;
 
 /************************************************************************************/
+/*
+TODO Capture:
+params:
+1) Allow capture:
+	["Everyone", "AI only", "Players Only", "nobody"]
+	["all", "ai", "players", "disabeled"]
+2) Captive Heart attack: 
+	["never", "1 minute", "2 minutes", "3 minutes", "4 minutes", "5 minutes"]
+	[-1,1,2,3,4,5]
 
-// SFSM_fnc_nearestKnownEnemy    = {};
-// SFSM_fnc_distanceToKnownEnemy = {};
-// SFSM_fnc_returnToFormation    = {};
-// SFSM_fnc_canReturnToFormation = {}; 
-// ObjScan_fnc_scopeRange        = {};
-// SFSM_fnc_isMarksman       = {};
-// private _weaponData       = ([this] call objScan_fnc_infGearData)get"weaponData";
-// SFSM_fnc_hasAmmoForWeapon = {};
-// SFSM_fnc_getScopeRange    = {};
+Surrender:
+1) Have panicked units switch to surrender when surrounded
+2) Have fleeing units surrender on a 50% random chance.
 
-SFSM_Custom3Dpositions=[];
+*/
 
-private _men     = units grp1;
-private _snipers = _men select {[_x] call SFSM_fnc_isMarksman};
-private _errors  = _men select {_x in _snipers isEqualTo false;};
-private _ePos    = getPosATLVisual leader grp1;
+// SFSM_fnc_isSurrounded        = {};
+// SFSM_fnc_manInLoosingState   = {};
+// SFSM_fnc_canPanicSurrender   = {};
+// SFSM_fnc_surrenderAll        = {};
+// SFSM_fnc_executionerKillshot = {};
+// [] call SFSM_fnc_surrenderAll;
 
-hint str [count _men, count _snipers, count _errors];
-
-// SFSM_Custom3Dpositions=[[_ePos, "No mark"]];
-// grp2 = createGroup west;
-_snipers join group player;
-
-
-// SFSM_fnc_squareGrid   = {};
-// SFSM_fnc_getLowestPos = {};
-// private _position     = getPosATL player;
-// private _rad          = SFSM_DodgeDistance;
-// private _lowPos = 
-// [_position, _rad] call SFSM_fnc_getLowestPos;
 // SFSM_Custom3Dpositions=[[_lowPos, "Lowest"]];
-// [aaa, player] call SFSM_fnc_evasion;
+
 
 /************************************************************************************/
 systemChat "devFile read";
