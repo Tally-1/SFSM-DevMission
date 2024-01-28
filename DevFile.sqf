@@ -25,13 +25,19 @@ systemChat "devFile found";
 
 // hint str ([player] call SFSM_fnc_countInventoryMagsForWeapon);
 
-// SFSM_fnc_getFipoMan       = {};
-// SFSM_fnc_nearFipoMen      = {};
-// SFSM_fnc_fipoQuickRevive  = {};
-// SFSM_fnc_deploySmoke      = {};
-// SFSM_fnc_relocateUnconMan = {};
+// SFSM_fnc_getFipoMan        = {};
+// SFSM_fnc_nearFipoMen       = {};
+// SFSM_fnc_fipoQuickRevive   = {};
+// SFSM_fnc_deploySmoke       = {};
+// SFSM_fnc_relocateUnconMan  = {};
+// SFSM_fnc_getSmokeDeployDir = {};
+// SFSM_fnc_deploySmokeOnMan  = {};
 
 SFSM_Custom3Dpositions=[];
+
+
+
+
 
 
 // if (windDir < 45 || windDir > 315) then {

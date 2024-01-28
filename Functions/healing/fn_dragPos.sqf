@@ -34,7 +34,8 @@ private _coverPos = [_wounded, nil, SFSM_maxDragDistance] call SFSM_fnc_getCover
 if(isNil "_coverPos")exitWith{};
 
 private _nearMen = _coverPos nearEntities ['CAManBase', 5];
-
 if(count _nearMen > 2)exitWith{};
+
+if(_coverPos distance _wounded < 7)exitWith{};
 
 _coverPos;

@@ -184,7 +184,8 @@ class CfgFunctions
 
             class rgbColorToA3Color     {};
             class distanceToFooting     {};
-
+            class getSmokeDeployDir     {};
+            class deploySmokeOnMan      {};
             class deploySmoke           {};
             class numberDiff            {};
             class getProneTreshHold     {};

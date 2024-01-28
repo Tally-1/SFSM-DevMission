@@ -7,8 +7,8 @@ params[
 private _relocatePos = [_healer, _unconscious] call SFSM_fnc_dragPos;
 if (isNil "_relocatePos")exitWith{false;};
 
-private _throwDir = [(windDir -180)]     call Tcore_fnc_formatDir;
-private _smokeOut = [_healer, _throwDir] call SFSM_fnc_deploySmoke;
-[_healer, _unconscious, _relocatePos]    call SFSM_fnc_dragMan;
+private _throwDir = [_healer, _relocatePos] call SFSM_fnc_getSmokeDeployDir;
+private _smokeOut = [_healer, _throwDir]    call SFSM_fnc_deploySmoke;
+[_healer, _unconscious, _relocatePos]       call SFSM_fnc_dragMan;
 
 true;

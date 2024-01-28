@@ -22,23 +22,27 @@ if([_healer] call SFSM_fnc_isFipoMedic)then{
     [_healer] call SFSM_fnc_getOutFipo;
     
 };
+["buddy_revive_init", [_healer, _unconscious]] call CBA_fnc_localEvent;
 
-//set action-data
+
 private _startPos      = getPos _healer;
 private _healerName    = name _healer;
 private _woundedName   = name _unconscious;
 private _wPos          = [getPosATL _unconscious, 0.2] call Tcore_fnc_addZ;
-private _maxDistance   = (_healer distance _unconscious)*1.25;
+private _distance      = _healer distance _unconscious;
+private _inSmokeDist   = _distance < 40 && {_distance > 10};
+private _maxDistance   = _distance*1.25;
 private _moveCondPar   = [_healer, _unconscious, _maxDistance];
 private _moveCondition = [_moveCondPar, SFSM_fnc_canMoveToRevive];
 private _hAction       = ["reviving ", _woundedName]joinString "";
 private _wAction       = ["being revived by ", _healerName]joinString "";
 
+//set action-data
 [_healer, _hAction]      call SFSM_fnc_setAction;
 [_unconscious, _wAction] call SFSM_fnc_setAction;
 
-["buddy_revive_init", [_healer, _unconscious]] call CBA_fnc_localEvent;
 
+if(_inSmokeDist)then{[_healer, _unconscious] call SFSM_fnc_deploySmokeOnMan;};
 [_healer, _wPos, nil, 3, _moveCondition] call SFSM_fnc_forcedMove;
 
 //check if conditions are still valid, if not then abort revive
@@ -51,14 +55,12 @@ _canHeal = [_healer, _unconscious, true, 7, true] call SFSM_fnc_canBuddyHeal;
 if!(_canHeal)exitWith{[_healer, _unconscious, false] call SFSM_fnc_endBuddyRevive;};
 
 
-_healer disableAI "MOVE";
-private _smokeOut = [_healer] call SFSM_fnc_deploySmoke;
-if(_smokeOut)then{sleep 1;};
 
-//start reviving revive
+
+//start reviving
+_healer disableAI "MOVE";
 ["revive_anim", [_healer, _unconscious]] call CBA_fnc_localEvent;
 [_healer, _unconscious] call SFSM_fnc_reviveAnim;
-
 _healer enableAI "MOVE";
 
 private _canHeal = [_healer, _unconscious, true, 7] call SFSM_fnc_canBuddyHeal;

@@ -6,7 +6,7 @@ if(!alive _wounded)exitWith{};
 
 private _healer        = objNull;
 private _pos           = getPosATLVisual _wounded;
-private _radius        = 10;
+private _radius        = 7;
 private _excludedFipos = [_fipo];
 private _excludedMen   = [_wounded];
 private _nearFipoMen   = [
