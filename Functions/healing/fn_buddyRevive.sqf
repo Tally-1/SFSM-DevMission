@@ -24,11 +24,14 @@ if([_healer] call SFSM_fnc_isFipoMedic)then{
 };
 
 //set action-data
-private _startPos    = getPos _healer;
-private _healerName  = name _healer;
-private _woundedName = name _unconscious;
-private _wPos        = [getPosATL _unconscious, 0.2] call Tcore_fnc_addZ;
-private _timeLimit   = 30;
+private _startPos      = getPos _healer;
+private _healerName    = name _healer;
+private _woundedName   = name _unconscious;
+private _wPos          = [getPosATL _unconscious, 0.2] call Tcore_fnc_addZ;
+private _timeLimit     = 30;
+private _maxDistance   = (_healer distance _unconscious)*1.25;
+private _moveCondPar   = [_healer, _unconscious, _maxDistance];
+private _moveCondition = [_moveCondPar, SFSM_fnc_canMoveToRevive];
 
 if(_timeLimit < SFSM_DodgeTimer)then{_timeLimit = SFSM_DodgeTimer};
 
@@ -42,9 +45,7 @@ private _wAction = ["being revived by ", _healerName]joinString "";
 
 ["buddy_revive_init", [_healer, _unconscious]] call CBA_fnc_localEvent;
 
-// private _run = 
-[_healer, _wPos, _timeLimit, 3] call SFSM_fnc_forceMove2;
-// waitUntil{ sleep 1; (scriptDone _run || time > _timer);};
+[_healer, _wPos, nil, 3, _moveCondition] call SFSM_fnc_forcedMove;
 
 //check if conditions are still valid, if not then abort revive
 private _canHeal = [_healer, _unconscious, true, 7, true] call SFSM_fnc_canBuddyHeal;
@@ -61,10 +62,7 @@ if (!isNil "_relocatePos") then {
     
     private _timeAdded = round((_unconscious distance2D _relocatePos) * 1.2);
     _timer             = _timer + _timeAdded;
-    // private _drag      = 
     [_healer, _unconscious, _relocatePos] call SFSM_fnc_dragMan;
-    
-    // waitUntil { sleep 1; scriptDone _drag;};
 };
 
 if(! _canHeal)exitWith{

@@ -15,21 +15,26 @@ private _path         = _man getVariable "SFSM_currentPath";
 private _startTime    = time;
 private _pathDistance = [_path] call SFSM_fnc_getPathDistance;
 
+if(_pathDistance <= 0)then{_pathDistance = 0.01;};
+
 [_man, "Path calculated"] spawn SFSM_fnc_flashAction;
 _man doFollow _man;
 
 for "_i"from 0 to (count _path -1)
 do {
     private _continue = _conditionParams call _conditionCode;
+    private _nextPos  = _path#0;
     if(_continue isEqualTo false)                        exitWith{};
+    if(isNil "_nextPos")                                 exitWith{};
     if([_man, "abortForcedMove"] call SFSM_fnc_unitData) exitWith{};
     if([_man, "inFipo"] call SFSM_fnc_unitData)          exitWith{};
 
     // private _k = 0;
     // SFSM_Custom3Dpositions = _path apply {_k=_k+1;[_x, str round (_x#2)]};
-    
-    private _nextPos      = _path#0;
     private _distance     = _man distance _nextPos;
+
+    if(_distance <= 0)then{_distance = 0.01;};
+
     private _distCoef     = _distance/_pathDistance;
     private _posTimeLimit = _maxTime * _distCoef;
     

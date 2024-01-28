@@ -10,7 +10,7 @@
 if(isNil "SFSM_allowFlinching")
 then{
         SFSM_disableSoldierFSM  = false;   //\\ disable soldier FSM
-        SFSM_DebugType          = "always";  // What type of debug is to be used. ["always", "curator", "never"];
+        SFSM_DebugType          = "curator";  // What type of debug is to be used. ["always", "curator", "never"];
         // SFSM_Debugger           = true;   // show debug-info, and 3D markers
         SFSM_allowFlinching     = true;     // Units will flinch on incoming fire.
         SFSM_allowDodging       = true;     // Units will dodge(change position) when incoming fire reaches the treshHold (SFSM_RpsDodgeTrigger).
@@ -53,9 +53,10 @@ then{
         SFSM_allowHunkerDown    = false;      //   Allow units to hunker down.
         SFSM_mgSuppression      = true;      //    Allow MG's to suppress enemy units.
         SFSM_dragWounded        = true;     //     Allow units to drag wounded units.
-        SFSM_maxDragDistance    = 40;      //      Max distance a unit will drag a wounded unit.
-        SFSM_turretLeaderDist   = 40;     //       Distance to leader for turret gunners to dismount.
-        SFSM_maxSprinters       = 10;    //        Max amount of units that can sprint at the same time.
+        SFSM_minEnemyDistForHealing = 30;  //      No Reviving when known enemies are within this distance.
+        SFSM_maxDragDistance    = 40;     //       Max distance a unit will drag a wounded unit.
+        SFSM_turretLeaderDist   = 40;    //        Distance to leader for turret gunners to dismount.
+        SFSM_maxSprinters       = 10;   //         Max amount of units that can sprint at the same time.
         SFSM_disableSpecialists = "player-squads"; // "all" "player-squads" "none"
         SFSM_specRegroupDist    = 70;             //   Distance to leader for specialists to regroup.
         SFSM_BFFknowledgeType   = "both sides";  //   "one side" "both sides"
@@ -117,8 +118,9 @@ then{
 
 //Make sure settings are available globally.
 // 1.32 settings
-missionNamespace setVariable ["SFSM_captureTargets",    SFSM_captureTargets, true];
-missionNamespace setVariable ["SFSM_captiveAutoDeath",  SFSM_captiveAutoDeath, true];
+missionNamespace setVariable ["SFSM_captureTargets",         SFSM_captureTargets, true];
+missionNamespace setVariable ["SFSM_captiveAutoDeath",       SFSM_captiveAutoDeath, true];
+missionNamespace setVariable ["SFSM_minEnemyDistForHealing", SFSM_minEnemyDistForHealing, true];
 
 
 // 1.3 settings

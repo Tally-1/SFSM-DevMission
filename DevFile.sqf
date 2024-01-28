@@ -36,38 +36,11 @@ params:
 
 */
 
-// SFSM_fnc_initForcedMoveToPos = {};
-// SFSM_fnc_endForcedMoveToPos  = {};
-// SFSM_fnc_whileForcedMove     = {};
-// SFSM_fnc_forcedMoveToPos     = {};
-// SFSM_fnc_forcedMoveSprint    = {};
-// SFSM_fnc_getPathDistance     = {};
-// SFSM_fnc_forcedMove          = {};
-// SFSM_fnc_calculatePath       = {};
-// SFSM_fnc_forcedMoveOnPath    = {};
+
+// SFSM_fnc_canMoveToRevive = {};
 
 SFSM_Custom3Dpositions=[];
 
-// hint str ([player, "last_bullet_fired"] call SFSM_fnc_unitData);
-// private _code = {
-//     params["_man"];
-//     private _timeSince = time - ([_man, "last_bullet_fired"] call SFSM_fnc_unitData);
-//     if(_timeSince < 10)exitWith{false;};
-//     true;
-// };
-
-// [
-//     aaa, 
-//     getPosATL player,
-//     nil,
-//     nil,
-//     [[player], _code]
-// ] spawn SFSM_fnc_forcedMove;
-
-// private _path = aaa getVariable "SFSM_currentPath";
-// hint str _path;
-// private _k = 0;
-// SFSM_Custom3Dpositions = _path apply {_k=_k+1;[_x, str round (_x#2)]};
 
 // SFSM_Custom3Dpositions=[[_lowPos, "Lowest"]];
 

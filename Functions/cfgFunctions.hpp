@@ -1061,6 +1061,7 @@ class CfgFunctions
 
             class ACE_medicalGlobal       {};
             class woundedAndHealersGlobal {};
+            class canMoveToRevive         {};
         };
 
 
