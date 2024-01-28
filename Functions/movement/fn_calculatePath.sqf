@@ -9,10 +9,13 @@
 private _timeLimit = 30;
 params["_man", "_destination", "_timeLimit"];
 
-private _start = getPos _man;
-private _timer = time + _timeLimit;
-private _agent = (calculatePath ["man", (behaviour _man), _start, _destination]);
+private _start     = getPos _man;
+private _timer     = time + _timeLimit;
+private _behaviour = behaviour _man;
 
+if(_behaviour isEqualTo "ERROR")exitwith{};
+
+private _agent     = (calculatePath ["man", _behaviour, _start, _destination]);
 _agent setVariable ["SFSM_pathOwner", _man];
 
 [_agent] call SFSM_fnc_PathCalculated;

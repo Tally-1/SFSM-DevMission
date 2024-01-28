@@ -21,9 +21,14 @@ private _house = [_wounded] call SFSM_fnc_currentBuilding;
 private _inDoors = !isNil "_house";
 if(_inDoors)exitWith{};
 
-private _objTypes    = ["Tree", "Bush", "ROCK", "ROCKS", "RUIN"];
-private _nearObjects = nearestTerrainObjects [_wounded, _objTypes, 4];
-if!(_nearObjects isEqualTo [])exitWith{};
+private _objTypes       = ["Tree", "Bush", "ROCK", "ROCKS", "RUIN"];
+private _nearObjects    = nearestTerrainObjects [_wounded, _objTypes, 5];
+private _nearFIPOs      = _wounded nearEntities ["SFSM_FIPO", 5];
+
+_nearObjects insert [0, _nearFIPOs,true];
+
+private _alreadyInCover = _nearObjects isNotEqualTo [];
+if(_alreadyInCover)exitWith{};
 
 private _coverPos = [_wounded, nil, SFSM_maxDragDistance] call SFSM_fnc_getCoverPos;
 if(isNil "_coverPos")exitWith{};

@@ -38,6 +38,8 @@ private _moveComplete = [
     _condition
 ] call SFSM_fnc_forcedMoveOnPath;
 
+if(isNil "_moveComplete")then{["Nil move complete",2]call dbgmsg;};
+
 if   (_moveComplete isEqualTo false)
 then {[_man, _startPos, _targetPos] call SFSM_fnc_onForcedMoveFailed;};
 

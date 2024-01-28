@@ -42,8 +42,8 @@ then{
         SFSM_hidingTimeOut      = 30;    // The max amount of time a unit will stay in a hiding-pos before returning to normal. (hiding is triggered by the presence of a enemy vehicle)
         SFSM_hearingHide        = true;  // Hide by hearing vehicle: A Vehicle with engine ON is detected within hearing-distance
         SFSM_hearingDistance    = 250;   // Max distance a vehicle will be reacted to by hearing, (if in a urban area, half of this distance is used).
-        // SFSM_overrunDistance    = 50;    // If an enemy comes within this range while holding cover / hiding the unit will try to evade the enemy, set to 0 to deactivate.
 
+        SFSM_clearHouse         = false; // Allows AI to clear buildings room by room.
         SFSM_houseDemolition    = true;  // Allow units with explosives in their backpack to blow up houses instead of clearing them room by room.
         SFSM_rpgHouse           = true;  // Allow units with RPG's to blow up houses 
         SFSM_globalUD           = false; // Global unit-data
@@ -118,10 +118,10 @@ then{
 
 //Make sure settings are available globally.
 // 1.32 settings
-missionNamespace setVariable ["SFSM_captureTargets",         SFSM_captureTargets, true];
-missionNamespace setVariable ["SFSM_captiveAutoDeath",       SFSM_captiveAutoDeath, true];
+missionNamespace setVariable ["SFSM_captureTargets",         SFSM_captureTargets,         true];
+missionNamespace setVariable ["SFSM_captiveAutoDeath",       SFSM_captiveAutoDeath,       true];
 missionNamespace setVariable ["SFSM_minEnemyDistForHealing", SFSM_minEnemyDistForHealing, true];
-
+missionNamespace setVariable ["SFSM_clearHouse",             SFSM_clearHouse,             true];
 
 // 1.3 settings
 missionNamespace setVariable ["SFSM_allowEvasionAttack",  SFSM_allowEvasionAttack, true];

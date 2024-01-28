@@ -28,6 +28,7 @@ do {
     if(isNil "_nextPos")                                 exitWith{};
     if([_man, "abortForcedMove"] call SFSM_fnc_unitData) exitWith{};
     if([_man, "inFipo"] call SFSM_fnc_unitData)          exitWith{};
+    // if(_this call SFSM_fnc_forcedMoveSprint)             exitWith{};
 
     // private _k = 0;
     // SFSM_Custom3Dpositions = _path apply {_k=_k+1;[_x, str round (_x#2)]};

@@ -21,6 +21,7 @@ if([_man, "abortForcedMove"] call SFSM_fnc_unitData)exitWith{
        _this call SFSM_fnc_postForceMove2;
 	   true;
     };
+    
 	true;
 };
     

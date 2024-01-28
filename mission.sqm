@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={26915.201,157.81219,24026.422};
-		dir[]={0.76581484,-0.56340075,0.31007254};
-		up[]={0.52222699,0.82617629,0.21144554};
-		aside[]={0.37530294,-1.139997e-007,-0.92692018};
+		pos[]={26980.613,137.22629,24447.006};
+		dir[]={-0.13091108,-0.56514877,-0.81453627};
+		up[]={-0.089679055,0.82498896,-0.55798823};
+		aside[]={-0.98732978,0,0.1586822};
 	};
 };
 binarizationWanted=0;
@@ -2574,7 +2574,6 @@ class Mission
 			};
 			id=45334;
 			type="SFSM_FIPO";
-			atlOffset=3.2424927e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2980,7 +2979,6 @@ class Mission
 			};
 			id=45337;
 			type="SFSM_FIPO";
-			atlOffset=3.2424927e-005;
 			class CustomAttributes
 			{
 				class Attribute0

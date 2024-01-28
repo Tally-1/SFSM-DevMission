@@ -18,30 +18,25 @@ systemChat "devFile found";
 
 /************************************************************************************/
 /*
-TODO Capture:
-params:
-// 1) Allow capture:
-// 	["Everyone", "AI only", "Players Only", "nobody"]
-// 	["all", "ai", "players", "disabeled"]
-// 2) Captive Heart attack: 
-// 	["never", "1 minute", "2 minutes", "3 minutes", "4 minutes", "5 minutes"]
-// 	[-1,1,2,3,4,5]
-3) Redo capture function so that the man avoids capping if unit is discovered.
-(Maybe use EH?)
-4) Capture when very close and doing CQB
 
-// Surrender:
-// 1) Have panicked units switch to surrender when surrounded
-// 2) Have fleeing units surrender on a 50% random chance.
 
 */
+// SFSM_fnc_countInventoryMagsForWeapon = {};
 
+// hint str ([player] call SFSM_fnc_countInventoryMagsForWeapon);
 
-// SFSM_fnc_canMoveToRevive = {};
+// SFSM_fnc_getFipoMan       = {};
+// SFSM_fnc_nearFipoMen      = {};
+// SFSM_fnc_fipoQuickRevive  = {};
+// SFSM_fnc_deploySmoke      = {};
+// SFSM_fnc_relocateUnconMan = {};
 
 SFSM_Custom3Dpositions=[];
 
 
+// if (windDir < 45 || windDir > 315) then {
+// 	hint "I feel a southern wind"; // wind going from South to North
+// };
 // SFSM_Custom3Dpositions=[[_lowPos, "Lowest"]];
 
 

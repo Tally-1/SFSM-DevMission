@@ -532,6 +532,9 @@ class CfgFunctions
             file = "functions\fightPos";
             class clearFipo             {};
             class getFipo               {};
+            class getFipoMan            {};
+            class nearFipoMen           {};
+
             class inFipo                {};
             class nearestFipo           {};
             class handleFipoHit         {};
@@ -670,6 +673,7 @@ class CfgFunctions
         {
             file = "functions\fightPos\FUBAR";
             class fipoKnockOut          {};
+            class fipoQuickRevive       {};
             class timeSinceFipoKnockOut {};
             class fipoIsFUBAR           {};
             class fipoIsDestroyed       {};
@@ -1039,6 +1043,7 @@ class CfgFunctions
             class reviveAnim              {};
             class buddyRevive             {};
             class endBuddyRevive          {};
+            class relocateUnconMan        {};
             class initDragMan             {};
             class dragStatus              {};
             class drag                    {};
@@ -1133,42 +1138,43 @@ class CfgFunctions
         class objectData
         {
             file = "functions\objectData";
-            class glRifle                {};
-            class ObjStance              {};
-            class areaData               {};
-            class getMapObjects          {};
-            class excludedMapObject      {};
-            class filterMapObjects       {};
-            class terrainObjData         {};
-            class squadAsset             {};
-            class hasAmmoForWeapon       {};
-            class validEnemy             {};
-            class validEnemyVehicle      {};
-            class validEnemyInArr        {};
-            class nearestKnownEnemy      {};
-            class distanceToKnownEnemy   {};
-            class isMachineGunner        {};
-            class isATSoldier            {};
-            class isMarksman             {};
-            class isRealMan              {};
-            class functionalMan          {};
-            class isMedic                {};
-            class isFipoMedic            {};
-            class isPlayer               {};
-            class isDeactivated          {};            
+            class glRifle                     {};
+            class ObjStance                   {};
+            class areaData                    {};
+            class getMapObjects               {};
+            class excludedMapObject           {};
+            class filterMapObjects            {};
+            class terrainObjData              {};
+            class squadAsset                  {};
+            class countInventoryMagsForWeapon {};
+            class hasAmmoForWeapon            {};
+            class validEnemy                  {};
+            class validEnemyVehicle           {};
+            class validEnemyInArr             {};
+            class nearestKnownEnemy           {};
+            class distanceToKnownEnemy        {};
+            class isMachineGunner             {};
+            class isATSoldier                 {};
+            class isMarksman                  {};
+            class isRealMan                   {};
+            class functionalMan               {};
+            class isMedic                     {};
+            class isFipoMedic                 {};
+            class isPlayer                    {};
+            class isDeactivated               {};            
             
-            class availableAiSoldier     {};
-            class buildingCenterPosASL   {};
-            class availEnemyFriendDist   {};
+            class availableAiSoldier          {};
+            class buildingCenterPosASL        {};
+            class availEnemyFriendDist        {};
 
-            class validAllyVehicle       {};
-            class validAlly              {};
+            class validAllyVehicle            {};
+            class validAlly                   {};
 
-            class manIsInjured           {};
+            class manIsInjured                {};
 
-            class weaponAimPos           {};
-            class getAmmoData            {};
-            class getMagSplashRange      {};
+            class weaponAimPos                {};
+            class getAmmoData                 {};
+            class getMagSplashRange           {};
         };
 
         class turrets

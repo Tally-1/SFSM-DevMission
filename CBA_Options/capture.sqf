@@ -18,8 +18,8 @@ private _versionName = "DCO soldier FSM | Capture";
 	["Captive Heart attack", "How long until a captive dies automatically."],
 	_versionName,
 	[
-		["never", "1 minute", "2 minutes", "3 minutes", "4 minutes", "5 minutes"],
-		[-1,1,2,3,4,5], 
+		["never", "5 minutes", "10 minutes", "15 minutes", "30 minutes", "60 minutes"],
+		[-1, 5, 10, 15, 30, 60], 
 		0
 	]
 ] call cba_settings_fnc_init;
