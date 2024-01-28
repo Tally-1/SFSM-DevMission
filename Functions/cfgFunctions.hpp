@@ -278,6 +278,7 @@ class CfgFunctions
             class returnToFormation              {};
 
             class returnAllMen                   {};
+            class getPathDistance                {};
 
         };
 
@@ -298,6 +299,19 @@ class CfgFunctions
             class attackAnimMap                                {};
             class initAttackAnims                              {};
             class zigZagPathClear                              {};
+
+        };
+
+        class forcedMove
+        {
+            file = "functions\movement\forcedMove";
+            class initForcedMoveToPos {};
+            class forcedMoveToPos     {};
+            class whileForcedMove     {};
+            class endForcedMoveToPos  {};
+            class forcedMoveSprint    {};
+            class forcedMoveOnPath    {};
+            class forcedMove          {};
 
         };
 
