@@ -204,6 +204,8 @@ class CfgFunctions
             class lineBroken            {};
             
             class replaceInArr          {};
+            class deleteValuesFromArr   {};
+            class removeValueFromArray  {};
             class selectionMap          {};    
             class squareGrid            {};
             class getLowestPos          {};
@@ -766,6 +768,16 @@ class CfgFunctions
             class toggleCaptureAi     {};
 
             class ACE_onCaptiveChange {};
+        };
+
+        class capture_autoKill
+        {
+            file = "functions\overrun\capture\autoKill";
+            class isValidCaptive      {};
+            class canAutoKillCaptive  {};
+            class autoKillCaptive     {};
+            class cleanupCaptives     {};
+
         };
 
         class capture_abuse

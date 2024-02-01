@@ -18,24 +18,33 @@ systemChat "devFile found";
 
 /************************************************************************************/
 /*
-
+TODO:
+- Forced move needs to apply remaining time and distance, not total.
 
 */
 // SFSM_fnc_countInventoryMagsForWeapon = {};
 
 // hint str ([player] call SFSM_fnc_countInventoryMagsForWeapon);
 
-// SFSM_fnc_getFipoMan        = {};
-// SFSM_fnc_nearFipoMen       = {};
-// SFSM_fnc_fipoQuickRevive   = {};
-// SFSM_fnc_deploySmoke       = {};
-// SFSM_fnc_relocateUnconMan  = {};
-// SFSM_fnc_getSmokeDeployDir = {};
-// SFSM_fnc_deploySmokeOnMan  = {};
+// SFSM_fnc_getFipoMan           = {};
+// SFSM_fnc_nearFipoMen          = {};
+// SFSM_fnc_fipoQuickRevive      = {};
+// SFSM_fnc_deploySmoke          = {};
+// SFSM_fnc_relocateUnconMan     = {};
+// SFSM_fnc_getSmokeDeployDir    = {};
+// SFSM_fnc_deploySmokeOnMan     = {};
+// SFSM_Custom3Dpositions        = [];
+// SFSM_fnc_setCaptured          = {};
+// SFSM_fnc_isValidCaptive       = {};
+// SFSM_fnc_canAutoKillCaptive   = {};
+// SFSM_fnc_autoKillCaptive      = {};
+// SFSM_fnc_removeValueFromArray = {};
+// SFSM_fnc_deleteValuesFromArr  = {};
+// SFSM_fnc_cleanupCaptives      = {};
 
-SFSM_Custom3Dpositions=[];
-
-
+// [aaa] call SFSM_fnc_setCaptured;
+// [aaa] call SFSM_fnc_postCapture;
+// hint str ([aaa] call SFSM_fnc_isValidCaptive);
 
 
 

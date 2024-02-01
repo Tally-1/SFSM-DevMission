@@ -33,11 +33,14 @@ do {
     // private _k = 0;
     // SFSM_Custom3Dpositions = _path apply {_k=_k+1;[_x, str round (_x#2)]};
     private _distance     = _man distance _nextPos;
+    private _pathDistance = [_path] call SFSM_fnc_getPathDistance;
+    private _timeSpent    = time - _startTime;
+    private _timeLeft     = ceil _maxTime - _timeSpent;
 
     if(_distance <= 0)then{_distance = 0.01;};
 
     private _distCoef     = _distance/_pathDistance;
-    private _posTimeLimit = _maxTime * _distCoef;
+    private _posTimeLimit = _timeLeft * _distCoef;
     
     [_man, _startPos, _startTime] call SFSM_fnc_forcedMoveProne;
     

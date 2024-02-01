@@ -4,5 +4,6 @@
 [] call SFSM_fnc_findZombies;
 [] call SFSM_fnc_returnAllMen;
 [] call SFSM_fnc_surrenderAll;
+[] call SFSM_fnc_cleanupCaptives;
 
 true;

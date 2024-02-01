@@ -200,9 +200,10 @@ SFSM_allFipos        = [];
     
 // } forEach (entities "logic");
 
-SFSM_sprinters   = []; //simultaneous sprinters, used to cap the amount
-SFSM_cleanupObjs = []; //Objects programmed for deletion.
-SFSM_cleanupGrps = []; //Groups programmed  for deletion.
+SFSM_sprinters     = []; // simultaneous sprinters, used to cap the amount
+SFSM_cleanupObjs   = []; // Objects  programmed for deletion.
+SFSM_cleanupGrps   = []; // Groups   programmed for deletion.
+SFSM_captivesToDie = []; // Captives programmed for death.
 
 
 
