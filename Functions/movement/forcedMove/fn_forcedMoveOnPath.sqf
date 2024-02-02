@@ -35,8 +35,8 @@ do {
     private _timeSpent    = time - _startTime;
     private _timeLeft     = ceil _maxTime - _timeSpent;
 
-    if(_distance <= 0)     then{_distance = 0.01;};
-    if(_pathDistance <= 0) exitWith{};
+    if(_distance <= 0)     then{_distance     = 0.01;};
+    if(_pathDistance <= 0) then{_pathDistance = 0.01;};
 
     private _distCoef     = _distance/_pathDistance;
     private _posTimeLimit = _timeLeft * _distCoef;

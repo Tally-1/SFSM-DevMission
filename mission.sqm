@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={26888.932,38.600025,24144.754};
-		dir[]={0.11677155,-0.38596135,0.91509467};
-		up[]={0.048854824,0.92251498,0.38285688};
-		aside[]={0.99195647,3.7252903e-009,-0.12657958};
+		pos[]={27027.748,123.03629,24316.188};
+		dir[]={-0.85802865,-0.50875527,-0.070603378};
+		up[]={-0.50705057,0.86090541,-0.041722789};
+		aside[]={-0.082009971,2.1251799e-007,0.99664825};
 	};
 };
 binarizationWanted=0;
@@ -67,14 +67,13 @@ addons[]=
 	"A3_Structures_F_Exp_Walls_Slum",
 	"A3_Misc_F_Helpers",
 	"A3_Structures_F_Heli_VR_Helpers",
-	"A3_Structures_F_Orange_VR_Helpers",
-	"A3_Characters_F_Enoch"
+	"A3_Structures_F_Orange_VR_Helpers"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=32;
+		items=31;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -290,13 +289,6 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item31
-		{
-			className="A3_Characters_F_Enoch";
-			name="Arma 3 Contact Platform - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
 	};
 };
 dlcs[]=
@@ -305,8 +297,7 @@ dlcs[]=
 	"Expansion",
 	"Argo",
 	"Heli",
-	"Orange",
-	"Enoch"
+	"Orange"
 };
 randomSeed=904946;
 class ScenarioData
@@ -371,7 +362,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=129;
+		items=121;
 		class Item0
 		{
 			dataType="Logic";
@@ -2574,6 +2565,7 @@ class Mission
 			};
 			id=45334;
 			type="SFSM_FIPO";
+			atlOffset=3.2424927e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2979,6 +2971,7 @@ class Mission
 			};
 			id=45337;
 			type="SFSM_FIPO";
+			atlOffset=3.2424927e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33018,900 +33011,16 @@ class Mission
 				nAttributes=30;
 			};
 		};
-		class Item121
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=8;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26765.842,22.31319,24237.121};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						rank="SERGEANT";
-					};
-					id=56154;
-					type="B_Soldier_SL_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26770.842,22.188953,24232.121};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56155;
-					type="B_soldier_AR_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26760.842,21.961493,24232.121};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=56156;
-					type="B_Soldier_GL_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26775.842,22.070763,24227.121};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						rank="SERGEANT";
-					};
-					id=56157;
-					type="B_soldier_M_F";
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26755.842,21.694256,24227.121};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=56158;
-					type="B_soldier_AT_F";
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26780.842,21.781879,24222.121};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56159;
-					type="B_soldier_AAT_F";
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26750.842,21.584644,24222.121};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56160;
-					type="B_Soldier_A_F";
-				};
-				class Item7
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26785.842,21.485844,24217.121};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56161;
-					type="B_medic_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=56153;
-		};
-		class Item122
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=8;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26837.896,18.88023,24194.42};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						rank="SERGEANT";
-					};
-					id=56163;
-					type="B_Soldier_SL_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26842.896,18.284454,24189.42};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56164;
-					type="B_soldier_AR_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26832.896,18.894279,24189.42};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=56165;
-					type="B_Soldier_GL_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26847.896,17.804638,24184.42};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						rank="SERGEANT";
-					};
-					id=56166;
-					type="B_soldier_M_F";
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26827.896,18.728252,24184.42};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=56167;
-					type="B_soldier_AT_F";
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26852.896,17.32946,24179.42};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56168;
-					type="B_soldier_AAT_F";
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26822.896,18.695097,24179.42};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56169;
-					type="B_Soldier_A_F";
-				};
-				class Item7
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26857.896,16.920698,24174.42};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56170;
-					type="B_medic_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=56162;
-		};
-		class Item123
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=8;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26895.543,16.738407,24181.914};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						rank="SERGEANT";
-					};
-					id=56172;
-					type="B_Soldier_SL_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26900.543,16.275881,24176.914};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56173;
-					type="B_soldier_AR_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26890.543,16.528271,24176.914};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=56174;
-					type="B_Soldier_GL_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26905.543,15.646177,24171.914};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						rank="SERGEANT";
-					};
-					id=56175;
-					type="B_soldier_M_F";
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26885.543,16.282986,24171.914};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=56176;
-					type="B_soldier_AT_F";
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26910.543,14.412877,24166.914};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56177;
-					type="B_soldier_AAT_F";
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26880.543,16.029255,24166.914};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56178;
-					type="B_Soldier_A_F";
-				};
-				class Item7
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26915.543,12.715882,24161.914};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56179;
-					type="B_medic_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=56171;
-		};
-		class Item124
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=8;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26739.934,23.94212,24279.215};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						rank="SERGEANT";
-					};
-					id=56181;
-					type="B_Soldier_SL_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26744.934,23.875462,24274.215};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56182;
-					type="B_soldier_AR_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26734.934,23.656675,24274.215};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=56183;
-					type="B_Soldier_GL_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26749.934,23.787746,24269.215};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						rank="SERGEANT";
-					};
-					id=56184;
-					type="B_soldier_M_F";
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26729.934,23.399328,24269.215};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=56185;
-					type="B_soldier_AT_F";
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26754.934,23.664312,24264.215};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56186;
-					type="B_soldier_AAT_F";
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26724.934,23.201168,24264.215};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56187;
-					type="B_Soldier_A_F";
-				};
-				class Item7
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26759.934,23.499884,24259.215};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56188;
-					type="B_medic_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=56180;
-		};
-		class Item125
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26865.727,24.990692,24317.66};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-						rank="SERGEANT";
-					};
-					id=56190;
-					type="O_R_Soldier_TL_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26870.727,24.556417,24312.66};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=56191;
-					type="O_R_Soldier_AR_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26860.727,24.749563,24312.66};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56192;
-					type="O_R_soldier_M_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26875.727,24.334953,24307.66};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56193;
-					type="O_R_Soldier_LAT_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=56189;
-		};
-		class Item126
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26897.648,24.000832,24304.998};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-						rank="SERGEANT";
-					};
-					id=56195;
-					type="O_R_Soldier_TL_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26902.648,23.631716,24299.998};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=56196;
-					type="O_R_Soldier_AR_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26892.648,23.896479,24299.998};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56197;
-					type="O_R_soldier_M_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26907.648,23.185089,24294.998};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56198;
-					type="O_R_Soldier_LAT_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=56194;
-		};
-		class Item127
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26920.389,22.696369,24295.023};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-						rank="SERGEANT";
-					};
-					id=56200;
-					type="O_R_Soldier_TL_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26925.389,22.255949,24290.023};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=56201;
-					type="O_R_Soldier_AR_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26915.389,22.649349,24290.023};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56202;
-					type="O_R_soldier_M_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26930.389,21.796047,24285.023};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56203;
-					type="O_R_Soldier_LAT_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=56199;
-		};
-		class Item128
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26905.018,22.709517,24283.434};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-						rank="SERGEANT";
-					};
-					id=56205;
-					type="O_R_Soldier_TL_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26910.018,22.289791,24278.434};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=56206;
-					type="O_R_Soldier_AR_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26900.018,22.642982,24278.434};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56207;
-					type="O_R_soldier_M_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={26915.018,21.916412,24273.434};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=56208;
-					type="O_R_Soldier_LAT_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=56204;
-		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=126;
+			nextID=76;
 		};
 		class Links
 		{
-			items=126;
+			items=76;
 			class Item0
 			{
 				linkID=0;
@@ -34335,7 +33444,7 @@ class Mission
 			class Item42
 			{
 				linkID=42;
-				item0=45426;
+				item0=45428;
 				item1=45493;
 				class CustomData
 				{
@@ -34345,7 +33454,7 @@ class Mission
 			class Item43
 			{
 				linkID=43;
-				item0=45427;
+				item0=45429;
 				item1=45493;
 				class CustomData
 				{
@@ -34355,7 +33464,7 @@ class Mission
 			class Item44
 			{
 				linkID=44;
-				item0=45428;
+				item0=45430;
 				item1=45493;
 				class CustomData
 				{
@@ -34365,8 +33474,8 @@ class Mission
 			class Item45
 			{
 				linkID=45;
-				item0=45429;
-				item1=45493;
+				item0=45457;
+				item1=45491;
 				class CustomData
 				{
 					type="Sync";
@@ -34375,8 +33484,8 @@ class Mission
 			class Item46
 			{
 				linkID=46;
-				item0=45430;
-				item1=45493;
+				item0=45458;
+				item1=45491;
 				class CustomData
 				{
 					type="Sync";
@@ -34385,7 +33494,7 @@ class Mission
 			class Item47
 			{
 				linkID=47;
-				item0=45457;
+				item0=45459;
 				item1=45491;
 				class CustomData
 				{
@@ -34395,7 +33504,7 @@ class Mission
 			class Item48
 			{
 				linkID=48;
-				item0=45458;
+				item0=45460;
 				item1=45491;
 				class CustomData
 				{
@@ -34405,7 +33514,7 @@ class Mission
 			class Item49
 			{
 				linkID=49;
-				item0=45459;
+				item0=45461;
 				item1=45491;
 				class CustomData
 				{
@@ -34415,7 +33524,7 @@ class Mission
 			class Item50
 			{
 				linkID=50;
-				item0=45460;
+				item0=45462;
 				item1=45491;
 				class CustomData
 				{
@@ -34425,8 +33534,8 @@ class Mission
 			class Item51
 			{
 				linkID=51;
-				item0=45461;
-				item1=45491;
+				item0=45457;
+				item1=49191;
 				class CustomData
 				{
 					type="Sync";
@@ -34435,8 +33544,8 @@ class Mission
 			class Item52
 			{
 				linkID=52;
-				item0=45462;
-				item1=45491;
+				item0=45458;
+				item1=49191;
 				class CustomData
 				{
 					type="Sync";
@@ -34445,7 +33554,7 @@ class Mission
 			class Item53
 			{
 				linkID=53;
-				item0=45457;
+				item0=45459;
 				item1=49191;
 				class CustomData
 				{
@@ -34455,7 +33564,7 @@ class Mission
 			class Item54
 			{
 				linkID=54;
-				item0=45458;
+				item0=45460;
 				item1=49191;
 				class CustomData
 				{
@@ -34465,7 +33574,7 @@ class Mission
 			class Item55
 			{
 				linkID=55;
-				item0=45459;
+				item0=45461;
 				item1=49191;
 				class CustomData
 				{
@@ -34475,7 +33584,7 @@ class Mission
 			class Item56
 			{
 				linkID=56;
-				item0=45460;
+				item0=45462;
 				item1=49191;
 				class CustomData
 				{
@@ -34485,7 +33594,7 @@ class Mission
 			class Item57
 			{
 				linkID=57;
-				item0=45461;
+				item0=45473;
 				item1=49191;
 				class CustomData
 				{
@@ -34495,7 +33604,7 @@ class Mission
 			class Item58
 			{
 				linkID=58;
-				item0=45462;
+				item0=45474;
 				item1=49191;
 				class CustomData
 				{
@@ -34505,7 +33614,7 @@ class Mission
 			class Item59
 			{
 				linkID=59;
-				item0=45473;
+				item0=45475;
 				item1=49191;
 				class CustomData
 				{
@@ -34515,7 +33624,7 @@ class Mission
 			class Item60
 			{
 				linkID=60;
-				item0=45474;
+				item0=45476;
 				item1=49191;
 				class CustomData
 				{
@@ -34525,7 +33634,7 @@ class Mission
 			class Item61
 			{
 				linkID=61;
-				item0=45475;
+				item0=45477;
 				item1=49191;
 				class CustomData
 				{
@@ -34535,7 +33644,7 @@ class Mission
 			class Item62
 			{
 				linkID=62;
-				item0=45476;
+				item0=45478;
 				item1=49191;
 				class CustomData
 				{
@@ -34545,7 +33654,7 @@ class Mission
 			class Item63
 			{
 				linkID=63;
-				item0=45477;
+				item0=45409;
 				item1=49191;
 				class CustomData
 				{
@@ -34555,7 +33664,7 @@ class Mission
 			class Item64
 			{
 				linkID=64;
-				item0=45478;
+				item0=45410;
 				item1=49191;
 				class CustomData
 				{
@@ -34565,7 +33674,7 @@ class Mission
 			class Item65
 			{
 				linkID=65;
-				item0=45409;
+				item0=45411;
 				item1=49191;
 				class CustomData
 				{
@@ -34575,7 +33684,7 @@ class Mission
 			class Item66
 			{
 				linkID=66;
-				item0=45410;
+				item0=45412;
 				item1=49191;
 				class CustomData
 				{
@@ -34585,7 +33694,7 @@ class Mission
 			class Item67
 			{
 				linkID=67;
-				item0=45411;
+				item0=45413;
 				item1=49191;
 				class CustomData
 				{
@@ -34595,7 +33704,7 @@ class Mission
 			class Item68
 			{
 				linkID=68;
-				item0=45412;
+				item0=45414;
 				item1=49191;
 				class CustomData
 				{
@@ -34605,8 +33714,8 @@ class Mission
 			class Item69
 			{
 				linkID=69;
-				item0=45413;
-				item1=49191;
+				item0=45393;
+				item1=45490;
 				class CustomData
 				{
 					type="Sync";
@@ -34615,8 +33724,8 @@ class Mission
 			class Item70
 			{
 				linkID=70;
-				item0=45414;
-				item1=49191;
+				item0=45394;
+				item1=45490;
 				class CustomData
 				{
 					type="Sync";
@@ -34625,7 +33734,7 @@ class Mission
 			class Item71
 			{
 				linkID=71;
-				item0=45393;
+				item0=45395;
 				item1=45490;
 				class CustomData
 				{
@@ -34635,7 +33744,7 @@ class Mission
 			class Item72
 			{
 				linkID=72;
-				item0=45394;
+				item0=45396;
 				item1=45490;
 				class CustomData
 				{
@@ -34645,7 +33754,7 @@ class Mission
 			class Item73
 			{
 				linkID=73;
-				item0=45395;
+				item0=45397;
 				item1=45490;
 				class CustomData
 				{
@@ -34655,7 +33764,7 @@ class Mission
 			class Item74
 			{
 				linkID=74;
-				item0=45396;
+				item0=45398;
 				item1=45490;
 				class CustomData
 				{
@@ -34665,508 +33774,8 @@ class Mission
 			class Item75
 			{
 				linkID=75;
-				item0=45397;
-				item1=45490;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item76
-			{
-				linkID=76;
-				item0=45398;
-				item1=45490;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item77
-			{
-				linkID=77;
 				item0=50164;
 				item1=45492;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item78
-			{
-				linkID=78;
-				item0=56200;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item79
-			{
-				linkID=79;
-				item0=56201;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item80
-			{
-				linkID=80;
-				item0=56202;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item81
-			{
-				linkID=81;
-				item0=56203;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item82
-			{
-				linkID=82;
-				item0=56195;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item83
-			{
-				linkID=83;
-				item0=56196;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item84
-			{
-				linkID=84;
-				item0=56197;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item85
-			{
-				linkID=85;
-				item0=56198;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item86
-			{
-				linkID=86;
-				item0=56190;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item87
-			{
-				linkID=87;
-				item0=56191;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item88
-			{
-				linkID=88;
-				item0=56192;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item89
-			{
-				linkID=89;
-				item0=56193;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item90
-			{
-				linkID=90;
-				item0=56205;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item91
-			{
-				linkID=91;
-				item0=56206;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item92
-			{
-				linkID=92;
-				item0=56207;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item93
-			{
-				linkID=93;
-				item0=56208;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item94
-			{
-				linkID=94;
-				item0=56181;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item95
-			{
-				linkID=95;
-				item0=56182;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item96
-			{
-				linkID=96;
-				item0=56183;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item97
-			{
-				linkID=97;
-				item0=56184;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item98
-			{
-				linkID=98;
-				item0=56185;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item99
-			{
-				linkID=99;
-				item0=56186;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item100
-			{
-				linkID=100;
-				item0=56187;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item101
-			{
-				linkID=101;
-				item0=56188;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item102
-			{
-				linkID=102;
-				item0=56154;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item103
-			{
-				linkID=103;
-				item0=56155;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item104
-			{
-				linkID=104;
-				item0=56156;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item105
-			{
-				linkID=105;
-				item0=56157;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item106
-			{
-				linkID=106;
-				item0=56158;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item107
-			{
-				linkID=107;
-				item0=56159;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item108
-			{
-				linkID=108;
-				item0=56160;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item109
-			{
-				linkID=109;
-				item0=56161;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item110
-			{
-				linkID=110;
-				item0=56163;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item111
-			{
-				linkID=111;
-				item0=56164;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item112
-			{
-				linkID=112;
-				item0=56165;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item113
-			{
-				linkID=113;
-				item0=56166;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item114
-			{
-				linkID=114;
-				item0=56167;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item115
-			{
-				linkID=115;
-				item0=56168;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item116
-			{
-				linkID=116;
-				item0=56169;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item117
-			{
-				linkID=117;
-				item0=56170;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item118
-			{
-				linkID=118;
-				item0=56172;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item119
-			{
-				linkID=119;
-				item0=56173;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item120
-			{
-				linkID=120;
-				item0=56174;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item121
-			{
-				linkID=121;
-				item0=56175;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item122
-			{
-				linkID=122;
-				item0=56176;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item123
-			{
-				linkID=123;
-				item0=56177;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item124
-			{
-				linkID=124;
-				item0=56178;
-				item1=45532;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item125
-			{
-				linkID=125;
-				item0=56179;
-				item1=45532;
 				class CustomData
 				{
 					type="Sync";

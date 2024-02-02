@@ -1022,3 +1022,39 @@ SFSM_Custom3Dpositions = [
     [ASLToATL _endPos,   "_endPos"]
 ];
 */
+
+// private _animList = [
+// 	["amovpknlmrunsraswrfldf",                          "walk-front-crouch"],
+// 	["amovpknlmrunsraswrfldr",                          "walk-right-crouch"],
+// 	// ["AmovPpneMstpSrasWrflDnon_AmovPpneMevaSlowWrflDr",        "roll-right"],
+// 	// ["AmovPpneMstpSrasWrflDnon_AmovPpneMevaSlowWrflDl",         "roll-left"],
+// 	["amovpknlmrunsraswrfldl",                           "walk-left-crouch"]
+// ];
+
+// [
+// 	nil,
+// 	nil,
+// 	true,
+// 	_animList
+
+// ] call SFSM_fnc_animListData;
+
+// hint "executing anims";
+// sleep 1;
+// private _dataList = [];
+// {
+// 	private _startPos  = getPosATLVisual player;
+// 	private _startTime = time;
+// 	player playMoveNow _x#0;
+// 	sleep 0.2;
+// 	waitUntil{velocityModelSpace player isEqualTo [0,0,0]};
+// 	private _dist = (getPosATLVisual player) distance _startPos;
+// 	private _dir  = player getRelDir _startPos;
+// 	private _time = time - _startTime;
+// 	_dataList pushBack [_x#1, _dist, _dir, _time];
+	
+// } forEach _animList;
+
+// copyToClipboard str _dataList;
+
+// hint "anims scanned";

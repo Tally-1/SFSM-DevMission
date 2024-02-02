@@ -20,12 +20,13 @@ systemChat "devFile found";
 /*
 TODO:
 AnimData needed:
- walk-right-crouch
- roll-right
- walk-left-crouch
- roll-left
-
+ walk-right-crouch ("amovpknlmrunsraswrfldr")
+ roll-right        ("AmovPpneMstpSrasWrflDnon_AmovPpneMevaSlowWrflDr")
+ walk-left-crouch  ("amovpknlmrunsraswrfldl")
+ roll-left         ("AmovPpneMstpSrasWrflDnon_AmovPpneMevaSlowWrflDl")
+ ""
 */
+// setWindDir 
 
 
 // if (windDir < 45 || windDir > 315) then {
