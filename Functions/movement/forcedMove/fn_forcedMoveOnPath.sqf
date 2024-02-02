@@ -15,8 +15,6 @@ private _path         = _man getVariable "SFSM_currentPath";
 private _startTime    = time;
 private _pathDistance = [_path] call SFSM_fnc_getPathDistance;
 
-if(_pathDistance <= 0)then{_pathDistance = 0.01;};
-
 [_man, "Path calculated"] spawn SFSM_fnc_flashAction;
 _man doFollow _man;
 
@@ -37,7 +35,8 @@ do {
     private _timeSpent    = time - _startTime;
     private _timeLeft     = ceil _maxTime - _timeSpent;
 
-    if(_distance <= 0)then{_distance = 0.01;};
+    if(_distance <= 0)     then{_distance = 0.01;};
+    if(_pathDistance <= 0) exitWith{};
 
     private _distCoef     = _distance/_pathDistance;
     private _posTimeLimit = _timeLeft * _distCoef;
