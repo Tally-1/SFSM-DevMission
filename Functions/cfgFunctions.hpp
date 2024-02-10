@@ -707,6 +707,20 @@ class CfgFunctions
 
         };
 
+        class sidestep
+        {
+            file = "functions\fightPos\sidestep";
+            class fipoSideStep                {};
+            class fipoSideStepStart           {};
+            class getSideStepAnim             {};
+            class execSideStep                {};
+            class execSideStepCondition       {};
+            class execSideStepMid             {};
+            class execSideStepEnd             {};
+            class fipoSideStepReturn          {};
+            class endFipoSideStep             {};
+        };
+
 /***********************FIPO-END*************************/
 /********************************************************/
 

@@ -3,7 +3,7 @@ params["_man"];
 private _peekTime = ([_man] call SFSM_fnc_fipoPeekTime)+0.1;//added 0.1 to account for the wait 
 private _coolDown = [_man] call SFSM_fnc_peekCoolDownTime;
 private _fipo     = [_man] call SFSM_fnc_getFipo;
-if(isNil "_fipo")    exitWith{};
+if(isNil "_fipo")exitWith{};
 
 ([_fipo] call SFSM_fnc_fipoStanceIndexes)
 params[
@@ -33,12 +33,19 @@ if!(isNil "_anim")then{
     [_man] call SFSM_fnc_abortIdleFipo;
 };
 
+// Sidesteps needs a different method.
+if(_sideStep)exitWith{
+    [
+        _man, 
+        _shootingStance,
+        _coverStance
+    ] 
+    call SFSM_fnc_fipoSideStep;
+};
+
 //change to peeking(high) stance.
 [_man, "Peeking"] call SFSM_fnc_setAction;
-
-if(_sideStep)
-then{[_man, _shootingStance] call SFSM_fnc_fipoSideStep}
-else{[_man, _shootingStance] call SFSM_fnc_animSetStance};
+[_man, _shootingStance] call SFSM_fnc_animSetStance;
 
 
 //wait for stance to complete.
