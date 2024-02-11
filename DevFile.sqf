@@ -27,14 +27,21 @@ TODO:
 // SFSM_fnc_fipoPeek              = {};
 // SFSM_fnc_getSideStepAnim       = {};
 // SFSM_fnc_endFipoSideStep       = {};
-// SFSM_fnc_execSideStepCondition = {};
+// 
 // SFSM_fnc_execSideStepMid       = {};
 // SFSM_fnc_execSideStepEnd       = {};
 // SFSM_fnc_execSideStep          = {};
 // SFSM_fnc_fipoSideStepStart     = {};
 // SFSM_fnc_fipoSideStepReturn    = {};
+// SFSM_fnc_reInitAllMen          = {};
+// SFSM_fnc_isHeadLess            = {};
+// SFSM_fnc_handleNewGroup        = {};
+// SFSM_fnc_forceAnimStop         = {};
+// SFSM_fnc_canReturnStep         = {};
+// SFSM_fnc_canContinueSideStep   = {};
+// SFSM_fnc_execSideStepCondition = {};
 
-
+// SFSM_fnc_initNewGroups = {};
 
 // copyToClipboard str ([f1] call SFSM_fnc_fipoStanceIndexes);
 

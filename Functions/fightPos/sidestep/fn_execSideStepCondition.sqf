@@ -1,17 +1,15 @@
 params[
     ["_man", nil, [objNull]]
 ];
-if!(_man getVariable ["SFSM_returnStep",  false])exitWith{true;};
-
 private _fipo = [_man] call SFSM_fnc_getFipo;
-private _distance = _fipo distance _man;
+if(isNil "_fipo")exitWith {false;};
 
-if(isNil "_fipo")   exitWith {false;};
-if(_distance < 0.9) exitWith {
-    private _anim = SFSM_stanceToAnimMap get (stance _man);
-    [_man, _anim] remoteExecCall ["switchMove", _man];
-    [_man, "Aborting sideStep", 1] spawn SFSM_fnc_flashAction;
-    false;
+if((_man getVariable ["SFSM_returnStep",  false]) isEqualTo false)
+exitWith{
+	private _canContinue = [_man] call SFSM_fnc_canContinueSideStep;
+	_canContinue;
 };
 
-true;
+private _canReturn = [_man] call SFSM_fnc_canReturnStep;
+
+_canReturn;

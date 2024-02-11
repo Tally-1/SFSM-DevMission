@@ -5,5 +5,7 @@
 [] call SFSM_fnc_returnAllMen;
 [] call SFSM_fnc_surrenderAll;
 [] call SFSM_fnc_cleanupCaptives;
+[] call SFSM_fnc_reInitAllMen;
+
 
 true;

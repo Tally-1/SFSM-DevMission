@@ -195,9 +195,15 @@ SFSM_sprinters       = []; // Simultaneous sprinters, used to cap the amount
 SFSM_cleanupObjs     = []; // Objects  programmed for deletion.
 SFSM_cleanupGrps     = []; // Groups   programmed for deletion.
 SFSM_captivesToDie   = []; // Captives programmed for death.
+SFSM_newGroups       = [];
 
-
-
+// Notifying of missing unitData:
+if(SFSM_globalUD isEqualTo false
+&&{hasInterface  isEqualTo false})then{
+    private _msg = "Unitdata is localized on dedicated server, switch Global unit-data ON";
+    [_msg] remoteExec ["systemChat", 0, true];
+    [_msg] remoteExec ["diag_log", 0, true];
+};
 
 
 if(!isNil "Tally_Dev"
