@@ -17,7 +17,8 @@ systemChat "devFile found";
 // [aaa, (getPosATLVisual player)] spawn SFSM_fnc_forcedMove;
 
 /************************************************************************************/
-// SFSM_fnc_buddyReviveDeathEh = {};
+// SFSM_fnc_clearHouseImpactPos = {};
+
 
 
 /************************************************************************************/

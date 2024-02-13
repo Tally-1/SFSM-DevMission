@@ -1,5 +1,5 @@
 params["_man"];
-private _reviveTarget = _healer getVariable "SFSM_myReviveTarget";
+
 
 // boot unconscious from vehicles so they can be revived, 
 // and the vehicle can be re-crewed.
@@ -12,6 +12,7 @@ then{_man action ["Eject", vehicle _man];};
 [_man]        call SFSM_fnc_fipoKnockOut;
 [_man]        call SFSM_fnc_moraleOnKnockOut;
 
+private _reviveTarget = _man getVariable "SFSM_myReviveTarget";
 if(!isNil "_reviveTarget")then{
 	[_reviveTarget, "healerDeathTime", time] call SFSM_fnc_unitData;
 	"Healer Knocked out while trying to revive" call dbgmsg;

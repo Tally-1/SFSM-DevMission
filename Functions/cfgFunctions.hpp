@@ -486,6 +486,7 @@ class CfgFunctions
             class endFireRpgAtHouse      {};
             class missileAimed           {};
             class getHouseTargetPos      {};
+            class clearHouseImpactPos    {};
         }
 
         class dodging
