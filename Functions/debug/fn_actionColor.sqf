@@ -54,6 +54,7 @@ if("!PANIC!"                  isEqualTo _action)    exitWith{_red};
 /*------------------------------------------------------------------------*/
 
 if("fiPo"                 in _action)             exitWith{_darkGreen};
+if("explosion"            in _action)             exitWith{_red};
 if("house is about to ex" in _action)             exitWith{_red};
 if("earching for targets" in _action)             exitWith{_darkGreen};
 if("Picking up"           in _action)             exitWith{_orange};

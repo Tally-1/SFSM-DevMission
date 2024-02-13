@@ -14,8 +14,8 @@ then{_man action ["Eject", vehicle _man];};
 
 private _reviveTarget = _man getVariable "SFSM_myReviveTarget";
 if(!isNil "_reviveTarget")then{
+	[_man,          "healerDeathTime", time] call SFSM_fnc_unitData;
 	[_reviveTarget, "healerDeathTime", time] call SFSM_fnc_unitData;
-	"Healer Knocked out while trying to revive" call dbgmsg;
 };
 
 true;

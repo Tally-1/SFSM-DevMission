@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=56779;
+		nextID=56798;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={26231.488,29.207582,24255.129};
-		dir[]={0.40815607,-0.34316438,0.84596354};
-		up[]={0.14911951,0.93927562,0.30907229};
-		aside[]={0.90065479,-4.5089109e-008,-0.43454236};
+		pos[]={22805.047,52.967125,18918.232};
+		dir[]={-0.45754761,-0.60147482,0.65488791};
+		up[]={-0.34448144,0.79889178,0.4930563};
+		aside[]={0.81974554,0,0.57272792};
 	};
 };
 binarizationWanted=0;
@@ -48,12 +48,8 @@ addons[]=
 	"ace_medical_treatment",
 	"ace_attach",
 	"ace_chemlights",
-	"A3_Weapons_F_Exp",
-	"ace_laserpointer",
-	"A3_Weapons_F_Mark_Acc",
-	"A3_Weapons_F_Tank_Launchers_Vorona",
-	"A3_Weapons_F_Tank",
-	"ace_metis",
+	"A3_Weapons_F_Mod_SMGs_SMG_03",
+	"A3_Weapons_F_Mod",
 	"A3_Weapons_F_Pistols_ACPC2",
 	"cba_jam",
 	"A3_Weapons_F_Explosives",
@@ -65,14 +61,13 @@ addons[]=
 	"A3_Structures_F_Walls",
 	"A3_Structures_F_Argo_Walls_Military",
 	"A3_Structures_F_Exp_Walls_Slum",
-	"A3_Modules_F",
-	"A3_Characters_F_Exp"
+	"A3_Modules_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=30;
+		items=25;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -180,104 +175,69 @@ class AddonsMetaData
 		};
 		class Item15
 		{
-			className="A3_Weapons_F_Exp";
-			name="Arma 3 Apex - Weapons and Accessories";
+			className="A3_Weapons_F_Mod";
+			name="Arma 3 Official Mod - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
 		class Item16
-		{
-			className="ace_laserpointer";
-			name="ACE3 - Laser Pointer";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item17
-		{
-			className="A3_Weapons_F_Mark";
-			name="Arma 3 Marksmen - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item18
-		{
-			className="A3_Weapons_F_Tank";
-			name="Arma 3 Tank - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item19
-		{
-			className="ace_metis";
-			name="ACE3 - Metis";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item20
 		{
 			className="cba_jam";
 			name="Community Base Addons - Joint Ammo Magazines";
 			author="CBA Team";
 			url="https://www.github.com/CBATeam/CBA_A3";
 		};
-		class Item21
+		class Item17
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item22
+		class Item18
 		{
 			className="SFSM_fipo";
 			name="sfsm_fipo";
 		};
-		class Item23
+		class Item19
 		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item20
 		{
 			className="A3_Static_F";
 			name="Arma 3 Alpha - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item21
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item26
+		class Item22
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item27
+		class Item23
 		{
 			className="A3_Structures_F_Argo";
 			name="Arma 3 Malden - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item28
+		class Item24
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item29
-		{
-			className="A3_Characters_F_Exp";
-			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -285,7 +245,7 @@ class AddonsMetaData
 };
 dlcs[]=
 {
-	"Mark",
+	"OfficialMod",
 	"Expansion",
 	"Argo"
 };
@@ -709,8 +669,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22913.98,6.1417561,18842.115};
-						angles[]={0,0.90127057,0};
+						position[]={22774.355,12.765493,18963.402};
+						angles[]={0,5.8405576,-0};
 					};
 					side="West";
 					flags=7;
@@ -722,25 +682,11 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="arifle_MXM_F";
-								optics="optic_DMS_ghex_F";
-								muzzle="muzzle_snds_H";
-								flashlight="acc_pointer_IR";
-								underBarrel="bipod_01_F_snd";
-								firemode="arifle_MXM_F:Single";
+								name="SMG_03C_black";
 								class primaryMuzzleMag
 								{
-									name="30Rnd_65x39_caseless_mag";
-									ammoLeft=30;
-								};
-							};
-							class secondaryWeapon
-							{
-								name="launch_O_Vorona_brown_F";
-								class primaryMuzzleMag
-								{
-									name="Vorona_HEAT";
-									ammoLeft=1;
+									name="50Rnd_570x28_SMG_03";
+									ammoLeft=50;
 								};
 							};
 							class handgun
@@ -754,7 +700,7 @@ class Mission
 							};
 							class uniform
 							{
-								typeName="U_I_CombatUniform_shortsleeve";
+								typeName="U_BG_Guerilla2_1";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -767,9 +713,9 @@ class Mission
 									};
 									class Item1
 									{
-										name="30Rnd_65x39_caseless_mag";
-										count=3;
-										ammoLeft=30;
+										name="50Rnd_570x28_SMG_03";
+										count=1;
+										ammoLeft=50;
 									};
 								};
 								class ItemCargo
@@ -784,7 +730,7 @@ class Mission
 							};
 							class vest
 							{
-								typeName="V_PlateCarrierIA2_dgtl";
+								typeName="V_PlateCarrier1_rgr";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -821,35 +767,41 @@ class Mission
 									};
 									class Item5
 									{
-										name="100Rnd_65x39_caseless_mag";
+										name="50Rnd_570x28_SMG_03";
 										count=2;
-										ammoLeft=100;
+										ammoLeft=50;
 									};
 								};
 							};
 							class backpack
 							{
-								typeName="B_Bergen_dgtl_F";
+								typeName="B_Carryall_cbr";
 								isBackpack=1;
 								class MagazineCargo
 								{
-									items=2;
+									items=3;
 									class Item0
 									{
-										name="Vorona_HE";
+										name="DemoCharge_Remote_Mag";
 										count=3;
 										ammoLeft=1;
 									};
 									class Item1
 									{
-										name="DemoCharge_Remote_Mag";
-										count=4;
-										ammoLeft=1;
+										name="9Rnd_45ACP_Mag";
+										count=3;
+										ammoLeft=8;
+									};
+									class Item2
+									{
+										name="50Rnd_570x28_SMG_03";
+										count=3;
+										ammoLeft=50;
 									};
 								};
 								class ItemCargo
 								{
-									items=2;
+									items=4;
 									class Item0
 									{
 										name="Medikit";
@@ -860,6 +812,16 @@ class Mission
 										name="FirstAidKit";
 										count=10;
 									};
+									class Item2
+									{
+										name="ACE_fieldDressing";
+										count=2;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
 								};
 							};
 							map="ItemMap";
@@ -867,12 +829,12 @@ class Mission
 							watch="ItemWatch";
 							radio="ItemRadio";
 							hmd="NVGoggles_INDEP";
-							headgear="H_HelmetIA";
+							headgear="H_Shemag_olive";
 						};
 					};
 					id=44720;
 					type="I_medic_F";
-					atlOffset=-4.7683716e-007;
+					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -922,7 +884,7 @@ class Mission
 			{
 			};
 			id=44723;
-			atlOffset=-4.7683716e-007;
+			atlOffset=9.5367432e-007;
 		};
 		class Item4
 		{
@@ -4176,7 +4138,6 @@ class Mission
 			};
 			id=45346;
 			type="SFSM_FIPO";
-			atlOffset=2.0980835e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -35083,7 +35044,7 @@ class Mission
 						class data
 						{
 							singleType="BOOL";
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -35505,7 +35466,6 @@ class Mission
 			};
 			id=56606;
 			type="SFSM_FIPO";
-			atlOffset=0.23791075;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -35911,7 +35871,6 @@ class Mission
 			};
 			id=56609;
 			type="SFSM_FIPO";
-			atlOffset=0.1495676;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -36317,7 +36276,6 @@ class Mission
 			};
 			id=56612;
 			type="SFSM_FIPO";
-			atlOffset=0.4088912;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -40093,11 +40051,11 @@ class Mission
 			class PositionInfo
 			{
 				position[]={26918.857,22.237469,24267.326};
-				angles[]={-0,3.7713249,0};
+				angles[]={0,3.7713249,0};
 			};
 			id=56682;
 			type="SFSM_FIPO";
-			atlOffset=0.00016975403;
+			atlOffset=0.00014877319;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -40503,7 +40461,7 @@ class Mission
 			};
 			id=56694;
 			type="SFSM_FIPO";
-			atlOffset=0.00027275085;
+			atlOffset=0.00025177002;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -40902,7 +40860,7 @@ class Mission
 		class Item141
 		{
 			dataType="Group";
-			side="Independent";
+			side="West";
 			class Entities
 			{
 				items=8;
@@ -40911,137 +40869,136 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26187.822,7.4226665,24195.959};
+						position[]={22779.043,12.753734,18957.346};
 					};
-					side="Independent";
+					side="West";
 					flags=7;
 					class Attributes
 					{
 						rank="SERGEANT";
 					};
-					id=56771;
-					type="I_C_Soldier_Para_2_F";
+					id=56790;
+					type="B_Soldier_SL_F";
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26192.822,7.1075516,24190.959};
+						position[]={22784.043,12.952386,18952.346};
 					};
-					side="Independent";
+					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
 					};
-					id=56772;
-					type="I_C_Soldier_Para_4_F";
-					atlOffset=-4.7683716e-007;
+					id=56791;
+					type="B_soldier_AR_F";
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26182.822,7.050643,24190.959};
+						position[]={22774.043,12.763665,18952.346};
 					};
-					side="Independent";
+					side="West";
 					flags=5;
 					class Attributes
 					{
-						rank="SERGEANT";
+						skill=0.44999999;
+						rank="CORPORAL";
 					};
-					id=56773;
-					type="I_C_Soldier_Para_6_F";
+					id=56792;
+					type="B_Soldier_GL_F";
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26197.822,6.8062601,24185.959};
+						position[]={22789.043,12.767951,18947.346};
 					};
-					side="Independent";
+					side="West";
 					flags=5;
 					class Attributes
 					{
-						skill=0.44999999;
-						rank="CORPORAL";
+						rank="SERGEANT";
 					};
-					id=56774;
-					type="I_C_Soldier_Para_1_F";
+					id=56793;
+					type="B_soldier_M_F";
 				};
 				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26177.822,7.4007845,24185.959};
+						position[]={22769.043,12.557562,18947.346};
 					};
-					side="Independent";
+					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
 					};
-					id=56775;
-					type="I_C_Soldier_Para_7_F";
+					id=56794;
+					type="B_soldier_AT_F";
 				};
 				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26202.648,6.8790045,24178.535};
+						position[]={22794.043,12.598792,18942.346};
 					};
-					side="Independent";
+					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
 					};
-					id=56776;
-					type="I_C_Soldier_Para_5_F";
+					id=56795;
+					type="B_soldier_AAT_F";
 				};
 				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26172.822,7.4164152,24180.959};
+						position[]={22764.043,12.375916,18942.346};
 					};
-					side="Independent";
+					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
 					};
-					id=56777;
-					type="I_C_Soldier_Para_8_F";
+					id=56796;
+					type="B_Soldier_A_F";
 				};
 				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26207.822,7.0698986,24175.959};
+						position[]={22799.043,12.47775,18937.346};
 					};
-					side="Independent";
+					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
 					};
-					id=56778;
-					type="I_C_Soldier_Para_3_F";
+					id=56797;
+					type="B_medic_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=56770;
+			id=56789;
 		};
 	};
 	class Connections
@@ -41896,8 +41853,8 @@ class Mission
 			class Item84
 			{
 				linkID=84;
-				item0=56771;
-				item1=56389;
+				item0=56790;
+				item1=3215;
 				class CustomData
 				{
 					type="Sync";
@@ -41906,8 +41863,8 @@ class Mission
 			class Item85
 			{
 				linkID=85;
-				item0=56772;
-				item1=56389;
+				item0=56791;
+				item1=3215;
 				class CustomData
 				{
 					type="Sync";
@@ -41916,8 +41873,8 @@ class Mission
 			class Item86
 			{
 				linkID=86;
-				item0=56773;
-				item1=56389;
+				item0=56792;
+				item1=3215;
 				class CustomData
 				{
 					type="Sync";
@@ -41926,8 +41883,8 @@ class Mission
 			class Item87
 			{
 				linkID=87;
-				item0=56774;
-				item1=56389;
+				item0=56793;
+				item1=3215;
 				class CustomData
 				{
 					type="Sync";
@@ -41936,8 +41893,8 @@ class Mission
 			class Item88
 			{
 				linkID=88;
-				item0=56775;
-				item1=56389;
+				item0=56794;
+				item1=3215;
 				class CustomData
 				{
 					type="Sync";
@@ -41946,8 +41903,8 @@ class Mission
 			class Item89
 			{
 				linkID=89;
-				item0=56776;
-				item1=56389;
+				item0=56795;
+				item1=3215;
 				class CustomData
 				{
 					type="Sync";
@@ -41956,8 +41913,8 @@ class Mission
 			class Item90
 			{
 				linkID=90;
-				item0=56777;
-				item1=56389;
+				item0=56796;
+				item1=3215;
 				class CustomData
 				{
 					type="Sync";
@@ -41966,8 +41923,8 @@ class Mission
 			class Item91
 			{
 				linkID=91;
-				item0=56778;
-				item1=56389;
+				item0=56797;
+				item1=3215;
 				class CustomData
 				{
 					type="Sync";
