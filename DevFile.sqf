@@ -17,33 +17,8 @@ systemChat "devFile found";
 // [aaa, (getPosATLVisual player)] spawn SFSM_fnc_forcedMove;
 
 /************************************************************************************/
-/*
-TODO:
-- Has moved check to allow returnStep
-*/
+// SFSM_fnc_buddyReviveDeathEh = {};
 
-// SFSM_fnc_fipoSideStep          = {};
-// SFSM_fnc_getInFipo             = {};
-// SFSM_fnc_fipoPeek              = {};
-// SFSM_fnc_getSideStepAnim       = {};
-// SFSM_fnc_endFipoSideStep       = {};
-// 
-// SFSM_fnc_execSideStepMid       = {};
-// SFSM_fnc_execSideStepEnd       = {};
-// SFSM_fnc_execSideStep          = {};
-// SFSM_fnc_fipoSideStepStart     = {};
-// SFSM_fnc_fipoSideStepReturn    = {};
-// SFSM_fnc_reInitAllMen          = {};
-// SFSM_fnc_isHeadLess            = {};
-// SFSM_fnc_handleNewGroup        = {};
-// SFSM_fnc_forceAnimStop         = {};
-// SFSM_fnc_canReturnStep         = {};
-// SFSM_fnc_canContinueSideStep   = {};
-// SFSM_fnc_execSideStepCondition = {};
-
-// SFSM_fnc_initNewGroups = {};
-
-// copyToClipboard str ([f1] call SFSM_fnc_fipoStanceIndexes);
 
 /************************************************************************************/
 systemChat "devFile read";

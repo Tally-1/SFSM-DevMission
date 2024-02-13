@@ -78,8 +78,6 @@ class CfgFunctions
             class OOP_animEndPos       {};
             class OOP_getAnimEndPos    {};
         };
-
-        
         
         class CQB
         {
@@ -1103,6 +1101,7 @@ class CfgFunctions
             class ACE_medicalGlobal       {};
             class woundedAndHealersGlobal {};
             class canMoveToRevive         {};
+            class buddyReviveDeathEh      {};
         };
 
 
