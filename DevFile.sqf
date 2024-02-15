@@ -17,14 +17,11 @@ systemChat "devFile found";
 // [aaa, (getPosATLVisual player)] spawn SFSM_fnc_forcedMove;
 
 /************************************************************************************/
+// SFSM_fnc_onFipoGetIn      = {};
+// SFSM_fnc_canChangeFipoDir = {};
+// SFSM_fnc_handleTwoWayFIPO = {};
 
-// aaa say3D "welcome_back";
-// aaa directSay "targeting_vehicle";
-// SFSM_audioFeedbackType = "voice_text";
-// SFSM_audioFeedbackType = "voice";
-// private _phrase = "run_the_house_will_explode";
-[aaa, _phrase] spawn SFSM_fnc_say;
-hint str round (aaa distance player);
 
+// playSound3D ["A3\Sounds_F\sfx\blip1.wss", player];
 /************************************************************************************/
 systemChat "devFile read";

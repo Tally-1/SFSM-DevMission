@@ -560,6 +560,10 @@ class CfgFunctions
             class tempPegToFipo         {};
             class dynamicFipoActive     {};
             class assignFipo            {};
+
+            class onFipoGetIn           {};
+            class canChangeFipoDir      {};
+            class handleTwoWayFIPO      {};
             
                         
         };

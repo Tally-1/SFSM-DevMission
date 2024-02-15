@@ -31,14 +31,6 @@ private _versionName = "DCO soldier FSM | Actions";
 	1
 ] call cba_settings_fnc_init;
 
-// [
-// 	"SFSM_allowHunkerDown",
-// 	"CHECKBOX",
-// 	["Allow Hunker-Down", "Determine if a soldier should be able to hunker behind cover and shoot at visible enemies. (!NOT THE SAME AS FIPO!)"],
-// 	_versionName,
-// 	false
-// ] call cba_settings_fnc_init;
-
 [
 	"SFSM_audioFeedbackType",
 	"LIST",
