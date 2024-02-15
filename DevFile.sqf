@@ -18,6 +18,13 @@ systemChat "devFile found";
 
 /************************************************************************************/
 
+// aaa say3D "welcome_back";
+// aaa directSay "targeting_vehicle";
+// SFSM_audioFeedbackType = "voice_text";
+// SFSM_audioFeedbackType = "voice";
+// private _phrase = "run_the_house_will_explode";
+[aaa, _phrase] spawn SFSM_fnc_say;
+hint str round (aaa distance player);
 
 /************************************************************************************/
 systemChat "devFile read";

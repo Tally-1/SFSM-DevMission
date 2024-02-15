@@ -40,9 +40,13 @@ private _versionName = "DCO soldier FSM | Actions";
 // ] call cba_settings_fnc_init;
 
 [
-	"SFSM_audioFeedback",
-	"CHECKBOX",
-	["Voice feedback", "AI soldiers informs of their status using a auto generated voice."],
+	"SFSM_audioFeedbackType",
+	"LIST",
+	["AI audio feedback", "Select how soldiers status is relayed to the player."],
 	_versionName,
-	true
+	[
+		["voice_text", "voice", "none"],
+		["Voice and text", "Voice Only", "No feedback."], 
+		1
+	]
 ] call cba_settings_fnc_init;
