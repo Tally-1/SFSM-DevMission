@@ -2,7 +2,8 @@ params[
     ["_man",       nil, [objNull]],
     ["_targetPos", nil,      [[]]], // ATL format.
     ["_timeLimit", 3,         [0]], // How long he should look;
-	["_frequency", 0.5,       [0]]  // How long between each dir check
+	["_frequency", 0.5,       [0]], // How long between each dir check
+    ["_dirRange",  3,         [0]]  // How far of the wanted dir the man can look.
 ];
 private _timer = time + _timeLimit;
 

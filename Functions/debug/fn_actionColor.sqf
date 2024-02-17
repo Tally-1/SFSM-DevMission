@@ -50,6 +50,7 @@ if("Resetting brain"          isEqualTo _action)    exitWith{_aqua};
 if("Brain reset"              isEqualTo _action)    exitWith{_green};
 if("Back in action"           isEqualTo _action)    exitWith{_green};
 if("!PANIC!"                  isEqualTo _action)    exitWith{_red};
+if("Evasive attack"           isEqualTo _action)    exitWith{_orange};
 
 /*------------------------------------------------------------------------*/
 

@@ -303,6 +303,7 @@ class CfgFunctions
             class attackAnimMap                                {};
             class initAttackAnims                              {};
             class zigZagPathClear                              {};
+            class evasiveAttackMidFnc                          {};
 
         };
 
