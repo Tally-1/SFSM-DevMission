@@ -48,9 +48,11 @@ class CfgFunctions
             class SquadSay        {};
             class say             {};
             class canSpeak        {};
+            class canSpeakEnglish {};
+            class languageMan     {};
             class speechEventsMan {};
             class getPhrase       {};
-        }
+        };
 
         class animations 
         {

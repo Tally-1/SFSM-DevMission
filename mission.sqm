@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=56824;
+		nextID=56860;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={22916.711,25.473194,18771.535};
-		dir[]={0.71052259,-0.61710775,0.33813563};
-		up[]={0.55722564,0.78687865,0.26518205};
-		aside[]={0.4297176,0,-0.90296328};
+		pos[]={22903.832,29.943382,18803.178};
+		dir[]={0.64841419,-0.50803715,0.56698483};
+		up[]={0.38245103,0.86133426,0.33442259};
+		aside[]={0.65826201,1.0203075e-007,-0.75279999};
 	};
 };
 binarizationWanted=0;
@@ -433,8 +433,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22954.332,2.9431846,18794.43};
-						angles[]={0,4.0965557,-0};
+						position[]={22934.684,4.799881,18822.229};
+						angles[]={0,4.0965557,0};
 					};
 					side="West";
 					flags=7;
@@ -616,7 +616,7 @@ class Mission
 					};
 					id=44714;
 					type="B_Soldier_GL_F";
-					atlOffset=2.3841858e-007;
+					atlOffset=-4.7683716e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -655,7 +655,7 @@ class Mission
 				formation="FILE";
 			};
 			id=44713;
-			atlOffset=2.3841858e-007;
+			atlOffset=-4.7683716e-007;
 		};
 		class Item3
 		{
@@ -669,8 +669,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22949.436,2.9506481,18791.025};
-						angles[]={0,0.89668602,-0};
+						position[]={22929.787,4.815834,18818.824};
+						angles[]={0,0.89668602,0};
 					};
 					side="West";
 					flags=7;
@@ -834,7 +834,7 @@ class Mission
 					};
 					id=44720;
 					type="I_medic_F";
-					atlOffset=2.3841858e-007;
+					atlOffset=4.7683716e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -884,7 +884,7 @@ class Mission
 			{
 			};
 			id=44723;
-			atlOffset=2.3841858e-007;
+			atlOffset=4.7683716e-007;
 		};
 		class Item4
 		{
@@ -36532,6 +36532,7 @@ class Mission
 			};
 			id=56606;
 			type="SFSM_FIPO";
+			atlOffset=0.23791075;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -36950,6 +36951,7 @@ class Mission
 			};
 			id=56609;
 			type="SFSM_FIPO";
+			atlOffset=0.1495676;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -37368,6 +37370,7 @@ class Mission
 			};
 			id=56612;
 			type="SFSM_FIPO";
+			atlOffset=0.4088912;
 			class CustomAttributes
 			{
 				class Attribute0

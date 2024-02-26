@@ -15,26 +15,10 @@ systemChat "devFile found";
 // [this, 1] call SFSM_fnc_forcedFire;
 // [player, true] call ace_medical_fnc_setUnconscious;
 // [aaa, (getPosATLVisual player)] spawn SFSM_fnc_forcedMove;
+// playSound3D ["A3\Sounds_F\sfx\blip1.wss", player];
 
 /************************************************************************************/
 
-// SFSM_fnc_attackAnimPath      = {};
-// SFSM_fnc_initAttackAnims     = {};
-// SFSM_fnc_evasiveAttackAnims  = {};
-// SFSM_fnc_canDoEvasiveAttack  = {};
-// SFSM_fnc_initevasiveAttack   = {};
-// SFSM_fnc_endevasiveAttack    = {};
-// SFSM_fnc_evasiveAttackAlign  = {};
-// SFSM_fnc_evasiveAttackMidFnc = {};
-// SFSM_fnc_evasiveAttack       = {};
 
-// player allowDamage false;
-// [aaa, player] call SFSM_fnc_evasiveAttack;
-
-// aaa playMoveNow "AmovPercMevaSrasWrflDfr_AmovPknlMstpSrasWrflDnon";
-// aaa playMove "AmovPercMevaSrasWrflDfl";
-// aaa playMove "AmovPercMevaSrasWrflDfl_AmovPknlMstpSrasWrflDnon";
-
-// playSound3D ["A3\Sounds_F\sfx\blip1.wss", player];
 /************************************************************************************/
 systemChat "devFile read";

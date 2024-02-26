@@ -73,7 +73,7 @@ then{
         SFSM_fipoGetInDistance      = 70;     // Distance to squad leader to allow getting into a fipo 
         SFSM_allowFipoTeleport      = true;   // allow man to teleport the last 10m to get into a fipo 
         SFSM_playerSpotTeleportDist = 100;    // how far away a player must be to allow fipo-teleport        
-        SFSM_audioFeedbackType      = "voice";// enable audio feedback from ai soldiers ["voice_text", "voice", "none"]
+        SFSM_audioFeedbackType      = "voice";// enable audio feedback from ai soldiers ["voice_text", "voice", "english", "none"]
         SFSM_playerSquadFipo        = true;   // enable ai-soldiers in player-squads to get into fipos 
         SFSM_overRun                = true;   // allow overrun actions (surrender / flee / counter)
         SFSM_playerSquadOverRun     = true;   // enable ai-soldiers in player-squads to be overrun
