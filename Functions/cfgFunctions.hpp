@@ -1218,6 +1218,8 @@ class CfgFunctions
             class weaponAimPos                {};
             class getAmmoData                 {};
             class getMagSplashRange           {};
+
+            class validVehicle                {};
         };
 
         class turrets
