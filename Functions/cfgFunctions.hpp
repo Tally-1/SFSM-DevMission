@@ -286,6 +286,7 @@ class CfgFunctions
             class returnAllMen                   {};
             class getPathDistance                {};
 
+            class canNormalizeStance             {};
         };
 
         class evasionAttack

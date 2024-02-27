@@ -18,21 +18,11 @@ systemChat "devFile found";
 // playSound3D ["A3\Sounds_F\sfx\blip1.wss", player];
 
 /************************************************************************************/
-// SFSM_fnc_getUnitsInAz = { 
-// private _entities = (_self get "position") nearEntities (_self get "radius");
-// private _units = _entities select {[_x] call SFSM_fnc_validAzUnit;};
-
-// // hint str _units;
-
-// _units;
-// };
-
-private _AZ   = (entities "SFSM_AZ")#0;
-private _data = _AZ getVariable "SFSM_AzData";
-
-// // _data set ["getUnits", SFSM_fnc_getUnitsInAz];
-
-hint str (_data call ["getUnits"]);
+// SFSM_fnc_endFipoSideStep = {};
+// private _AZ   = (entities "SFSM_AZ")#0;
+// private _data = _AZ getVariable "SFSM_AzData";
+// _data set ["getUnits", SFSM_fnc_getUnitsInAz];
+// hint str (_data call ["getUnits"]);
 
 /************************************************************************************/
 systemChat "devFile read";
