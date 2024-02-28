@@ -27,5 +27,11 @@ systemChat "devFile found";
 // SFSM_evasionAttackSpeed = 1.2;
 // [aaa, player] spawn SFSM_fnc_evasiveAttack;
 
+// SFSM_fnc_get360PosASL    = {};
+// SFSM_fnc_canSprintFlinch = {};
+// SFSM_fnc_evasionDir2     = {};
+// SFSM_fnc_sprintFlinch    = {};
+
+// [aaa] spawn SFSM_fnc_sprintFlinch;
 /************************************************************************************/
 systemChat "devFile read";

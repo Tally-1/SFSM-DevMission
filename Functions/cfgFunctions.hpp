@@ -212,6 +212,7 @@ class CfgFunctions
             class getLowestPos          {};
 
             class isHeadLess            {};
+            class get360PosASL          {};
         };
 
         class morale
@@ -507,9 +508,7 @@ class CfgFunctions
 
             class evasion               {};
             class evadeDir              {};
-            class evasionFail           {};
-
-            
+            class evasionFail           {};          
             
         };
         
@@ -530,6 +529,10 @@ class CfgFunctions
 
             class registerFlinch        {};
             class isPinnedDown          {};
+            
+            class evasionDir2           {};
+            class canSprintFlinch       {};
+            class sprintFlinch          {};
             
         };
        
