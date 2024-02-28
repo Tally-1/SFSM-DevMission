@@ -23,6 +23,9 @@ systemChat "devFile found";
 // private _data = _AZ getVariable "SFSM_AzData";
 // _data set ["getUnits", SFSM_fnc_getUnitsInAz];
 // hint str (_data call ["getUnits"]);
+// player allowDamage false;
+// SFSM_evasionAttackSpeed = 1.2;
+// [aaa, player] spawn SFSM_fnc_evasiveAttack;
 
 /************************************************************************************/
 systemChat "devFile read";

@@ -111,14 +111,18 @@ then{
         SFSM_cptrPlrEscProb   = 0.5;         // The probability for success when a player attempts to break free while captured.
         SFSM_cptrPlrEscTime   = 8;           // How long one escape attempt takes in seconds.
         SFSM_captureTargets   = "all";       // Who can be captured | ["all", "ai", "players", "disabeled"]
-        SFSM_captiveAutoDeath = 1;          // How long until a captive dies automatically. -1 = never | [-1,1,2,3,4,5]
+        SFSM_captiveAutoDeath = 1;           // How long until a captive dies automatically. -1 = never | [-1,1,2,3,4,5]
         
-        SFSM_allowEvasionAttack = true;     // When rushing an enemy at close range the AI will sometimes do a evasive manouver before firing, such as Zig-Zag or a quick flank.
-};
+        SFSM_allowEvasionAttack = true;      // When rushing an enemy at close range the AI will sometimes do a evasive manouver before firing, such as Zig-Zag or a quick flank.
+        SFSM_evasionAttackSpeed = 1.2;        // Speed coef for evasion attacks. 1 = vanilla. 2 = twice the normal speed
+}; 
 
 //Make sure settings are available globally.
+// 1.41 settings
+missionNamespace setVariable ["SFSM_evasionAttackSpeed", SFSM_evasionAttackSpeed, true];
+
 // 1.37 settings
-missionNamespace setVariable ["SFSM_audioFeedbackType",      SFSM_audioFeedbackType,      true];
+missionNamespace setVariable ["SFSM_audioFeedbackType", SFSM_audioFeedbackType, true];
 
 
 // 1.32 settings
