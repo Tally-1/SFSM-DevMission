@@ -213,6 +213,8 @@ class CfgFunctions
 
             class isHeadLess            {};
             class get360PosASL          {};
+            class hashAllObjVars        {};
+
         };
 
         class morale
@@ -721,6 +723,17 @@ class CfgFunctions
 
         };
 
+        class virtualZone
+       {
+            file = "functions\fightPos\virtualZone";
+            class initVirtualZone                {};
+            class spawnVzFipo                    {};
+            class initVzFipo                     {};
+            class virtualizeFipo                 {};
+            class virtualizeZone                 {};
+            class unVirtualizeZone               {};
+       };
+
         class sidestep
         {
             file = "functions\fightPos\sidestep";
@@ -1224,6 +1237,7 @@ class CfgFunctions
             class getMagSplashRange           {};
 
             class validVehicle                {};
+            class deadCrew                    {};
         };
 
         class turrets

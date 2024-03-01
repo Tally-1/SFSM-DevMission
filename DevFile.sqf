@@ -31,7 +31,56 @@ systemChat "devFile found";
 // SFSM_fnc_canSprintFlinch = {};
 // SFSM_fnc_evasionDir2     = {};
 // SFSM_fnc_sprintFlinch    = {};
+// SFSM_fnc_hashAllObjVars  = {};
+// SFSM_fnc_initVzFipo      = {};
+// SFSM_fnc_spawnVzFipo     = {};
+// SFSM_fnc_virtualizeFipo  = {};
+// SFSM_fnc_virtualizeZone  = {};
+// SFSM_fnc_unVirtualZone   = {};
+// [VZ_1] call SFSM_fnc_virtualizeZone;
+// sleep 3;
+// [VZ_1] call SFSM_fnc_unVirtualizeZone;
+// SFSM_fnc_deadCrew = {};
 
-// [aaa] spawn SFSM_fnc_sprintFlinch;
+SFSM_fnc_unitsInModuleArea = { 
+params[
+	["_module",      nil, [objNull]],
+	["_returnSides", false, [false]]
+];
+private _area  = [_module] call SFSM_fnc_getAzArea;
+private _units = entities "land" select {
+	([_x] call SFSM_fnc_functionalMan ||
+	{[_x] call SFSM_fnc_validVehicle})
+};
+
+if(_returnSides isEqualTo false)exitWith{_units;};
+
+
+
+};
+
+
+SFSM_fnc_VZconditionsTrue = { 
+params["_vzModule"];
+private _units = 
+
+};
+
+
+SFSM_fnc_reInitVz = { 
+params[
+	["_module", objNull,[objNull]]
+];
+
+private _area  = [_module] call SFSM_fnc_getAzArea;
+private _fipos = entities "SFSM_FIPO" select {_x inArea _area};
+
+_module setVariable ["SFSM_active",         true];
+_module setVariable ["SFSM_physicalFipos", _fipos];
+_module setVariable ["SFSM_virtualFipos",      []];
+};
+
+copyToClipboard str allVariables VZ_1;
+
 /************************************************************************************/
 systemChat "devFile read";
