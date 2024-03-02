@@ -1,12 +1,5 @@
 params[
-	["_mode",  "", [""]],
-	["_input", [], [[]]]
-];
-_input
-params[
-	["_module",          objNull,[objNull]], // Module logic
-	["_isActivated",     true,      [true]], // True when the module was activated, false when it is deactivated
-	["_isCuratorPlaced", false,     [true]]  // True if the module was placed by Zeus
+    ["_module", objNull, [objNull]]
 ];
 private _area            = [_module] call SFSM_fnc_getAzArea;
 private _fipos           = entities "SFSM_FIPO" select {_x inArea _area};
@@ -18,10 +11,26 @@ if(_module getVariable "activatedByEast")        then{_allowedSides pushBack eas
 if(_module getVariable "activatedByWest")        then{_allowedSides pushBack west;};
 if(_module getVariable "activatedByIndependent") then{_allowedSides pushBack independent;};
 
-_module setVariable ["SFSM_battleActivated", _battleActivated];
-_module setVariable ["SFSM_active",                      true];
-_module setVariable ["SFSM_physicalFipos",             _fipos];
-_module setVariable ["SFSM_virtualFipos",                  []];
-_module setVariable ["SFSM_allowedSides",       _allowedSides];
+private _dataArr = [
+	["module",                           _module],
+    ["area",                               _area],
+	["activatedByBattle",       _battleActivated],
+    ["activationtype",           _activationtype],
+	["active",                              true],
+	["physicalFipos",                     _fipos],
+	["virtualFipos",                          []],
+	["allowedSides",               _allowedSides],
+    ["canActivate",       SFSM_fnc_canActivateVz],
+    ["activate",       SFSM_fnc_unVirtualizeZone],
+    ["canDeActivate",   SFSM_fnc_canDeActivateVz],
+    ["deActivate",       SFSM_fnc_virtualizeZone],
+    ["toggleZone",             SFSM_fnc_toggleVz],
+    ["conditionsTrue", SFSM_fnc_VZconditionsTrue],
+    ["canBattleInit",   SFSM_fnc_canBattleInitVz]
+];
 
-// [_module] call SFSM_fnc_virtualize;
+private _data = createHashmapObject [_dataArr];
+
+_module setVariable ["SFSM_vzData", _data];
+
+true;

@@ -679,24 +679,24 @@ class CfgFunctions
         class hitAndRun
         {
             file = "functions\fightPos\hitAndRun";
-            class initHitAndRunFipo   {};
-            class fipoCooldownLeft    {};
-            class firedHitAndRunEH    {};
-            class fipoTimeUntilExit   {};
-            class getOutFipoHitAndRun {};
-            class fipoRun             {};
-            class endHitAndRun        {};
+            class initHitAndRunFipo            {};
+            class fipoCooldownLeft             {};
+            class firedHitAndRunEH             {};
+            class fipoTimeUntilExit            {};
+            class getOutFipoHitAndRun          {};
+            class fipoRun                      {};
+            class endHitAndRun                 {};
         };
 
         class FUBAR
         {
             file = "functions\fightPos\FUBAR";
-            class fipoKnockOut          {};
-            class fipoQuickRevive       {};
-            class timeSinceFipoKnockOut {};
-            class fipoIsFUBAR           {};
-            class fipoIsDestroyed       {};
-            class fipoBuildingDestroyed {};
+            class fipoKnockOut             {};
+            class fipoQuickRevive          {};
+            class timeSinceFipoKnockOut    {};
+            class fipoIsFUBAR              {};
+            class fipoIsDestroyed          {};
+            class fipoBuildingDestroyed    {};
         };
 
         class activationZones
@@ -726,12 +726,23 @@ class CfgFunctions
         class virtualZone
        {
             file = "functions\fightPos\virtualZone";
+            class updateVirtualZones             {};
             class initVirtualZone                {};
+
+            class canDeActivateVz                {};
+            
+            class canActivateVz                  {};
+            class VZconditionsTrue               {};
+            class canBattleInitVz                {};
+            class unVirtualizeZone               {};
+            class virtualizeZone                 {};
+            class toggleVz                       {};
+
+            class virtualizeFipo                 {};
             class spawnVzFipo                    {};
             class initVzFipo                     {};
-            class virtualizeFipo                 {};
-            class virtualizeZone                 {};
-            class unVirtualizeZone               {};
+
+            class activateBattleVzs              {};
        };
 
         class sidestep
@@ -1238,6 +1249,8 @@ class CfgFunctions
 
             class validVehicle                {};
             class deadCrew                    {};
+            class sidesFromObjArr             {};
+            class unitsInModuleArea           {};
         };
 
         class turrets

@@ -1,18 +1,13 @@
-params[
-	["_module", nil, [objNull]]
-];
-
-private _fipoDataArr = _module getVariable "SFSM_virtualFipos";
 private _fipos       = [];
 
 {
-	private _fipo = [_x] call SFSM_fnc_spawnVzFipo;
-	_fipos pushBackUnique _fipo;
+    private _fipo = [_x] call SFSM_fnc_spawnVzFipo;
+    _fipos pushBackUnique _fipo;
 
-} forEach _fipoDataArr;
+} forEach (_self get "virtualFipos");
 
-_module setVariable ["SFSM_virtualFipos",        []];
-_module setVariable ["SFSM_physicalFipos",   _fipos];
-_module setVariable ["SFSM_active",            true];
+_self set ["physicalFipos", _fipos];
+_self set ["virtualFipos",      []];
+_self set ["active",         true];
 
 true;

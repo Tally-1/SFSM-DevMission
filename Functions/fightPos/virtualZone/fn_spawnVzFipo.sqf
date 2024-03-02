@@ -1,5 +1,5 @@
 params[
-	["_data", nil, [createHashMap]]
+    ["_data", nil, [createHashMap]]
 ];
 
 private _pos  = _data get "asl_pos";// getPosASLVisual player;//
@@ -14,6 +14,6 @@ _fipo setDir _dir;
 
 _fipo synchronizeObjectsAdd _AZs;
 
-[_fipo] call SFSM_fnc_initVzFipo;
+[_fipo] spawn SFSM_fnc_initVzFipo;
 
 _fipo;
