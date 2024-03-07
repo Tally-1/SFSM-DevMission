@@ -12,7 +12,7 @@ if(_searchRadius > 5000)then{_searchRadius = 5000;};
     private _virtualZone = _x getVariable "SFSM_vzData";
     if  (_virtualZone get "activatedByBattle")
     then{
-    if(_virtualZone call ["toggleZone"])
+    if(_virtualZone spawn ["toggleZone"])
     then{_activated = _activated+1;};
     };
     

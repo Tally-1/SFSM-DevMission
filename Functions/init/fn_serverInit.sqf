@@ -50,7 +50,6 @@ isNil{
     {[_x] call SFSM_fnc_InitGroup}       forEach allGroups;
     {[_x] call SFSM_fnc_initVehicle}     forEach vehicles;
     {_x   call SFSM_fnc_curatorEH}       forEach allCurators;
-    {[_x] call SFSM_fnc_initVirtualZone} forEach (entities "SFSM_VZ");
     []    call SFSM_fnc_initFIPOsAndAZs;
     []    call SFSM_fnc_unitKilled; 
     []    call SFSM_fnc_unitCreated;
@@ -64,6 +63,8 @@ isNil{
     []    call SFSM_fnc_antiRubberBand;
     []    call SFSM_fnc_ACE_MedicalCBA;
     []    call SFSM_fnc_storeMoveDataAllMen;
+
+    {[_x] call SFSM_fnc_initVirtualZone} forEach (entities "SFSM_VZ");
 
     // May move these lines to a separate function if more non-medical
     // ACE / CBA eventhandlers are added.

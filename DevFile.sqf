@@ -27,6 +27,13 @@ systemChat "devFile found";
 // SFSM_evasionAttackSpeed = 1.2;
 // [aaa, player] spawn SFSM_fnc_evasiveAttack;
 
+/*
+TODO:
+// 1) Undefined values (FIPO already deleted?)
+// 2) resync VZ spawned FIPOs.
+
+*/
+
 // SFSM_fnc_get360PosASL      = {};
 // SFSM_fnc_canSprintFlinch   = {};
 // SFSM_fnc_evasionDir2       = {};
@@ -49,20 +56,22 @@ systemChat "devFile found";
 // SFSM_fnc_toggleVz          = {};
 // SFSM_fnc_initVirtualZone   = {};
 // SFSM_fnc_activateBattleVzs = {};
+// SFSM_fnc_initVirtualZone   = {};
+
+{
+	private _data = _x getVariable "SFSM_vzData";
+	// _data set ["activate", SFSM_fnc_unVirtualizeZone];
+	// _data set ["activate", SFSM_fnc_unVirtualizeZone];
+	
+} forEach entities "SFSM_VZ";
 
 // ["", _battlefield] call CBA_fnc_localEvent;
-
 // private _data = VZ_1 getVariable "SFSM_vzData";
 
 // hint str (_data call ["canActivate"]);
 // _data call ["toggleZone"];
 // _data call ["deActivate"];
-// sleep 5;
 // _data call ["activate"];
-// hint "Activated";
-
-// [VZ_1] call SFSM_fnc_virtualizeZone;
-// [VZ_1] call SFSM_fnc_initVirtualZone;
 
 
 

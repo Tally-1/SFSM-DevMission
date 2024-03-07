@@ -740,7 +740,7 @@ class CfgFunctions
 
             class virtualizeFipo                 {};
             class spawnVzFipo                    {};
-            class initVzFipo                     {};
+            class initVzFipos                    {};
 
             class activateBattleVzs              {};
        };

@@ -14,6 +14,4 @@ _fipo setDir _dir;
 
 _fipo synchronizeObjectsAdd _AZs;
 
-[_fipo] spawn SFSM_fnc_initVzFipo;
-
 _fipo;
