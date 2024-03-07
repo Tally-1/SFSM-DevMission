@@ -57,6 +57,8 @@ TODO:
 // SFSM_fnc_initVirtualZone   = {};
 // SFSM_fnc_activateBattleVzs = {};
 // SFSM_fnc_initVirtualZone   = {};
+// SFSM_fnc_drawVrtZones      = {};
+// SFSM_fnc_VZ3D              = {};
 
 {
 	private _data = _x getVariable "SFSM_vzData";
@@ -65,13 +67,6 @@ TODO:
 	
 } forEach entities "SFSM_VZ";
 
-// ["", _battlefield] call CBA_fnc_localEvent;
-// private _data = VZ_1 getVariable "SFSM_vzData";
-
-// hint str (_data call ["canActivate"]);
-// _data call ["toggleZone"];
-// _data call ["deActivate"];
-// _data call ["activate"];
 
 
 

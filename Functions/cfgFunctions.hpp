@@ -1072,6 +1072,10 @@ class CfgFunctions
             class activeAZ3D            {};
             class AZ3DCorners           {};
 
+            class drawVrtZones          {};
+            class VZ3D                  {};
+
+
         };
 
         class debugMan
