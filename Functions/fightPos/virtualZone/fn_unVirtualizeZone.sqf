@@ -13,7 +13,9 @@ _self set ["active", true];
 
 } forEach (_self get "virtualFipos");
 
-[_fipos] call SFSM_fnc_initVzFipos;
+if(canSuspend)
+then{[_fipos] call SFSM_fnc_initVzFipos}
+else{[_fipos] spawn SFSM_fnc_initVzFipos};
 
 {[_x] call SFSM_fnc_initAz} forEach _allAZs;
 
