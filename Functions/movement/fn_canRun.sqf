@@ -26,10 +26,10 @@ isNil{//Forced unscheduled execution
     &&{([_man, "inFipo"] call SFSM_fnc_unitData) isEqualTo false}})
     exitWith{_canRun = false;};
 
-    if (_ignoreLegs)exitWith{true;};
+    if (_ignoreLegs)exitWith{_canRun = true;};
 
     private _legDamage = getAllHitPointsDamage _man#2#10;
-    if(_legDamage > 0.4)exitWith{_canRun = false;};
+    if(_legDamage > 0.4)exitWith{_canRun = false};
 };
 
 _canRun;

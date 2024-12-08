@@ -4,7 +4,7 @@ class CfgFunctions
     {
         class actionMenu
         {
-            file = "functions\actionMenu";
+            file = "Functions\actionMenu";
             class buddyRearmAction      {};
             class captureAction         {};
             class disableAutoStance     {};
@@ -23,7 +23,7 @@ class CfgFunctions
 
         class ACE_actionMenu
         {
-            file = "functions\actionMenu\ace";
+            file = "Functions\actionMenu\ace";
             class ACE_selfActionCategory  {};
             class ACE_simpleSelfAction    {};
             class ACE_callMedic           {};
@@ -44,7 +44,7 @@ class CfgFunctions
         
         class audioFeedback
         {
-            file = "functions\audioFeedback";
+            file = "Functions\audioFeedback";
             class SquadSay        {};
             class say             {};
             class canSpeak        {};
@@ -56,7 +56,7 @@ class CfgFunctions
 
         class animations 
         {
-            file = "functions\animations";
+            file = "Functions\animations";
             class playAnimList       {};
             class animListEnd        {};
             class onAnimListEhFired  {};
@@ -72,7 +72,7 @@ class CfgFunctions
 
         class OOP_movement
         {
-            file = "functions\animations\OOPmovement";
+            file = "Functions\animations\OOPmovement";
             class OOP_moveAnimsMap     {};
             class OOP_moveAnimsEntries {};
             class OOP_playAnim         {};
@@ -83,143 +83,151 @@ class CfgFunctions
         
         class CQB
         {
-           file = "functions\CQB";
-           class assignAllBuildings    {};
-           class assignBuilding        {};
-           class currentBuilding       {};
-           class unitIndoorPos         {};
-           class floorPositions        {};
-           class buildingFloors        {};
-           class unitsInBuilding       {};
-           class CQBlimitReached       {};
-           class initCQB               {};
-           class buildingPath          {};
-           class buildingExits         {};
-           class CQBTargetEnemies      {};
-           class clearCQBPos           {};
-           class clearBuilding         {};
-           class CQBposAvailable       {};
-           class CQBcoverPosFilter     {};
-           class moveIntoHouseInit     {};
-           class moveIntoHouseExec     {};
-           class endMoveIntoHouse      {};
-           class houseAvailable        {};
-           class nearestAvailableHouse {};
-           class endCQBclearing        {};
-           class getHousePoints        {};
-           class getHouseTargetMan     {};
-           class nearestEnemyInBuilding{};
+           file = "Functions\CQB";
+           class assignAllBuildings       {};
+           class assignBuilding           {};
+           class currentBuilding          {};
+           class unitIndoorPos            {};
+           class floorPositions           {};
+           class buildingFloors           {};
+           class unitsInBuilding          {};
+           class CQBlimitReached          {};
+           class initCQB                  {};
+           class buildingPath             {};
+           class buildingExits            {};
+           class CQBTargetEnemies         {};
+           class clearCQBPos              {};
+           class clearBuilding            {};
+           class CQBposAvailable          {};
+           class CQBcoverPosFilter        {};
+           class moveIntoHouseInit        {};
+           class moveIntoHouseExec        {};
+           class endMoveIntoHouse         {};
+           class houseAvailable           {};
+           class nearestAvailableHouse    {};
+           class endCQBclearing           {};
+           class getHousePoints           {};
+           class getHouseTargetMan        {};
+           class nearestEnemyInBuilding   {};
+           class validBuildingFirePos     {};
+           class isHouse                  {};
+           class nearBuildings            {};
+           class nearBuildingPositions    {};
         };
-        
+
         class misc
         {
             
-            file = "functions\misc";
-            class StoreSuppression      {};
-            class onSuppression         {};
-            class unitData              {};
-            class sinCosPos             {};
-            class sinCosPos2            {};
+            file = "Functions\misc";
+            class storeSuppression         {};
+            class onSuppression            {};
+            class unitData                 {};
+            class sinCosPos                {};
+            class sinCosPos2               {};
             
-            class initReaction          {};
-            class groupData             {};
-            class manAvailable          {};
-            class manLoaded             {};
-            class unitInDoor            {};
+            class initReaction             {};
+            class groupData                {};
+            class manAvailable             {};
+            class manLoaded                {};
+            class unitInDoor               {};
             
-            class targetVisible         {};
-            class allCurrentDestinations{};
-            class manOverrunBy          {};
-            class firePosLite           {};
-            class killNearEnemies       {};
+            class targetVisible            {};
+            class allCurrentDestinations   {};
+            class manOverrunBy             {};
+            class firePosLite              {};
+            class killNearEnemies          {};
+            class attackNearEnemy          {};
             
-            class loadedAddons          {};
-            class unitsInRangeSameSide  {};
-            class getNearestOrPlayer    {};
-            class relAimPos             {};
-            class isPosition            {};
-            class availableRegulars     {};
-            class isUncon               {};
+            class loadedAddons             {};
+            class unitsInRangeSameSide     {};
+            class getNearestOrPlayer       {};
+            class relAimPos                {};
+            class isPosition               {};
+            class availableRegulars        {};
+            class isUncon                  {};
             
             
-            class playableUnit          {};
-            class playableGroup         {};
+            class playableUnit             {};
+            class playableGroup            {};
 
-            class getNearest            {};
-            class noBushNoMan           {};
+            class getNearest               {};
+            class noBushNoMan              {};
 
-            class getAction             {};
-            class setAction             {};
-            class inVehicle             {};
+            class getAction                {};
+            class setAction                {};
+            class inVehicle                {};
 
-            class targetsAndVisibility  {};
-            class stand                 {};
-            class crouch                {};
-            class hostile               {};
-            class nearEnemies           {};
-            class nearAllies            {};
+            class targetsAndVisibility     {};
+            class stand                    {};
+            class crouch                   {};
+            class hostile                  {};
+            class nearEnemies              {};
+            class nearAllies               {};
 
-            class hasActiveWp           {};
-            class animSetStance         {};
+            class hasActiveWp              {};
+            class animSetStance            {};
 
-            class isPlayerGroup         {};
-            class spamDoFire            {};
-            class getFurthest           {};
+            class isPlayerGroup            {};
+            class spamDoFire               {};
+            class getFurthest              {};
             
-            class canResetBrain         {};
-            class deActivateMan         {};
-            class activateMan           {};
-            class abilitiesInUse        {};
-            class getSquadIndex         {};
-            class forceGroupJoin        {};
-            class resetBrain            {};
-            class inDirRange            {};
-            class formatDirRanges       {};
-            class selectionPos          {};
-            class addToPosValues        {};
-            class setDirAndPitchToPos   {};
-            class canGoProne            {};
-            class animThenExec          {};
-            class onExecAnim            {};
-            class execFromArr           {};
+            class canResetBrain            {};
+            class deActivateMan            {};
+            class activateMan              {};
+            class abilitiesInUse           {};
+            class getSquadIndex            {};
+            class forceGroupJoin           {};
+            class resetBrain               {};
+            class inDirRange               {};
+            class formatDirRanges          {};
+            class selectionPos             {};
+            class addToPosValues           {};
+            class setDirAndPitchToPos      {};
+            class canGoProne               {};
+            class animThenExec             {};
+            class onExecAnim               {};
+            class execFromArr              {};
 
-            class rgbColorToA3Color     {};
-            class distanceToFooting     {};
-            class getSmokeDeployDir     {};
-            class deploySmokeOnMan      {};
-            class deploySmoke           {};
-            class numberDiff            {};
-            class getProneTreshHold     {};
-            class distanceToMan         {};
+            class rgbColorToA3Color        {};
+            class distanceToFooting        {};
+            class getSmokeDeployDir        {};
+            class deploySmokeOnMan         {};
+            class deploySmoke              {};
+            class numberDiff               {};
+            class getProneTreshHold        {};
+            class distanceToMan            {};
 
-            class threadsFinished       {};
-            class enemiesInFront        {};
-            class addRandomToValue      {};
+            class threadsFinished          {};
+            class enemiesInFront           {};
+            class addRandomToValue         {};
 
-            class getAreaCorners        {};
-            class buildingOnPos         {};
-            class splitArr              {};
-            class getCourageTime        {};
+            class getAreaCorners           {};
+            class buildingOnPos            {};
+            class splitArr                 {};
+            class getCourageTime           {};
 
-            class posOnVector           {};
-            class lineBroken            {};
+            class posOnVector              {};
+            class lineBroken               {};
             
-            class replaceInArr          {};
-            class deleteValuesFromArr   {};
-            class removeValueFromArray  {};
-            class selectionMap          {};    
-            class squareGrid            {};
-            class getLowestPos          {};
+            class replaceInArr             {};
+            class deleteValuesFromArr      {};
+            class removeValueFromArray     {};
+            class selectionMap             {};    
+            class squareGrid               {};
+            class getLowestPos             {};
 
-            class isHeadLess            {};
-            class get360PosASL          {};
-            class hashAllObjVars        {};
+            class isHeadLess                {};
+            class get360PosASL              {};
+            class hashAllObjVars            {};
+            class validSurfaceIntersections {};
+            class semiCirclePosArr          {};
+            class zoneCone                  {};
 
         };
 
         class morale
         {
-            file = "functions\morale";
+            file = "Functions\morale";
             class moraleEvent           {};
 
             class moraleOnCapture       {};
@@ -249,7 +257,7 @@ class CfgFunctions
 
         class movement
         {
-            file = "functions\movement";
+            file = "Functions\movement";
             class forceMoveToPos                 {};
             class forceMove2                     {};
             class postForceMove2                 {};
@@ -294,7 +302,7 @@ class CfgFunctions
 
         class evasionAttack
         {
-            file = "functions\movement\evasionAttack";
+            file = "Functions\movement\evasionAttack";
             class evasiveAttack                                {};
             class evasiveAttackAnims                           {};
             class canDoEvasiveAttack                           {};
@@ -315,7 +323,7 @@ class CfgFunctions
 
         class forcedMove
         {
-            file = "functions\movement\forcedMove";
+            file = "Functions\movement\forcedMove";
             class initForcedMoveToPos {};
             class forcedMoveToPos     {};
             class whileForcedMove     {};
@@ -326,9 +334,27 @@ class CfgFunctions
 
         };
 
+        class fsmMovement
+        {
+            file = "Functions\movement\fsmMovement";
+            class addMoveManFsmCombatEh    {};
+			class removeMoveManFsmCombatEh {};
+			class moveManFsmCondition      {};
+			class validFsmMoveTarget       {};
+			class fsmMoveHandleTarget      {};
+            class fsmMoveManIsCQB          {};
+			class whileManFsmMoving        {};
+			class fsmMoveHandleAutoTarget  {};
+			class initFsmMoveMan           {};
+			class execFsmMoveMan           {};
+			class endFsmMoveMan            {};
+			class fsmMoveManToPos          {};
+
+        };
+
         class sprint
         {
-            file = "functions\movement\sprint";
+            file = "Functions\movement\sprint";
             class canSprint                             {};
             class clearSprintPath                       {};
             class sprint                                {};
@@ -352,7 +378,7 @@ class CfgFunctions
 
         class vehicles
         {
-            file = "functions\vehicles";
+            file = "Functions\vehicles";
             class vehicleData                    {};
             class vehicleHeard                   {};
             class availableVehicles              {};
@@ -378,8 +404,8 @@ class CfgFunctions
 
         class taskManagement
         {
-            file = "functions\taskManagement";
-            class HandleSuppression              {};
+            file = "Functions\taskManagement";
+            class HandleSuppression     {};
             class TaskManager           {};
             class tenSecondTasks        {};
             class fiveMinTasks          {};
@@ -398,21 +424,21 @@ class CfgFunctions
 
         class projectileHandling
         {
-            file = "functions\projectileHandling";
+            file = "Functions\projectileHandling";
             class soundReaction         {};
             class handleBulletImpact    {};
         };
 
         class curator
         {
-            file = "functions\curator";
+            file = "Functions\curator";
             class zWPplaced             {};
             class zWPdeleted            {};
         };
         
         class eventHandlers
         {
-            file = "functions\eventHandlers";
+            file = "Functions\eventHandlers";
             class SuppressedEH          {};
             class hitEH                 {};
             class firedEH               {};
@@ -443,13 +469,12 @@ class CfgFunctions
             class onCommandChange       {};
 
             class onAnimChange          {};
-            class onGroupCreated        {};
-            
+            class onGroupCreated        {}; 
         };
 
         class explosives 
         {
-            file = "functions\explosives" 
+            file = "Functions\explosives" 
             class canBlowUpHouse         {};
             class carriedExplosives      {};
             class formatExplosiveName    {};
@@ -472,7 +497,7 @@ class CfgFunctions
 
         class launchers
         {
-            file = "functions\launchers" 
+            file = "Functions\launchers" 
             class rpgHouse               {};
             class loadLauncherHE         {};
             class launcherHandler        {};
@@ -498,7 +523,7 @@ class CfgFunctions
 
         class dodging
         {
-            file = "functions\dodging";
+            file = "Functions\dodging";
             class dodgeEnded            {};
             class EndDodge              {};
             class Dodge                 {};
@@ -516,7 +541,7 @@ class CfgFunctions
         
         class flinching 
         {
-            file = "functions\flinching";
+            file = "Functions\flinching";
             class canFlinch             {};
             class endFlinch             {};
             class flinch                {};
@@ -544,7 +569,7 @@ class CfgFunctions
         
         class fightPos 
         {
-            file = "functions\fightPos";
+            file = "Functions\fightPos";
             class clearFipo             {};
             class getFipo               {};
             class getFipoMan            {};
@@ -579,17 +604,18 @@ class CfgFunctions
 
         class FIPO_Suppress
         {
-            file = "functions\fightPos\suppression";
-            class canFipoSuppress       {};
-            class getFipoSuppressPos    {};
-            class fipoSuppress          {};
-            class validSuppressPos      {};
+            file = "Functions\fightPos\suppression";
+            class canFipoSuppress                {};
+            class getFipoSuppressPos             {};
+            class fipoSuppress                   {};
+            class validSuppressPos               {};
+            class SQFSM_getSuppressionTargetFipo {};
 
         }
 
         class dodgeToFipo
         {
-            file = "functions\fightPos\dodgeToFipo";
+            file = "Functions\fightPos\dodgeToFipo";
             class isDodgeFipo           {};
             class initDodgeToFipo       {};
             class dodgeToFipo           {};
@@ -598,7 +624,7 @@ class CfgFunctions
 
         class FIPO_actions
         {
-            file = "functions\fightPos\actions";
+            file = "Functions\fightPos\actions";
             class fipoActions         {};
             class leaderGetOutFipo    {};
             class curatorGetOutFipo   {};
@@ -630,7 +656,7 @@ class CfgFunctions
 
         class module
         {
-            file = "functions\fightPos\module";
+            file = "Functions\fightPos\module";
             class initFipo          {};
             class fipoMan           {};
             class moveInFipoSynced  {};
@@ -643,7 +669,7 @@ class CfgFunctions
 
         class peeking
         {
-            file = "functions\fightPos\peeking";
+            file = "Functions\fightPos\peeking";
             class peekEnded            {};
             class initFipoPeek         {};
             class fipoPeek             {};
@@ -657,11 +683,14 @@ class CfgFunctions
             class getFipoATtarget      {};
             class selectShootingStance {};
             class setFipoAnimOfset     {};
+            class fiposideStepDistance {};
+            class fiposideStepZ        {};
+            class getFipoFirePos       {};
         };
 
         class sectors 
         {
-            file = "functions\fightPos\sectors";
+            file = "Functions\fightPos\sectors";
             class validSector         {};
             class inSector            {};
             class sectorEdgePositions {};
@@ -678,7 +707,7 @@ class CfgFunctions
 
         class hitAndRun
         {
-            file = "functions\fightPos\hitAndRun";
+            file = "Functions\fightPos\hitAndRun";
             class initHitAndRunFipo            {};
             class fipoCooldownLeft             {};
             class firedHitAndRunEH             {};
@@ -690,7 +719,7 @@ class CfgFunctions
 
         class FUBAR
         {
-            file = "functions\fightPos\FUBAR";
+            file = "Functions\fightPos\FUBAR";
             class fipoKnockOut             {};
             class fipoQuickRevive          {};
             class timeSinceFipoKnockOut    {};
@@ -701,7 +730,7 @@ class CfgFunctions
 
         class activationZones
         {
-            file = "functions\fightPos\activationZones";
+            file = "Functions\fightPos\activationZones";
             class initFIPOsAndAZs       {};
             class initActivationZones   {};
             class getAzSides            {};
@@ -725,7 +754,7 @@ class CfgFunctions
 
         class virtualZone
        {
-            file = "functions\fightPos\virtualZone";
+            file = "Functions\fightPos\virtualZone";
             class updateVirtualZones             {};
             class initVirtualZone                {};
 
@@ -747,7 +776,7 @@ class CfgFunctions
 
         class sidestep
         {
-            file = "functions\fightPos\sidestep";
+            file = "Functions\fightPos\sidestep";
             class fipoSideStep                {};
             class fipoSideStepStart           {};
             class getSideStepAnim             {};
@@ -767,7 +796,7 @@ class CfgFunctions
 
         class overrun 
         {
-            file = "functions\overrun";
+            file = "Functions\overrun";
             class groupFleeingEh    {};
             class groupFlee         {};            
             class groupFleeDecision {};
@@ -790,7 +819,7 @@ class CfgFunctions
 
         class capture
         {
-            file = "functions\overrun\capture";
+            file = "Functions\overrun\capture";
             class dropWeapon          {};
             class dropAllWeapons      {};
             class canPanicSurrender   {};
@@ -826,7 +855,7 @@ class CfgFunctions
 
         class capture_autoKill
         {
-            file = "functions\overrun\capture\autoKill";
+            file = "Functions\overrun\capture\autoKill";
             class isValidCaptive      {};
             class canAutoKillCaptive  {};
             class autoKillCaptive     {};
@@ -836,7 +865,7 @@ class CfgFunctions
 
         class capture_abuse
         {
-            file = "functions\overrun\capture\abuse";
+            file = "Functions\overrun\capture\abuse";
             class executionerKillshot     {};
             class captorAbuseOnAnimChange {};
             class captorAbuseMirrorAnim   {};
@@ -854,7 +883,7 @@ class CfgFunctions
 
         class capture_eventsAndActions
         {
-            file = "functions\overrun\capture\ehAndAction";
+            file = "Functions\overrun\capture\ehAndAction";
             class captureKillEh           {};
             class captureHitEh            {};
             class executionerKillshotEh   {};
@@ -863,7 +892,7 @@ class CfgFunctions
 
         class capture_selfBomb 
         {
-            file = "functions\overrun\capture\selfBomb";
+            file = "Functions\overrun\capture\selfBomb";
             class captureBombType  {};
             class canBombOnCapVars {};
             class bombOnCapture    {};
@@ -871,7 +900,7 @@ class CfgFunctions
 
         class capture_player
         {
-            file = "functions\overrun\capture\player";
+            file = "Functions\overrun\capture\player";
             class breakOutHint             {};
             class capturePlayer            {};
             class endPlayerCapture         {};
@@ -883,7 +912,7 @@ class CfgFunctions
 
         class reactiveFire
         {
-            file = "functions\reactiveFire";
+            file = "Functions\reactiveFire";
             class canReactFire          {};
             class reactFire             {};
             class endReactiveFire       {};
@@ -900,7 +929,7 @@ class CfgFunctions
 
         class rearming
         {
-            file = "functions\rearming";
+            file = "Functions\rearming";
             class rearm            {};
             class canRearm         {};
             class needMachinegun   {};
@@ -919,7 +948,7 @@ class CfgFunctions
 
         class buddyRearm
         {
-            file = "functions\rearming\buddyRearm";
+            file = "Functions\rearming\buddyRearm";
             class isRearmBuddy       {};
             class canCallBuddyRearm  {};
             class getRearmingBuddy   {};
@@ -931,7 +960,7 @@ class CfgFunctions
 
         class marksmanFSM
         {
-            file = "functions\marksmanFSM";
+            file = "Functions\marksmanFSM";
             class handleMarksmanHit       {};
             class marksmenInGroup         {};
             class getMarksMen             {};
@@ -965,7 +994,7 @@ class CfgFunctions
 
         class startEngagement
         {
-            file = "functions\startEngagement";
+            file = "Functions\startEngagement";
             class canDoSpecial           {};
             class allowSpecial           {};
             class AtSpecialistInitFight  {};
@@ -988,7 +1017,7 @@ class CfgFunctions
 
         class startEngagement_takeCover
         {
-            file = "functions\startEngagement\takeCover";
+            file = "Functions\startEngagement\takeCover";
             class getCoverPos            {};
             class fightInitCover         {};
             class takeCover              {};
@@ -1003,7 +1032,7 @@ class CfgFunctions
 
         class startEngagement_hide
         {
-            file = "functions\startEngagement\hide";
+            file = "Functions\startEngagement\hide";
             class findHidePos            {};
             class hideFromVehicle        {};
             class initHideFromVeh        {};
@@ -1014,7 +1043,7 @@ class CfgFunctions
 
         class init
         {
-            file = "functions\init";
+            file = "Functions\init";
             class serverInit            {};
             class initSettings          {};
             class postConfig            {};
@@ -1032,7 +1061,7 @@ class CfgFunctions
 
         class debug
         {
-            file = "functions\debug";
+            file = "Functions\debug";
             class 3dDebug               {};
             class aimLine               {};
             class actionColor           {};
@@ -1080,7 +1109,7 @@ class CfgFunctions
 
         class debugMan
         {
-            file = "functions\debug\debugMan";
+            file = "Functions\debug\debugMan";
             class manInfo               {};
             class man3dInfo             {};
             class 3DdebugText           {};
@@ -1100,11 +1129,13 @@ class CfgFunctions
             class dbgTxtActionText      {};
             class dbgTxtForcedMovement  {};
             class dbgTxtMorale          {};
+            class dbgTxtRevving         {};
+            class dbgTxtSuppressing     {};
         };
         
         class healing
         {
-            file = "functions\healing";
+            file = "Functions\healing";
             class proneHeal               {};
             class endSelfHeal             {};
             class canSelfHeal             {};
@@ -1142,12 +1173,13 @@ class CfgFunctions
             class woundedAndHealersGlobal {};
             class canMoveToRevive         {};
             class buddyReviveDeathEh      {};
+            class canContinueRevive       {};
         };
 
 
         class battlefield
         {
-            file = "functions\battlefield";
+            file = "Functions\battlefield";
             class InitBattlefield         {};
             class battlefieldPostInit     {};
             class battlefieldEnd          {};
@@ -1203,7 +1235,7 @@ class CfgFunctions
         
         class markers
         {
-            file = "functions\markers";
+            file = "Functions\markers";
             class posMarker             {};
             class drawCircle            {};
             class bfDebugMarkers        {};
@@ -1212,7 +1244,7 @@ class CfgFunctions
 
         class objectData
         {
-            file = "functions\objectData";
+            file = "Functions\objectData";
             class glRifle                     {};
             class ObjStance                   {};
             class areaData                    {};
@@ -1239,6 +1271,8 @@ class CfgFunctions
             class isDeactivated               {};            
             
             class availableAiSoldier          {};
+            class manIsAvailFriendly          {};
+            class nearAvailFriendlyMen        {};
             class buildingCenterPosASL        {};
             class availEnemyFriendDist        {};
 
@@ -1257,9 +1291,25 @@ class CfgFunctions
             class unitsInModuleArea           {};
         };
 
+
+        class suppression 
+        {
+            file = "Functions\suppression";
+            class medevacSuppressionData       {};
+            class medevacSuppression           {};
+            class execMedevacSuppression       {};
+            class suppressTarget               {};
+            class targetZoneCone               {};
+            class getSuppressFirePosTarget     {};
+            class getSuppressionTarget         {};
+            class engageAndSuppress            {};
+            class getSuppressionTargetPosition {};
+        };
+
+
         class turrets
         {
-            file = "functions\turrets";
+            file = "Functions\turrets";
             class isTurret              {};
             class getTurretsAndLeaders  {};
             class assignMenToTurrets    {};
@@ -1285,7 +1335,7 @@ class CfgFunctions
     {
         class core
         {
-            file = "functions\core";
+            file = "Functions\core";
             class average               {};
             class decimals              {};
             class addZ                  {};
@@ -1365,6 +1415,31 @@ class CfgFunctions
             class positionClear         {};
         };
     };
-    
-    #include "PR\cfgFunctions.hpp"
+
+/*
+*  cfgFunctions.hpp  for headlessClients
+*  Author: PapaReap
+*/
+class SFSM_PR_hc {
+    class headlessClient {
+        file = "Functions\PR\functions\headlessClient";
+        // Main headless startup
+        class hcCheck { postInit = 1; description = "Sets Headless Clients variables for the mission"; };
+        class hcTracker { description = "Watches for headless client connect and disconnect durning mission"; };
+        class passToHCs { description = "Load balances ai to headless clients"; };
+        class aiSpawner { description = "Spreads out spawns between server and headless clients"; };
+
+        // Extras
+        class checkSpawner { description = "Condition Check if unit is allow to run spawn script"; };
+        class setAiOwner   { description = "Keeps spawned units set to spawn owner"; };
+    };
+};
+
+class SFSM_PR_main {
+    class main {
+        file = "Functions\PR\functions\main";
+        class getOwner { description = "Sever finds owner id"};
+    };
+};
+
 };
